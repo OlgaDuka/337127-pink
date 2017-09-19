@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ольга Дука](https://up.htmlacademy.ru/adaptive/12/user/337127).
-* Наставник: `Юлия Бухвалова`.
+* Наставник: [Юлия Бухвалова](https://github.com/yoksel).
 
 ---
 
