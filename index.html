@@ -11,135 +11,171 @@
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a href="index.html">Главная</a>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active">
+            <a>Главная</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="photo.html">Фотографии</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="form.html">Конкурс</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
       </nav>
     </header>
+
     <main class="page-main">
       <h1 class="visually-hidden">Путешествуйте вместе с PINK!</h1>
-      <section class="intro">
-        <h2 class="visually-hidden">Взгляните на жизнь иначе!</h2>
-        <a class="intro__download" href="#">Скачать приложение</a>
-        <div class="intro__wrapper-link">
-          <a class="intro__link" href="https://www.apple.com/itunes/">
+
+      <section class="downloads">
+        <h2 class="downloads__title visually-hidden">Взгляните на жизнь иначе!</h2>
+        <a class="downloads__btn" href="#">Скачать приложение</a>
+        <div class="downloads__apps">
+          <a class="downloads__link" href="https://www.apple.com/itunes/">
             <img  src="img/apple-logo.svg" alt="Apple" width="47" height="56">
           </a>
-          <a class="intro__link" href="https://play.google.com/store/">
+          <a class="downloads__link" href="https://play.google.com/store/">
             <img src="img/android-logo.svg" alt="Android" width="43" height="47">
           </a>
-          <a class="intro__link" href="https://www.microsoft.com/ru-RU/store/apps/">
-            <img class="intro__link" src="img/microsoft-logo.svg" alt="Microsoft" width="44" height="41">
+          <a class="downloads__link" href="https://www.microsoft.com/ru-RU/store/apps/">
+            <img src="img/microsoft-logo.svg" alt="Microsoft" width="44" height="41">
           </a>
         </div>
-        <p class="intro__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
+        <p class="downloads__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
       </section>
-      <section class="info">
-        <h2 class="visually-hidden">Мы распахиваем перед Вами окно в мир!</h2>
-        <p class="info__advertisment">Устали от серости мегаполиса?</p>
-        <p class="info__advertisment">Нам есть, что вам предложить!</p>
-        <ul class="info__list">
-          <li class="info__item">
-            <h3>Поднимает настроение</h3>
-            <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+
+      <section class="features">
+        <h2 class="visually-hidden">Достоинства нашего приложения</h2>
+        <div class="features__slogans">
+          <p class="features__slogan">Устали от серости мегаполиса?</p>
+          <p class="features__slogan">Нам есть, что вам предложить!</p>
+        </div>
+        <ul class="features__list">
+          <li class="features__item">
+            <h3 class="features__title">Поднимает настроение</h3>
+            <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
           </li>
-          <li class="info__item">
-            <h3>Меняет мир вокруг</h3>
-            <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          <li class="features__item">
+            <h3 class="features__title">Меняет мир вокруг</h3>
+            <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
           </li>
-          <li class="info__item">
-            <h3>Заводит новых друзей</h3>
-            <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          <li class="features__item">
+            <h3 class="features__title">Заводит новых друзей</h3>
+            <p class="features__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
-        <img class="info__screen" src="img/iphone-screen-3.png" alt="Скриншот айфона" width="157" height="320">
+        <img class="features__screen" src="img/iphone-screen-3.png" alt="Скриншот айфона" width="157" height="320">
       </section>
-      <section class="review">
-        <h2 class="visually-hidden">С пользователями приложения случаются всякие чудеса!</h2>
-        <div class="review__wrapper slider">
-          <ul class="slider__list">
-            <li class="slider__item">
-              <h3>Николай Петров</h3>
-              <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+
+      <section class="reviews">
+        <h2 class="visually-hidden">Отзывы пользователей приложения</h2>
+        <div class="reviews__slider">
+          <div class="controls">
+            <input class="controls__btn" type="radio" name="toggle" id="btn-slide1" checked>
+            <input class="controls__btn" type="radio" name="toggle" id="btn-slide2">
+            <input class="controls__btn" type="radio" name="toggle" id="btn-slide3">
+            <div class="controls__labels">
+              <label for="btn-slide1" class="controls__label" tabindex="0"><span class="visually-hidden">Первый слайд</span></label>
+              <label for="btn-slide2" class="controls__label" tabindex="0"><span class="visually-hidden">Второй слайд</span></label>
+              <label for="btn-slide3" class="controls__label" tabindex="0"><span class="visually-hidden">Третий слайд</span></label>
+            </div>
+          </div>
+          <ul class="reviews__list">
+            <li class="reviews__item reviews__item--active">
+              <h3 class="reviews__nikname">Николай Петров</h3>
+              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
-            <li class="slider__item">
-              <h3>Вася Пупкин</h3>
-              <p>«Это потрясающе! После того, как я запостил свои фото с плавания по необитаемым островам Филиппинского архипелага, мне пришло столько писем!!! А еще мне досталась победа в ноябрьском конкурсе за снимки тайфуна!»</p>
+            <li class="reviews__item">
+              <h3 class="reviews__nikname">Вася Пупкин</h3>
+              <p class="reviews__text">«Это потрясающе! После того, как я запостил свои фото с плавания по необитаемым островам Филиппинского архипелага, мне пришло столько писем!!! А еще мне досталась победа в ноябрьском конкурсе за снимки тайфуна!»</p>
             </li>
-            <li class="slider__item">
-              <h3>Старушка Шапокляк</h3>
-              <p>«Мы с Ларисой летели на вертолете. Под нами были горы и хрустальное горное озеро. Я делала снимки все 5 минут, пока мы спускались на парашюте! Ларискин парашют унесло на другую сторону озера. А я предупреждала, что крыски слишком легки для таких полетов...»</p>
+            <li class="reviews__item">
+              <h3 class="reviews__nikname">Старушка Шапокляк</h3>
+              <p class="reviews__text">«Мы с Ларисой летели на вертолете. Под нами были горы и хрустальное горное озеро. Я делала снимки все 5 минут, пока мы спускались на парашюте! Ларискин парашют унесло на другую сторону озера. А я предупреждала, что крыски слишком легки для таких полетов...»</p>
             </li>
           </ul>
-          <div class="controls">
-            <input type="radio" class="controls__radio-btn controls__radio-btn--checked" checked>
-            <input type="radio" class="controls__radio-btn">
-            <input type="radio" class="controls__radio-btn">
-          </div>
         </div>
       </section>
+
       <section class="tariffs">
         <h2 class="visually-hidden">Тарифы</h2>
+        <div class="controls">
+          <input class="controls__btn" type="radio" name="column" id="btn-column1" checked>
+          <input class="controls__btn" type="radio" name="column" id="btn-column2">
+          <input class="controls__btn" type="radio" name="column" id="btn-column3">
+          <div class="controls__labels">
+            <label for="btn-column1" class="controls__label" tabindex="0"><span class="visually-hidden">Первый слайд</span></label>
+            <label for="btn-column2" class="controls__label" tabindex="0"><span class="visually-hidden">Второй слайд</span></label>
+            <label for="btn-column3" class="controls__label" tabindex="0"><span class="visually-hidden">Третий слайд</span></label>
+          </div>
+        </div>
         <table class="tariffs__slider">
-          <tr class="tariff__str">
-            <td class="tariff__name">Мини-тариф<br><span>1,99 USD</span></td>
-            <td class="tariff__name tarif__name--hit">Стандарт<br><span>3,99 USD</span></td>
-            <td class="tariff__name">Макси-тариф<br><span>4,99 USD</span></td>
+          <tr class="tariffs__str">
+            <td class="tariffs__name" colspan="2">Мини-тариф</td>
+            <td class="tariffs__name tariffs__name--hit tariffs__name--active" colspan="2">Стандарт</td>
+            <td class="tariffs__name" colspan="2">Макси-тариф</td>
           </tr>
-          <tr class="tariff__str">
-            <td class="tariff__option tariff__option--yes">Розовый фильтр</td>
-            <td class="tariff__option tariff__option--yes">Розовый фильтр</td>
-            <td class="tariff__option tariff__option--no">Розовый фильтр</td>
+          <tr class="tariffs__str">
+            <td class="tariffs__price" colspan="2">1,99 USD</td>
+            <td class="tariffs__price" colspan="2">3,99 USD</td>
+            <td class="tariffs__price" colspan="2">4,99 USD</td>
           </tr>
-          <tr class="tariff__str">
-            <td class="tariff__option tariff__option--yes">Смайлики</td>
-            <td class="tariff__option tariff__option--no">Смайлики</td>
-            <td class="tariff__option tariff__option--no">Смайлики</td>
+          <tr class="tariffs__str">
+            <td class="tariffs__option">Розовый фильтр</td>
+            <td class="tariffs__value">Да</td>
+            <td class="tariffs__option">Розовый фильтр</td>
+            <td class="tariffs__value">Да</td>
+            <td class="tariffs__option">Розовый фильтр</td>
+            <td class="tariffs__value">Нет</td>
           </tr>
-          <tr class="tariff__str">
-            <td class="tariff__option tariff__option--yes">Комментарии</td>
-            <td class="tariff__option tariff__option--yes">Комментарии</td>
-            <td class="tariff__option tariff__option--yes">Комментарии</td>
+          <tr class="tariffs__str">
+            <td class="tariffs__option">Смайлики</td>
+            <td class="tariffs__value">Да</td>
+            <td class="tariffs__option">Смайлики</td>
+            <td class="tariffs__value">Да</td>
+            <td class="tariffs__option">Смайлики</td>
+            <td class="tariffs__value">Да</td>
+          </tr>
+          <tr class="tariffs__str">
+            <td class="tariffs__option">Комментарии</td>
+            <td class="tariffs__value">Да</td>
+            <td class="tariffs__option">Комментарии</td>
+            <td class="tariffs__value">Да</td>
+            <td class="tariffs__option">Комментарии</td>
+            <td class="tariffs__value">Да</td>
           </tr>
         </table>
-        <div class="controls">
-          <input type="radio" class="controls__radio-btn">
-          <input type="radio" class="controls__radio-btn controls__radio-btn--checked" checked>
-          <input type="radio" class="controls__radio-btn">
-        </div>
       </section>
+    </main>
+
+    <footer class="page-footer">
       <section class="contacts">
-        <h2 class="visually-hidden">Будем рады Вам помочь!</h2>
-        <p class="contacts__relationship">Остались вопросы?</p>
-        <p class="contacts__relationship">Свяжитесь с нами!</p>
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="contacts__relationships">
+          <p class="contacts__relationship">Остались вопросы?</p>
+          <p class="contacts__relationship">Свяжитесь с нами!</p>
+        </div>
         <ul class="contacts__list">
           <li class="contacts__item">
-            <h3>Звоните:</h3>
-            <a href="+7(812)555-66-66" class="contact__telephon">+7(812)555-66-66</a>
+            <h3 class="contacts__title">Звоните:</h3>
+            <a  class="contacts__telephon" href="tel:+7(812)555-66-66">+7(812)555-66-66</a>
           </li>
           <li class="contacts__item">
-            <h3>Пишите:</h3>
-            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <h3 class="contacts__title">Пишите:</h3>
+            <a  class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </li>
           <li class="contacts__item">
-            <h3>Приезжайте в гости</h3>
-            <span>ул. Большая Конюшенная, 19/8</span>
+            <h3 class="contacts__title">Приезжайте в гости</h3>
+            <span class="contacts__address">ул. Большая Конюшенная, 19/8</span>
           </li>
         </ul>
         <img class="contacts__map" src="img/map.jpg" alt="Схема проезда">
       </section>
-    </main>
+    </footer>
 
   </body>
 </html>
