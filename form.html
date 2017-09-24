@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Пинк: конкурс</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image" src="img/logotype-white-mobile.svg" width="75" height="22" alt="PINK">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="photo.html">Фотографии</a>
+          </li>
+          <li class="main-nav__item main-nav__item--active">
+            <a>Конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="page-main__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <p class="page-main__text site-text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+      <form class="contest" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="contest__group">
+          <legend class="visually-hidden">Представьтесь, пожалуйста</legend>
+          <label class="contest__label">Фамилия:
+            <input type="text" class="contest__field" name="surname" placeholder="Укажите фамилию *" required>
+          </label>
+          <label class="contest__label">Имя:
+            <input type="text" class="contest__field" name="name" placeholder="Введите Ваше имя *" required>
+          </label>
+          <label class="contest__label">Отчество:
+            <input type="text" class="contest__field" name="patronymic-name" placeholder="Ну и отчество тоже">
+          </label>
+        </fieldset>
+        <fieldset class="contest__group">
+          <legend class="contest__discription">Ваши безбашенные достижения в путешествии</legend>
+          <input type="checkbox" class="contest__checkbox" id="event1" name="event" value="shark" checked>
+          <label for="event1" class="contest__label">Сделал селфи с акулой</label>
+          <input type="checkbox" class="contest__checkbox" id="event2" name="event" value="beach" checked>
+          <label for="event2" class="contest__label">Обгорел на пляже</label>
+          <input type="checkbox" class="contest__checkbox" id="event3" name="event" value="Norris">
+          <label for="event3" class="contest__label">Видел Чака Норриса</label>
+          <input type="checkbox" class="contest__checkbox" id="event4" name="event" value="souvenir">
+          <label for="event4" class="contest__label">Накупил сувениров</label>
+          <input type="checkbox" class="contest__checkbox" id="event5" name="event" value="tower" checked>
+          <label for="event5" class="contest__label">Удержал башню</label>
+        </fieldset>
+        <fieldset class="contest__group">
+          <legend class="visually-hidden">Ваши контакты</legend>
+          <label class="contest__label">Номер телефона
+            <input type="text" class="contest__field" name="telephone" placeholder="Номер, пожалуйста">
+          </label>
+          <label class="contest__label">Адрес почты
+            <input type="email" class="contest__field" name="email" placeholder="Введите почту *" required>
+          </label>
+        </fieldset>
+        <fieldset class="contest__group">
+          <legend class="contest__description">С каким приложением путешествовали?</legend>
+          <input type="radio" class="contest__radio" id="app1" name="app" value="for_iOS" checked>
+          <label for="app1" class="contest__label">Pink для iOS</label>
+          <input type="radio" class="contest__radio" id="app2" name="app" value="for_Android">
+          <label for="app2" class="contest__label">Pink на Android</label>
+          <input type="radio" class="contest__radio" id="app3" name="app" value="for_Windows">
+          <label for="app3" class="contest__label">Windows Phone</label>
+        </fieldset>
+        <label class="contest__label">Опишите свои эмоции
+          <textarea class="contest__letter" name="fantasy" cols="25" rows="7" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        </label>
+        <button class="contest__submit" type="submit">Отправить форму</button>
+        <p class="contest__note">* - обязательные поля</p>
+      </form>
+    </main>
+    <footer class="page-footer">
+      <a class="page-footer__logo" href="index.html">
+        <img class="page-footer__logo-image" src="img/logotype-blue-tablet.svg" width="147" height="40" alt="PINK">
+      </a>
+      <section class="page-footer__social social">
+        <h2 class="visually-hidden">Ссылки на социальные сети</h2>
+        <a class="social__btn social__btn--tw" href="#"><span class="visually-hidden">Твиттер</span></a>
+        <a class="social__btn social__btn--fb" href="#"><span class="visually-hidden">Фейсбук</span></a>
+        <a class="social__btn social__btn--yt" href="#"><span class="visually-hidden">Ю-туб</span></a>
+      </section>
+      <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copyright__text">Разработано</span>
+        <img class="copyright__img" src="img/htmlacademy.svg" alt="HTML Академия" width="27" height="34">
+      </a>
+    </footer>
+  </body>
+</html>
