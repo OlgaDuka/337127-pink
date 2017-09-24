@@ -75,13 +75,13 @@
         <h2 class="visually-hidden">Отзывы пользователей приложения</h2>
         <div class="reviews__slider">
           <div class="controls">
-            <input class="controls__btn" type="radio" name="toggle" id="btn-slide1" checked>
-            <input class="controls__btn" type="radio" name="toggle" id="btn-slide2">
-            <input class="controls__btn" type="radio" name="toggle" id="btn-slide3">
+            <input class="controls__point" type="radio" name="reviews-control" id="reviews-control-1" checked>
+            <input class="controls__point" type="radio" name="reviews-control" id="reviews-control-2">
+            <input class="controls__point" type="radio" name="reviews-control" id="reviews-control-3">
             <div class="controls__labels">
-              <label for="btn-slide1" class="controls__label" tabindex="0"><span class="visually-hidden">Первый слайд</span></label>
-              <label for="btn-slide2" class="controls__label" tabindex="0"><span class="visually-hidden">Второй слайд</span></label>
-              <label for="btn-slide3" class="controls__label" tabindex="0"><span class="visually-hidden">Третий слайд</span></label>
+              <label for="reviews-control-1" class="controls__label" tabindex="0"><span class="visually-hidden">Первый слайд</span></label>
+              <label for="reviews-control-2" class="controls__label" tabindex="0"><span class="visually-hidden">Второй слайд</span></label>
+              <label for="reviews-control-3" class="controls__label" tabindex="0"><span class="visually-hidden">Третий слайд</span></label>
             </div>
           </div>
           <ul class="reviews__list">
@@ -104,49 +104,44 @@
       <section class="tariffs">
         <h2 class="visually-hidden">Тарифы</h2>
         <div class="controls">
-          <input class="controls__btn" type="radio" name="column" id="btn-column1" checked>
-          <input class="controls__btn" type="radio" name="column" id="btn-column2">
-          <input class="controls__btn" type="radio" name="column" id="btn-column3">
+          <input class="controls__point" type="radio" name="tariffs-control" id="tariffs-control-1" checked>
+          <input class="controls__point" type="radio" name="tariffs-control" id="tariffs-control-2">
+          <input class="controls__point" type="radio" name="tariffs-control" id="tariffs-control-3">
           <div class="controls__labels">
-            <label for="btn-column1" class="controls__label" tabindex="0"><span class="visually-hidden">Первый слайд</span></label>
-            <label for="btn-column2" class="controls__label" tabindex="0"><span class="visually-hidden">Второй слайд</span></label>
-            <label for="btn-column3" class="controls__label" tabindex="0"><span class="visually-hidden">Третий слайд</span></label>
+            <label for="tariffs-control-1" class="controls__label" tabindex="0"><span class="visually-hidden">Первый слайд</span></label>
+            <label for="tariffs-control-2" class="controls__label" tabindex="0"><span class="visually-hidden">Второй слайд</span></label>
+            <label for="tariffs-control-3" class="controls__label" tabindex="0"><span class="visually-hidden">Третий слайд</span></label>
           </div>
         </div>
         <table class="tariffs__slider">
           <tr class="tariffs__str">
-            <td class="tariffs__name" colspan="2">Мини-тариф</td>
-            <td class="tariffs__name tariffs__name--hit tariffs__name--active" colspan="2">Стандарт</td>
-            <td class="tariffs__name" colspan="2">Макси-тариф</td>
+            <td class="tariffs__name">
+              <h3 class="tariffs__title">Мини-тариф</h3>
+              <p class="tariffs__value">1,99 USD</p>
+             </td>
+            <td class="tariffs__name tariffs__name--hit tariffs__name--active">
+              <h3 class="tariffs__title">Стандарт</h3>
+              <p class="tariffs__value">3,99 USD</p>
+            </td>
+            <td class="tariffs__name">
+              <h3 class="tariffs__title">Макси-тариф</h3>
+              <p class="tariffs__value">4,99 USD</p>
+            </td>
           </tr>
           <tr class="tariffs__str">
-            <td class="tariffs__price" colspan="2">1,99 USD</td>
-            <td class="tariffs__price" colspan="2">3,99 USD</td>
-            <td class="tariffs__price" colspan="2">4,99 USD</td>
+            <td class="tariffs__option">Розовый фильтр<span>Да</span></td>
+            <td class="tariffs__option">Розовый фильтр<span>Да</span></td>
+            <td class="tariffs__option">Розовый фильтр<span>Да</span></td>
           </tr>
           <tr class="tariffs__str">
-            <td class="tariffs__option">Розовый фильтр</td>
-            <td class="tariffs__value">Да</td>
-            <td class="tariffs__option">Розовый фильтр</td>
-            <td class="tariffs__value">Да</td>
-            <td class="tariffs__option">Розовый фильтр</td>
-            <td class="tariffs__value">Нет</td>
+            <td class="tariffs__option">Смайлики<span>Нет</span></td>
+            <td class="tariffs__option">Смайлики<span>Да</span></td>
+            <td class="tariffs__option">Смайлики<span>Да</span></td>
           </tr>
           <tr class="tariffs__str">
-            <td class="tariffs__option">Смайлики</td>
-            <td class="tariffs__value">Да</td>
-            <td class="tariffs__option">Смайлики</td>
-            <td class="tariffs__value">Да</td>
-            <td class="tariffs__option">Смайлики</td>
-            <td class="tariffs__value">Да</td>
-          </tr>
-          <tr class="tariffs__str">
-            <td class="tariffs__option">Комментарии</td>
-            <td class="tariffs__value">Да</td>
-            <td class="tariffs__option">Комментарии</td>
-            <td class="tariffs__value">Да</td>
-            <td class="tariffs__option">Комментарии</td>
-            <td class="tariffs__value">Да</td>
+            <td class="tariffs__option">Комментарии<span>Нет</span></td>
+            <td class="tariffs__option">Комментарии<span>Нет</span></td>
+            <td class="tariffs__option">Комментарии<span>Да</span></td>
           </tr>
         </table>
       </section>
