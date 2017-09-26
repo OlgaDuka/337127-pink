@@ -1,0 +1,43 @@
+.tariffs {
+  @include wrapper(lime);
+}
+
+.tariffs__slider {
+
+}
+
+.tariffs__str {
+
+}
+
+.tariffs__name {
+
+}
+
+.tariffs__title {
+
+}
+
+.tariffs__value {
+
+}
+
+.tariffs__name--hit {
+
+}
+
+.tariffs__name--active {
+
+}
+
+.tariffs__option {
+
+}
+
+.tariffs__name:first-child,
+.tariffs__option:first-child,
+.tariffs__name:last-child,
+.tariffs__option:last-child,
+ {
+  display: none;
+}

@@ -1,0 +1,12 @@
+.page-header {
+  background: $main-color;
+  @include wrapper(red);
+}
+
+.page-header__logo {
+  margin-left: 20px;
+}
+
+.page-header__logo-image {
+    padding-top: 20px;
+}

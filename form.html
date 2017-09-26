@@ -3,11 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title>Пинк: конкурс</title>
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* По умолчанию показывается мобильный макет */
+        background-image: url( "maket/pink-form-mobile.jpg" );
+      }
+      /* Планшет
+      @media ( min-width: 760px ) {
+        HTML {
+
+          background-image: url( "maket/760.png" );
+        }
+      }
+       Десктоп
+      @media ( min-width: 960px ) {
+        HTML {
+
+          background-image: url( "maket/960.png" );
+        }
+      } */
+    </style>
+    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+    <script src="../node_modules/pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
+
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logotype-white-mobile.svg" width="75" height="22" alt="PINK">
+        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
@@ -44,7 +72,7 @@
           </label>
         </fieldset>
         <fieldset class="contest__group">
-          <legend class="contest__discription">Ваши безбашенные достижения в путешествии</legend>
+          <legend class="contest__description">Ваши безбашенные достижения в путешествии</legend>
           <input type="checkbox" class="contest__checkbox" id="event1" name="event" value="shark" checked>
           <label for="event1" class="contest__label">Сделал селфи с акулой</label>
           <input type="checkbox" class="contest__checkbox" id="event2" name="event" value="beach" checked>
@@ -83,7 +111,7 @@
     </main>
     <footer class="page-footer">
       <a class="page-footer__logo" href="index.html">
-        <img class="page-footer__logo-image" src="img/logotype-blue-tablet.svg" width="147" height="40" alt="PINK">
+        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="PINK">
       </a>
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Ссылки на социальные сети</h2>
