@@ -1,10 +1,18 @@
 .page-header {
+  min-height: 325px;
   background: $main-color;
 
   @include wrapper(red);
 }
 
+.page-header__menu-close {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .page-header__logo {
+  height: 70px;
   margin-left: 20px;
 }
 

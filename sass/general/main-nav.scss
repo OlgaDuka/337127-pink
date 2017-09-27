@@ -1,19 +1,29 @@
-/*.main-nav {
-
-}
-
-.main-nav__toggle {
-
+.main-nav {
+  @include wrapper(yellow);
 }
 
 .main-nav__list {
-
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .main-nav__item {
-
+  height: 62px;
+  text-align: center;
+  border-bottom: 1px solid #222222;
+  border-top: 1px solid #4c5764;
 }
 
-.main-nav__item--active {
+.main-nav__item a {
+  text-transform: uppercase;
+
+  @include text-value(18px, 32px, 700, white);
+}
+
+/*.main-nav__item--active {
 
 }*/

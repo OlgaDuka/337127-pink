@@ -1,42 +1,58 @@
 .tariffs {
+  min-height: 380px;
+
   @include wrapper(lime);
 }
 
-/*.tariffs__slider {
-
+.tariffs__slider {
+  width: 320px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 .tariffs__str {
+  height: 60px;
+}
 
+.tariffs__str:first-child {
+  height: 96px;
+  background-color: $main-color;
 }
 
 .tariffs__name {
-
+  text-align: center;
 }
 
 .tariffs__title {
-
+  @include text-value(18px, 30px, 700, white);
 }
 
 .tariffs__value {
+  font-size: 24px;
+  font-weight: 300;
 
+  @include text-value(24px, 30px, 300, white);
 }
 
-.tariffs__name--hit {
+/*.tariffs__name--hit {
 
 }
 
 .tariffs__name--active {
 
-}
-
-.tariffs__option {
-
 }*/
 
-.tariffs__name:first-child,
+.tariffs__name,
+.tariffs__option {
+  flex-basis: 280px;
+  flex-shrink: 0;
+}
+
+/*.tariffs__name:first-child,
 .tariffs__option:first-child,
 .tariffs__name:last-child,
 .tariffs__option:last-child {
   display: none;
-}
+}*/

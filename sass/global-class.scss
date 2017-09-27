@@ -30,7 +30,6 @@ a {
 
 .site-text {
   margin: 0;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 30px;
+
+  @include text-value(14px, 30px, 400, $text-color);
 }

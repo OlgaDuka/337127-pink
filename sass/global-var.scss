@@ -16,3 +16,11 @@ $main-color: #283645;
   margin: 0 auto;
   outline: 1px solid $outline-color;
 }
+
+/* Миксин для текста */
+@mixin text-value($f-size, $l-height, $f-weight, $t-color) {
+  font-size: $f-size;
+  line-height: $l-height;
+  font-weight: $f-weight;
+  color: $t-color;
+}
