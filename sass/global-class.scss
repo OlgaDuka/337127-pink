@@ -1,14 +1,10 @@
-html,
 body {
   min-width: $panel-width;
   margin: 0;
   padding: 0;
   font-family: $default-font;
-  color: $text-color;
   font-weight: $text-weight;
-}
-
-body {
+  color: $text-color;
   background: $body-color;
 }
 
@@ -32,15 +28,9 @@ a {
   overflow: hidden;
 }
 
-.btn {
-
-}
-
 .site-text {
   margin: 0;
-  font-family: $default-font;
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
-  color: $text-color;
 }

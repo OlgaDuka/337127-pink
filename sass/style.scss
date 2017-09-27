@@ -1,23 +1,19 @@
-body {
-  background-color: white;
-}
-
 @import "global-var";
 @import "fonts";
 @import "global-class";
-@import "page-header";
-@import "main-nav";
-@import "page-main";
-@import "downloads";
-@import "features";
-@import "reviews";
-@import "tariffs";
-@import "controls";
-@import "page-footer";
-@import "contacts";
-@import "gallery";
-@import "upload";
-@import "editor";
-@import "social";
-@import "copyright";
-@import "contest";
+@import "general-mobile/page-header";
+@import "general-mobile/main-nav";
+@import "general-mobile/page-main";
+@import "general-mobile/page-footer";
+@import "general-mobile/social";
+@import "general-mobile/copyright";
+@import "index-mobile/downloads";
+@import "index-mobile/features";
+@import "index-mobile/reviews";
+@import "index-mobile/tariffs";
+@import "index-mobile/controls";
+@import "index-mobile/contacts";
+@import "photo-mobile/gallery";
+@import "photo-mobile/upload";
+@import "photo-mobile/editor";
+@import "form-mobile/contest";
