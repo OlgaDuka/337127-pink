@@ -4,7 +4,7 @@ $body-color: white;
 
 /* Настройка текстовых параметров */
 $default-font: "Open Sans", "Arial", sans-serif;
-$text-color: #333;
+$text-color: #333333;
 $text-weight: 400;
 
 /* Основной цвет сайта */
@@ -12,7 +12,7 @@ $main-color: #283645;
 
 /* Миксин для верстки блоков сетки */
 @mixin wrapper($outline-color) {
-width: $panel-width;
-margin: 0 auto;
-outline: 1px solid $outline-color;
+  width: $panel-width;
+  margin: 0 auto;
+  outline: 1px solid $outline-color;
 }
