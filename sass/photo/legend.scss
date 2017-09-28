@@ -1,0 +1,37 @@
+/*.legend {
+
+}*/
+
+.legend__wrap {
+  padding: 14px 17px 20px;
+}
+
+/*.legend__author {
+
+}*/
+
+.legend__name {
+  @include text-value(14px, 24px, 700, $text-color);
+}
+
+.legend__time {
+  text-transform: uppercase;
+
+  @include text-value(12px, 24px, 300, $text-color);
+}
+
+.legend__message {
+  margin: 0;
+  margin-bottom: 9px;
+
+  @include text-value(14px, 24px, 400, $text-color);
+}
+
+.legend__like {
+  padding-left: 33px;
+  align-self: flex-start;
+  border: none;
+  text-transform: uppercase;
+
+  @include text-value(12px, 24px, 400, #cc3366);
+}

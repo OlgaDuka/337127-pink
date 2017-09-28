@@ -47,37 +47,3 @@
 
   outline: 1px solid skyblue;
 }
-
-.gallery__legend-wrap {
-  padding: 14px 17px 20px;
-}
-
-/*.gallery__author-wrap {
-  margin-top: 20px;
-}*/
-
-.gallery__nickname {
-  @include text-value(14px, 24px, 700, $text-color);
-}
-
-.gallery__time {
-  text-transform: uppercase;
-
-  @include text-value(12px, 24px, 300, $text-color);
-}
-
-.gallery__message {
-  margin: 0;
-  margin-bottom: 9px;
-
-  @include text-value(14px, 24px, 400, $text-color);
-}
-
-.gallery__like {
-  padding-left: 33px;
-  align-self: flex-start;
-  border: none;
-  text-transform: uppercase;
-
-  @include text-value(12px, 24px, 400, #cc3366);
-}
