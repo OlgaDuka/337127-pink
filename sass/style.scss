@@ -2,7 +2,6 @@
 @import "global-var";
 @import "fonts";
 @import "global-class";
-@import "general/btn";
 @import "general/page-header";
 @import "general/main-nav";
 @import "general/page-main";
@@ -16,6 +15,6 @@
 @import "index/controls";
 @import "index/contacts";
 @import "photo/gallery";
-/*@import "photo/upload";
+@import "photo/upload";
 @import "photo/editor";
-@import "form/contest";*/
+@import "form/contest";

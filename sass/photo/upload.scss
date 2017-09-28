@@ -1,23 +1,40 @@
-/*.upload {
+.upload {
+  min-height: 925px;
+  background-color: #f2f2f2;
 
+  @include wrapper(forestgreen);
 }
 
 .upload__offer {
+  padding: 30px 30px 40px;
+  text-align: center;
+  background-color: white;
 
+  @include text-value(14px, 30px, 400, $text-color);
 }
 
 .upload__photo {
-
+  padding: 20px;
 }
 
 .upload__edit {
+  min-height: 140px;
 
+  @include wrapper(crimson);
+}
+
+.upload__btn-wrap {
+  min-height: 120px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .upload__execute {
-
+  @include btn(#cc3366);
 }
 
 .upload__cancel {
-
-}*/
+  @include btn(#333333);
+}

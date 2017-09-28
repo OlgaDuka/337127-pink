@@ -1,42 +1,83 @@
-/*.gallery {
-
+.gallery {
+  @include wrapper(mediumvioletred);
 }
 
 .gallery__title {
+  min-height: 110px;
+  margin: 0;
+  padding: 30px 20px;
+  text-align: center;
+  background-color: $main-color;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center -70px;
+  overflow: hidden;
 
+  @include text-value(24px, 28px, 300, white);
 }
 
 .gallery__offer {
+  padding: 45px 30px 50px;
+  text-align: center;
+  background-color: white;
 
-}*/
+  @include text-value(14px, 30px, 400, $text-color);
+}
 
 .gallery__list {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
   list-style: none;
 }
 
+.gallery__panorama {
+  margin: 0;
+
+  outline: 1px solid lime;
+}
+
 .gallery__item {
-  padding-left: 20px;
-  padding-right: 20px;
+  width: 280px;
+  margin: 0 auto 23px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+
+  outline: 1px solid skyblue;
 }
 
-.gallery__item--panorama {
-  padding: 0;
+.gallery__legend-wrap {
+  padding: 14px 17px 20px;
 }
 
-/*.gallery__nickname {
+/*.gallery__author-wrap {
+  margin-top: 20px;
+}*/
 
+.gallery__nickname {
+  @include text-value(14px, 24px, 700, $text-color);
 }
 
 .gallery__time {
+  text-transform: uppercase;
 
+  @include text-value(12px, 24px, 300, $text-color);
 }
 
 .gallery__message {
+  margin: 0;
+  margin-bottom: 9px;
 
+  @include text-value(14px, 24px, 400, $text-color);
 }
 
 .gallery__like {
+  padding-left: 33px;
+  align-self: flex-start;
+  border: none;
+  text-transform: uppercase;
 
-}*/
+  @include text-value(12px, 24px, 400, #cc3366);
+}
