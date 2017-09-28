@@ -23,7 +23,7 @@
   @include wrapper(crimson);
 }
 
-.upload__btn-wrap {
+.upload__buttons {
   min-height: 120px;
   padding: 40px 20px;
   display: flex;
@@ -31,10 +31,14 @@
   justify-content: space-between;
 }
 
-.upload__execute {
+/*.upload__button {
+
+}*/
+
+.upload__button--execute {
   @include btn(#cc3366);
 }
 
-.upload__cancel {
+.upload__button--cancel {
   @include btn(#333333);
 }
