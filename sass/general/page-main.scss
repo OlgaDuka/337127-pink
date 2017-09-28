@@ -2,10 +2,24 @@
   @include wrapper(blue);
 }
 
-/*.page-main__title {
+.page-main__title {
+  min-height: 110px;
+  margin: 0;
+  padding: 30px 20px;
+  text-align: center;
+  background-color: $main-color;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center -70px;
+  overflow: hidden;
 
+  @include text-value(24px, 28px, 300, white);
 }
 
 .page-main__text {
+  padding: 45px 20px 50px;
+  text-align: center;
+  background-color: white;
 
-}*/
+  @include text-value(14px, 30px, 400, $text-color);
+}
