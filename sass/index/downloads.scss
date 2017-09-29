@@ -1,0 +1,41 @@
+.downloads {
+  min-height: 240px;
+  padding-top: 426px;
+  background-color: $main-color;
+  background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left 110px, center -70px;
+
+  @include wrapper(green);
+}
+
+/*.downloads__title {
+
+}*/
+
+.downloads__btn {
+  margin: 0 auto;
+  width: 256px;
+
+  @include btn(white);
+}
+
+.downloads__apps {
+  width: 200px;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.downloads__link {
+  color: white;
+}
+
+.downloads__text {
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+
+  @include text-value(14px, 24px, 400, white);
+}

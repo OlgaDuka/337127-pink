@@ -1,0 +1,37 @@
+/*.post {
+
+}*/
+
+.post__wrap {
+  padding: 14px 17px 20px;
+}
+
+/*.post__author {
+
+}*/
+
+.post__name {
+  @include text-value(14px, 24px, 700, $text-color);
+}
+
+.post__time {
+  text-transform: uppercase;
+
+  @include text-value(12px, 24px, 300, $text-color);
+}
+
+.post__message {
+  margin: 0;
+  margin-bottom: 9px;
+
+  @include text-value(14px, 24px, 400, $text-color);
+}
+
+.post__like {
+  padding-left: 33px;
+  align-self: flex-start;
+  border: none;
+  text-transform: uppercase;
+
+  @include text-value(12px, 24px, 400, #cc3366);
+}

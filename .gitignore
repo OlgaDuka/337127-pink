@@ -8,4 +8,5 @@
 css/*.css
 node_modules/
 npm-debug.*
+maket/*.*
 Thumbs.db

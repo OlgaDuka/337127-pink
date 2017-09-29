@@ -1,0 +1,27 @@
+.gallery {
+  @include wrapper(mediumvioletred);
+}
+
+.gallery__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.gallery__panorama {
+  margin: 0;
+
+  outline: 1px solid lime;
+}
+
+.gallery__item {
+  width: 280px;
+  margin: 0 auto 23px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+
+  outline: 1px solid skyblue;
+}

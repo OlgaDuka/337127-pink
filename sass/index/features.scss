@@ -1,0 +1,50 @@
+.features {
+  @include wrapper(orange);
+}
+
+.features__slogans {
+  margin-bottom: 85px;
+  padding-top: 42px;
+  display: flex;
+  flex-direction: column;
+}
+
+.features__slogan {
+  margin-bottom: 30px;
+  text-align: center;
+
+  @include text-value(24px, 28px, 300, $text-color);
+}
+
+.features__list {
+  width: 280px;
+  margin: 0 auto 12px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+
+.features__item {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.features__title {
+  margin: 0;
+  margin-bottom: 12px;
+
+  @include text-value(18px, 24px, 700, $text-color);
+}
+
+.features__text {
+  @include text-value(14px, 24px, 400, $text-color);
+}
+
+.features__screen {
+  height: 277px;
+  width: 157px;
+  margin: 0 auto;
+  overflow: hidden;
+}

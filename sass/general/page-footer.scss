@@ -1,0 +1,26 @@
+.page-footer {
+  min-height: 270px;
+  padding: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include wrapper(olivedrab);
+}
+
+.page-footer__logo {
+  margin-top: 40px;
+}
+
+/*.page-footer__logo-image {
+
+}
+
+.page-footer__social {
+
+}
+
+.page-footer__copyright {
+
+}*/

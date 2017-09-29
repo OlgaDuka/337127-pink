@@ -3,14 +3,44 @@
   <head>
     <meta charset="utf-8">
     <title>Пинк: фотографии</title>
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* По умолчанию показывается мобильный макет */
+        background-image: url( "maket/pink-photo-mobile.jpg" );
+      }
+      /* Планшет
+      @media ( min-width: 760px ) {
+        HTML {
+
+          background-image: url( "maket/760.png" );
+        }
+      }
+       Десктоп
+      @media ( min-width: 960px ) {
+        HTML {
+
+          background-image: url( "maket/960.png" );
+        }
+      } */
+    </style>
+    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+    <script src="../node_modules/pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
+
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logotype-white-mobile.svg" width="75" height="22" alt="PINK">
-      </a>
+      <div class="page-header__menu-close">
+        <a class="page-header__logo">
+          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK">
+        </a>
+        <button class="page-header__toggle" type="button">Открыть меню</button>
+      </div>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a href="index.html">Главная</a>
@@ -28,66 +58,93 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="visually-hidden">С PINK можно попасть в любую точку мира!</h1>
+      <h1 class="page-main__title">Фотографии пользователей</h2>
+      <p class="page-main__text site-text">Взгляните на фотографии, которые выкладывают пользователи! Видите,&nbsp;как&nbsp;не хватает ваших?</p>
       <section class="gallery">
-        <h2 class="gallery__title">Фотографии пользователей</h2>
-        <p class="gallery__offer site-text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <img class="gallery__panorama" src="img/panorama-mobile@1x.jpg" alt="Панорама дня" width="320" height="137">
         <ul class="gallery__list">
-          <li class="gallery__item gallery__item--panorama">
-            <img  src="img/panorama-mobile.jpg" alt="Панорама дня" width="320" height="137">
-            <span class="gallery__nickname">Анна</span>
-            <span class="gallery__time">(5 минут назад)</span>
-            <p class="gallery__message">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-            <button class="gallery__like" type="button">Нравится: 215</button>
+          <li class="gallery__item post">
+            <div class="post__wrap">
+              <div class="post__author">
+                <span class="post__name">Анна</span>
+                <span class="post__time">(5 минут назад)</span>
+              </div>
+              <p class="post__message">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <button class="post__like" type="button">Нравится: 215</button>
+            </div>
           </li>
-          <li class="gallery__item">
-            <img  src="img/photo-1-mobile.jpg" alt="Фото 1" width="280" height="180">
-            <span class="gallery__nickname">Левон</span>
-            <span class="gallery__time">(5 часов назад)</span>
-            <p class="gallery__message">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-            <button class="gallery__like" type="button">Нравится: 356</button>
+          <li class="gallery__item post">
+            <img  src="img/photo-car-mobile@1x.jpg" alt="Фото 1" width="280" height="180">
+            <div class="post__wrap">
+              <div class="post__author">
+                <span class="post__name">Левон</span>
+                <span class="post__time">(5 часов назад)</span>
+              </div>
+              <p class="post__message">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <button class="post__like" type="button">Нравится: 356</button>
+            </div>
           </li>
-          <li class="gallery__item">
-            <img  src="img/photo-2-mobile.jpg" alt="Фото 2" width="280" height="180">
-            <span class="gallery__nickname">Антон</span>
-            <span class="gallery__time">(12 часов назад)</span>
-            <p class="gallery__message">Соседи будут рады!</p>
-            <button class="gallery__like" type="button">Нравится: 666</button>
+          <li class="gallery__item post">
+            <img  src="img/photo-drumset-mobile@1x.jpg" alt="Фото 2" width="280" height="180">
+            <div class="post__wrap">
+              <div class="post__author">
+                <span class="post__name">Антон</span>
+                <span class="post__time">(12 часов назад)</span>
+              </div>
+              <p class="post__message">Соседи будут рады!</p>
+              <button class="post__like" type="button">Нравится: 666</button>
+            </div>
           </li>
-          <li class="gallery__item">
-            <img  src="img/photo-3-mobile.jpg" alt="Фото 3" width="280" height="180">
-            <span class="gallery__nickname">Борис</span>
-            <span class="gallery__time">(20 часов назад)</span>
-            <p class="gallery__message">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <button class="gallery__like" type="button">Нравится: 215</button>
+          <li class="gallery__item post">
+            <img  src="img/photo-window-mobile@1x.jpg" alt="Фото 3" width="280" height="180">
+            <div class="post__wrap">
+              <div class="post__author">
+                <span class="post__name">Борис</span>
+                <span class="post__time">(20 часов назад)</span>
+              </div>
+              <p class="post__message">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <button class="post__like" type="button">Нравится: 215</button>
+            </div>
           </li>
-          <li class="gallery__item">
-            <img  src="img/photo-4-mobile.jpg" alt="Фото 4" width="280" height="180">
-            <span class="gallery__nickname">Сергей</span>
-            <span class="gallery__time">(25 часов назад)</span>
-            <p class="gallery__message">Самая кубанская в мире!</p>
-            <button class="gallery__like" type="button">Нравится: 4</button>
+          <li class="gallery__item post">
+            <img  src="img/photo-fair-mobile@1x.jpg" alt="Фото 4" width="280" height="180">
+            <div class="post__wrap">
+              <div class="post__author">
+                <span class="post__name">Сергей</span>
+                <span class="post__time">(25 часов назад)</span>
+              </div>
+              <p class="post__message">Самая кубанская в мире!</p>
+              <button class="post__like" type="button">Нравится: 4</button>
+            </div>
           </li>
-          <li class="gallery__item">
-            <img  src="img/photo-5-mobile.jpg" alt="Фото 5" width="280" height="180">
-            <span class="gallery__nickname">Максим</span>
-            <span class="gallery__time">(40 часов назад)</span>
-            <p class="gallery__message">Где снег-то?</p>
-            <button class="gallery__like" type="button">Нравится: 150</button>
+          <li class="gallery__item post">
+            <img  src="img/photo-pov-mobile@1x.jpg" alt="Фото 5" width="280" height="180">
+            <div class="post__wrap">
+              <div class="post__author">
+                <span class="post__name">Максим</span>
+                <span class="post__time">(40 часов назад)</span>
+              </div>
+              <p class="post__message">Где снег-то?</p>
+              <button class="post__like" type="button">Нравится: 150</button>
+            </div>
           </li>
-          <li class="gallery__item">
-            <img  src="img/photo-6-mobile.jpg" alt="Фото 6" width="280" height="180">
-            <span class="gallery__nickname">Надежда</span>
-            <span class="gallery__time">(45 часов назад)</span>
-            <p class="gallery__message">Всем GM и взаимные лайки!</p>
-            <button class="gallery__like" type="button">Нравится: 2560</button>
+          <li class="gallery__item post">
+            <img  src="img/photo-wing-mobile@1x.jpg" alt="Фото 6" width="280" height="180">
+            <div class="post__wrap">
+              <div class="post__author">
+                <span class="post__name">Надежда</span>
+                <span class="post__time">(45 часов назад)</span>
+              </div>
+              <p class="post__message">Всем GM и взаимные лайки!</p>
+              <button class="post__like" type="button">Нравится: 2560</button>
+            </div>
           </li>
         </ul>
       </section>
       <section class="upload">
         <h2 class="visually-hidden">Загрузите свою фотографию!</h2>
         <p class="upload__offer site-text">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
-        <img class="upload__photo" src="photo-7-mobile.jpg" alt="Ваше фото" width="280" height="374">
+        <img class="upload__photo" src="img/photo-road-mobile@1x.jpg" alt="Ваше фото" width="280" height="374">
         <div class="upload__edit editor">
           <div class="editor__wrapper">
             <button class="editor__crop" type="button"><span class="visually-hidden">Кадрировать</span></button>
@@ -96,13 +153,15 @@
           </div>
           <div class="editor__scale"><span class="visually-hidden">Ползунок</span></div>
         </div>
-        <button class="upload__execute btn" type="submit">Запостить</button>
-        <button class="upload__cancel btn" type="reset">Отмена</button>
+        <div class="upload__buttons">
+          <button class="upload__button upload__button--execute" type="submit">Запостить</button>
+          <button class="upload__button upload__button--cancel" type="reset">Отмена</button>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
       <a class="page-footer__logo" href="index.html">
-        <img class="page-footer__logo-image" src="img/logotype-blue-tablet.svg" width="147" height="40" alt="PINK">
+        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="PINK">
       </a>
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Ссылки на социальные сети</h2>

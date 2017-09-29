@@ -3,14 +3,44 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* По умолчанию показывается мобильный макет */
+        background-image: url("maket/pink-index-mobile.jpg");
+      }
+      /* Планшет
+      @media ( min-width: 760px ) {
+        HTML {
+
+          background-image: url( "maket/760.png" );
+        }
+      }
+       Десктоп
+      @media ( min-width: 960px ) {
+        HTML {
+
+          background-image: url( "maket/960.png" );
+        }
+      } */
+    </style>
+    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+    <script src="../node_modules/pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
+
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logotype-white-mobile.svg" width="75" height="22" alt="PINK">
-      </a>
+      <div class="page-header__menu-close">
+        <a class="page-header__logo">
+          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK">
+        </a>
+        <button class="page-header__toggle" type="button">Открыть меню</button>
+      </div>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
             <a>Главная</a>
@@ -33,42 +63,42 @@
 
       <section class="downloads">
         <h2 class="downloads__title visually-hidden">Взгляните на жизнь иначе!</h2>
-        <a class="downloads__btn" href="#">Скачать приложение</a>
+        <div class="downloads__btn"><a class="downloads__link" href="#">Скачать приложение</a></div>
         <div class="downloads__apps">
           <a class="downloads__link" href="https://www.apple.com/itunes/">
-            <img  src="img/apple-logo.svg" alt="Apple" width="47" height="56">
+            <img  src="img/logo-apple.svg" alt="Apple" width="47" height="56">
           </a>
           <a class="downloads__link" href="https://play.google.com/store/">
-            <img src="img/android-logo.svg" alt="Android" width="43" height="47">
+            <img src="img/logo-android.svg" alt="Android" width="43" height="47">
           </a>
           <a class="downloads__link" href="https://www.microsoft.com/ru-RU/store/apps/">
-            <img src="img/microsoft-logo.svg" alt="Microsoft" width="44" height="41">
+            <img src="img/logo-microsoft.svg" alt="Microsoft" width="44" height="41">
           </a>
         </div>
-        <p class="downloads__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
+        <p class="downloads__text site-text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </section>
 
       <section class="features">
         <h2 class="visually-hidden">Достоинства нашего приложения</h2>
         <div class="features__slogans">
-          <p class="features__slogan">Устали от серости мегаполиса?</p>
-          <p class="features__slogan">Нам есть, что вам предложить!</p>
+          <p class="features__slogan site-text">Устали от серости мегаполиса?</p>
+          <p class="features__slogan site-text">Нам есть, что вам предложить!</p>
         </div>
         <ul class="features__list">
           <li class="features__item">
             <h3 class="features__title">Поднимает настроение</h3>
-            <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            <p class="features__text site-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
           </li>
           <li class="features__item">
             <h3 class="features__title">Меняет мир вокруг</h3>
-            <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            <p class="features__text site-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
           </li>
           <li class="features__item">
             <h3 class="features__title">Заводит новых друзей</h3>
-            <p class="features__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            <p class="features__text site-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
-        <img class="features__screen" src="img/iphone-screen-3.png" alt="Скриншот айфона" width="157" height="320">
+        <div class="features__screen"><img src="img/iphone-screen-mobile@1x.png" alt="Скриншот айфона" width="157" height="320"></div>
       </section>
 
       <section class="reviews">
@@ -87,15 +117,15 @@
           <ul class="reviews__list">
             <li class="reviews__item reviews__item--active">
               <h3 class="reviews__nikname">Николай Петров</h3>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              <p class="reviews__text site-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
             <li class="reviews__item">
               <h3 class="reviews__nikname">Вася Пупкин</h3>
-              <p class="reviews__text">«Это потрясающе! После того, как я запостил свои фото с плавания по необитаемым островам Филиппинского архипелага, мне пришло столько писем!!! А еще мне досталась победа в ноябрьском конкурсе за снимки тайфуна!»</p>
+              <p class="reviews__text site-text">«Это потрясающе! После того, как я запостил свои фото с плавания по необитаемым островам Филиппинского архипелага, мне пришло столько писем!!! А еще мне досталась победа в ноябрьском конкурсе за снимки тайфуна!»</p>
             </li>
             <li class="reviews__item">
               <h3 class="reviews__nikname">Старушка Шапокляк</h3>
-              <p class="reviews__text">«Мы с Ларисой летели на вертолете. Под нами были горы и хрустальное горное озеро. Я делала снимки все 5 минут, пока мы спускались на парашюте! Ларискин парашют унесло на другую сторону озера. А я предупреждала, что крыски слишком легки для таких полетов...»</p>
+              <p class="reviews__text site-text">«Мы с Ларисой летели на вертолете. Под нами были горы и хрустальное горное озеро. Я делала снимки все 5 минут, пока мы спускались на парашюте! Ларискин парашют унесло на другую сторону озера. А я предупреждала, что крыски слишком легки для таких полетов...»</p>
             </li>
           </ul>
         </div>
@@ -104,8 +134,8 @@
       <section class="tariffs">
         <h2 class="visually-hidden">Тарифы</h2>
         <div class="controls">
-          <input class="controls__point" type="radio" name="tariffs-control" id="tariffs-control-1" checked>
-          <input class="controls__point" type="radio" name="tariffs-control" id="tariffs-control-2">
+          <input class="controls__point" type="radio" name="tariffs-control" id="tariffs-control-1">
+          <input class="controls__point" type="radio" name="tariffs-control" id="tariffs-control-2" checked>
           <input class="controls__point" type="radio" name="tariffs-control" id="tariffs-control-3">
           <div class="controls__labels">
             <label for="tariffs-control-1" class="controls__label" tabindex="0"><span class="visually-hidden">Первый слайд</span></label>
@@ -129,19 +159,19 @@
             </td>
           </tr>
           <tr class="tariffs__str">
-            <td class="tariffs__option">Розовый фильтр<span>Да</span></td>
-            <td class="tariffs__option">Розовый фильтр<span>Да</span></td>
-            <td class="tariffs__option">Розовый фильтр<span>Да</span></td>
+            <td class="tariffs__option site-text">Розовый фильтр<span>Да</span></td>
+            <td class="tariffs__option site-text">Розовый фильтр<span>Да</span></td>
+            <td class="tariffs__option site-text">Розовый фильтр<span>Да</span></td>
           </tr>
           <tr class="tariffs__str">
-            <td class="tariffs__option">Смайлики<span>Нет</span></td>
-            <td class="tariffs__option">Смайлики<span>Да</span></td>
-            <td class="tariffs__option">Смайлики<span>Да</span></td>
+            <td class="tariffs__option site-text">Смайлики<span>Нет</span></td>
+            <td class="tariffs__option site-text">Смайлики<span>Да</span></td>
+            <td class="tariffs__option site-text">Смайлики<span>Да</span></td>
           </tr>
           <tr class="tariffs__str">
-            <td class="tariffs__option">Комментарии<span>Нет</span></td>
-            <td class="tariffs__option">Комментарии<span>Нет</span></td>
-            <td class="tariffs__option">Комментарии<span>Да</span></td>
+            <td class="tariffs__option site-text">Комментарии<span>Нет</span></td>
+            <td class="tariffs__option site-text">Комментарии<span>Нет</span></td>
+            <td class="tariffs__option site-text">Комментарии<span>Да</span></td>
           </tr>
         </table>
       </section>
@@ -157,7 +187,7 @@
         <ul class="contacts__list">
           <li class="contacts__item">
             <h3 class="contacts__title">Звоните:</h3>
-            <a  class="contacts__telephon" href="tel:+7(812)555-66-66">+7(812)555-66-66</a>
+            <a  class="contacts__telephone" href="tel:+7(812)555-66-66">+7 (812) 555-66-66</a>
           </li>
           <li class="contacts__item">
             <h3 class="contacts__title">Пишите:</h3>
@@ -168,7 +198,7 @@
             <span class="contacts__address">ул. Большая Конюшенная, 19/8</span>
           </li>
         </ul>
-        <img class="contacts__map" src="img/map.jpg" alt="Схема проезда">
+        <img class="contacts__map" src="img/bg-map-mobile@1x.png" alt="Схема проезда">
       </section>
     </footer>
 

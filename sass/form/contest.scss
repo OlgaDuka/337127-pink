@@ -1,0 +1,98 @@
+.contest {
+  min-height: 2060px;
+  display: flex;
+  flex-direction: column;
+
+  @include wrapper(orange);
+}
+
+.contest__group {
+  margin-bottom: 30px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  border: 0;
+}
+
+.contest__group--background {
+  position: relative;
+  padding-top: 110px;
+  background-color: #f2f2f2;
+}
+
+.contest__label {
+  padding-left: 20px;
+  padding-top: 2px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+
+  @include text-value(14px, 30px, 400, #cc3366);
+}
+
+.contest__label--checkbox {
+  text-transform: none;
+  margin-bottom: 42px;
+  padding: 5px 0 5px 68px;
+
+  @include text-value(18px, 30px, 400, $text-color);
+}
+
+.contest__label--radio {
+  text-transform: none;
+  margin-bottom: 40px;
+  padding: 0 0 5px 68px;
+
+  @include text-value(18px, 30px, 400, $text-color);
+}
+
+.contest__label--letter {
+  padding-left: 0;
+  margin-bottom: 10px;
+  align-self: center;
+}
+
+.contest__field {
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  border: 2px solid #cccccc;
+
+  @include text-value(18px, 30px, 400, $text-color);
+}
+
+.contest__description {
+  position: absolute;
+  top: 37px;
+  left: 0;
+  text-align: center;
+  text-transform: uppercase;
+  border: 0;
+
+  @include text-value(14px, 18px, 400, #cc3366);
+}
+
+.contest__letter {
+  margin: 0 20px 25px;
+  padding: 18px 20px;
+  resize: none;
+  font-family: inherit;
+
+  @include text-value(18px, 30px, 400, $text-color);
+}
+
+.contest__submit {
+  padding: 17px 20px;
+  margin: 20px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  background-color: #2aab6d;
+
+  @include text-value(18px, 30px, 700, white);
+}
+
+.contest__note {
+  text-transform: uppercase;
+  text-align: center;
+
+  @include text-value(14px, 30px, 400, $text-color);
+}
