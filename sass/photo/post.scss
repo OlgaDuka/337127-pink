@@ -1,33 +1,33 @@
-/*.legend {
+/*.post {
 
 }*/
 
-.legend__wrap {
+.post__wrap {
   padding: 14px 17px 20px;
 }
 
-/*.legend__author {
+/*.post__author {
 
 }*/
 
-.legend__name {
+.post__name {
   @include text-value(14px, 24px, 700, $text-color);
 }
 
-.legend__time {
+.post__time {
   text-transform: uppercase;
 
   @include text-value(12px, 24px, 300, $text-color);
 }
 
-.legend__message {
+.post__message {
   margin: 0;
   margin-bottom: 9px;
 
   @include text-value(14px, 24px, 400, $text-color);
 }
 
-.legend__like {
+.post__like {
   padding-left: 33px;
   align-self: flex-start;
   border: none;

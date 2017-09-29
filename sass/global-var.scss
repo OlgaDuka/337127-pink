@@ -34,3 +34,19 @@ $main-color: #283645;
 
   @include text-value(18px, 18px, 700, $btn-color);
 }
+
+/* Миксин для стилизации placeholder
+@mixin input-placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
+}*/

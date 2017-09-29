@@ -59,10 +59,10 @@
     </header>
     <main class="page-main">
       <h1 class="page-main__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
-      <p class="page-main__text site-text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+      <p class="page-main__text page-main__text--form site-text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
       <form class="contest" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="contest__group">
-          <legend class="visually-hidden">Представьтесь, пожалуйста</legend>
+          <h2 class="visually-hidden">Представьтесь, пожалуйста</h2>
           <label for="surname" class="contest__label">Фамилия:</label>
           <input type="text" class="contest__field" name="surname" id="surname" placeholder="Укажите фамилию *" required>
           <label for="name" class="contest__label">Имя:</label>
@@ -71,46 +71,49 @@
           <input type="text" class="contest__field" name="patronymic-name" id="patronymic-name" placeholder="Ну и отчество тоже">
         </fieldset>
         <fieldset class="contest__group contest__group--background">
-          <legend class="contest__description">Ваши безбашенные достижения в путешествии</legend>
-          <label class="contest__label contest__label--option">
+          <h2 class="contest__description">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</h2>
+          <label class="contest__label contest__label--checkbox">
             <input type="checkbox" class="contest__checkbox" name="event" value="shark" checked>Сделал селфи с акулой
           </label>
-          <label class="contest__label contest__label--option">
+          <label class="contest__label contest__label--checkbox">
             <input type="checkbox" class="contest__checkbox" name="event" value="beach" checked>Обгорел на пляже
           </label>
-          <label class="contest__label contest__label--option">
+          <label class="contest__label contest__label--checkbox">
             <input type="checkbox" class="contest__checkbox" name="event" value="Norris">Видел Чака Норриса
           </label>
-          <label class="contest__label contest__label--option">
+          <label class="contest__label contest__label--checkbox">
             <input type="checkbox" class="contest__checkbox" name="event" value="souvenir">Накупил сувениров
           </label>
-          <label class="contest__label contest__label--option">
+          <label class="contest__label contest__label--checkbox">
             <input type="checkbox" class="contest__checkbox" name="event" value="tower" checked>Удержал башню
+          </label>
+          <label class="contest__label contest__label--checkbox">
+            <input type="checkbox" class="contest__checkbox" name="event" value="hotel" checked>Разгромил отель
           </label>
         </fieldset>
         <fieldset class="contest__group">
-          <legend class="visually-hidden">Ваши контакты</legend>
+          <h2 class="visually-hidden">Ваши контакты</h2>
           <label for="telephone" class="contest__label">Номер телефона</label>
           <input type="text" class="contest__field" name="telephone" id="telephone" placeholder="Номер, пожалуйста">
           <label for="email" class="contest__label">Адрес почты</label>
           <input type="email" class="contest__field" name="email" id="email" placeholder="Введите почту *" required>
         </fieldset>
         <fieldset class="contest__group contest__group--background">
-          <legend class="contest__description">С каким приложением путешествовали?</legend>
-          <label class="contest__label contest__label--option">
+          <h2 class="contest__description">С каким приложением путешествовали?</h2>
+          <label class="contest__label contest__label--radio">
             <input type="radio" class="contest__radio" name="app" value="for_iOS" checked>Pink для iOS
           </label>
-          <label class="contest__label contest__label--option">
+          <label class="contest__label contest__label--radio">
             <input type="radio" class="contest__radio" name="app" value="for_Android">Pink на Android
           </label>
-          <label class="contest__label contest__label--option">
+          <label class="contest__label contest__label--radio">
             <input type="radio" class="contest__radio" name="app" value="for_Windows">Windows Phone
           </label>
         </fieldset>
         <label for="fantasy" class="contest__label contest__label--letter">Опишите свои эмоции</label>
-        <textarea class="contest__letter" name="fantasy" id="fantasy" cols="25" rows="7" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        <textarea class="contest__letter" name="fantasy" id="fantasy" cols="25" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         <button class="contest__submit" type="submit">Отправить форму</button>
-        <p class="contest__note">* - обязательные поля</p>
+        <p class="contest__note"><span class="contest__note contest__note--red">*</span> &mdash; обязательные поля</p>
       </form>
     </main>
     <footer class="page-footer">

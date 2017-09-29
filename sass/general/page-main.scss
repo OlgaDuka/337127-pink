@@ -23,3 +23,7 @@
 
   @include text-value(14px, 30px, 400, $text-color);
 }
+
+.page-main__text--form {
+  padding-bottom: 30px;
+}
