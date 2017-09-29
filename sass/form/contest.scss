@@ -15,6 +15,8 @@
 }
 
 .contest__group--background {
+  position: relative;
+  padding-top: 110px;
   background-color: #f2f2f2;
 }
 
@@ -30,7 +32,7 @@
 .contest__label--checkbox {
   text-transform: none;
   margin-bottom: 42px;
-  padding: 5px 0 5px 70px;
+  padding: 5px 0 5px 68px;
 
   @include text-value(18px, 30px, 400, $text-color);
 }
@@ -38,7 +40,7 @@
 .contest__label--radio {
   text-transform: none;
   margin-bottom: 40px;
-  padding: 0 0 5px 70px;
+  padding: 0 0 5px 68px;
 
   @include text-value(18px, 30px, 400, $text-color);
 }
@@ -50,7 +52,7 @@
 }
 
 .contest__field {
-  padding: 14px 15px;
+  padding: 14px 18px;
   margin-bottom: 16px;
   border: 2px solid #cccccc;
 
@@ -58,19 +60,14 @@
 }
 
 .contest__description {
-  margin-top: 35px;
-  margin-bottom: 40px;
+  position: absolute;
+  top: 37px;
+  left: 0;
   text-align: center;
   text-transform: uppercase;
   border: 0;
-  background-color: #f2f2f2;
 
   @include text-value(14px, 18px, 400, #cc3366);
-}
-
-.contest__checkbox,
-.contest__radio {
-  display: none;
 }
 
 .contest__letter {
