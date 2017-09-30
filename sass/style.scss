@@ -1,7 +1,8 @@
 @import "normalize";
-@import "global-var";
 @import "fonts";
-@import "global-class";
+@import "variables";
+@import "mixin";
+@import "scaffolding";
 @import "general/page-header";
 @import "general/main-nav";
 @import "general/page-main";

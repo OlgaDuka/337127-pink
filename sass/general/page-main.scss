@@ -1,5 +1,5 @@
 .page-main {
-  @include wrapper(blue);
+  @include wrapper($panel-width, blue);
 }
 
 .page-main__title {
@@ -26,4 +26,16 @@
 
 .page-main__text--form {
   padding-bottom: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  $panel-width: $tablet-width;
+}
+
+@media (min-width: $desktop-width) {
+  $panel-width: $desktop-width;
+
+  .page-main {
+    @include wrapper($panel-width, red);
+  }
 }

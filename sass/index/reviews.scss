@@ -1,7 +1,7 @@
 .reviews {
   min-height: 444px;
 
-  @include wrapper(fuchsia);
+  @include wrapper($panel-width, fuchsia);
 }
 
 /*.reviews__slider {

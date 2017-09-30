@@ -1,5 +1,5 @@
 .contacts {
-  @include wrapper(orange);
+  @include wrapper($panel-width, orange);
 }
 
 .contacts__relationships {

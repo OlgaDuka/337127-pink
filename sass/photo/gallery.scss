@@ -1,5 +1,5 @@
 .gallery {
-  @include wrapper(mediumvioletred);
+  @include wrapper($panel-width, mediumvioletred);
 }
 
 .gallery__list {

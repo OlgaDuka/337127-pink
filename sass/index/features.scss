@@ -1,5 +1,5 @@
 .features {
-  @include wrapper(orange);
+  @include wrapper($panel-width, orange);
 }
 
 .features__slogans {

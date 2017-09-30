@@ -1,7 +1,7 @@
 .tariffs {
   min-height: 380px;
 
-  @include wrapper(lime);
+  @include wrapper($panel-width, lime);
 }
 
 .tariffs__slider {

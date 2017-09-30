@@ -6,7 +6,7 @@
   background-repeat: no-repeat, no-repeat;
   background-position: left 110px, center -70px;
 
-  @include wrapper(green);
+  @include wrapper($panel-width, green);
 }
 
 /*.downloads__title {

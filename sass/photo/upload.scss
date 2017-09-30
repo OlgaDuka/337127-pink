@@ -2,7 +2,7 @@
   min-height: 920px;
   background-color: #f2f2f2;
 
-  @include wrapper(forestgreen);
+  @include wrapper($panel-width, forestgreen);
 }
 
 .upload__offer {
@@ -20,7 +20,7 @@
 .upload__edit {
   min-height: 140px;
 
-  @include wrapper(crimson);
+  @include wrapper($panel-width, crimson);
 }
 
 .upload__buttons {

@@ -1,0 +1,24 @@
+/* Миксин для верстки блоков сетки */
+@mixin wrapper($panel-width, $outline-color) {
+  width: $panel-width;
+  margin: 0 auto;
+  outline: 1px solid $outline-color;
+}
+
+/* Миксин для текста */
+@mixin text-value($f-size, $l-height, $f-weight, $t-color) {
+  font-size: $f-size;
+  line-height: $l-height;
+  font-weight: $f-weight;
+  color: $t-color;
+}
+
+/* Миксин для кнопки */
+@mixin btn($btn-color) {
+  padding: 14px;
+  border: 3px solid $btn-color;
+  border-radius: 40px;
+  text-align: center;
+
+  @include text-value(18px, 18px, 700, $btn-color);
+}
