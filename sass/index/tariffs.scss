@@ -1,11 +1,12 @@
 .tariffs {
+  width: $panel-width;
+  margin: 0 auto;
+  outline: 1px solid lime;
   min-height: 380px;
-
-  @include wrapper($panel-width, lime);
 }
 
 .tariffs__slider {
-  width: 320px;
+  width: $panel-width;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -30,9 +31,6 @@
 }
 
 .tariffs__value {
-  font-size: 24px;
-  font-weight: 300;
-
   @include text-value(24px, 30px, 300, white);
 }
 

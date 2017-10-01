@@ -1,5 +1,6 @@
 .contacts {
-  @include wrapper($panel-width, orange);
+  width: $panel-width;
+  margin: 0 auto;
 }
 
 .contacts__relationships {
@@ -10,20 +11,17 @@
 }
 
 .contacts__relationship {
+  @include text-value(24px, 28px, 300, $text-color);
   margin: 0;
   text-align: center;
-
-  @include text-value(24px, 28px, 300, $text-color);
 }
 
 .contacts__list {
-  margin: 0;
-  padding: 0;
+  @include list-init;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  list-style: none;
 }
 
 .contacts__item {
@@ -34,22 +32,19 @@
 }
 
 .contacts__title {
-  margin-bottom: 0;
-
   @include text-value(18px, 22px, 700, $text-color);
+  margin-bottom: 0;
 }
 
-.contacts__telephone,
-.contacts__email,
-.contacts__address {
+.contacts__text {
   @include text-value(24px, 28px, 300, #cc3366);
 }
 
-.contacts__email {
+.contacts__text--email {
   padding-top: 5px;
 }
 
-.contacts__address {
+.contacts__text--address {
   padding: 5px;
 }
 

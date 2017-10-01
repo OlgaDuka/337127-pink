@@ -1,7 +1,7 @@
 /* Настройка вьюпорта */
 $panel-width: 320px;
 $tablet-width: 660px;
-$desktop-width: 1200px;
+$desktop-width: 960px;
 $body-color: white;
 
 /* Настройка текстовых параметров */
@@ -14,12 +14,10 @@ $main-color: #283645;
 
 /*
 @media (min-width: $tablet-width) {
-  $panel-width: $tablet-width;
 
 }
 
 @media (min-width: $desktop-width) {
-  $panel-width: $desktop-width;
 
 }
 */

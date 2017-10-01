@@ -1,10 +1,3 @@
-/* Миксин для верстки блоков сетки */
-@mixin wrapper($panel-width, $outline-color) {
-  width: $panel-width;
-  margin: 0 auto;
-  outline: 1px solid $outline-color;
-}
-
 /* Миксин для текста */
 @mixin text-value($f-size, $l-height, $f-weight, $t-color) {
   font-size: $f-size;
@@ -14,11 +7,19 @@
 }
 
 /* Миксин для кнопки */
-@mixin btn($btn-color) {
+@mixin btn($btn-width, $btn-color) {
+  width: $btn-width - 36px;
   padding: 14px;
   border: 3px solid $btn-color;
   border-radius: 40px;
   text-align: center;
 
   @include text-value(18px, 18px, 700, $btn-color);
+}
+
+/* Миксин для сброса стилей списков */
+@mixin list-init {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

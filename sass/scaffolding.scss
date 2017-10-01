@@ -33,3 +33,22 @@ a {
 
   @include text-value(14px, 30px, 400, $text-color);
 }
+
+.container {
+  width: auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 660px) {
+  .container {
+    width: auto;
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 1088px) {
+  .container {
+    width: 960px;
+    padding: 0 64px;
+  }
+}

@@ -1,12 +1,13 @@
 .page-footer {
+  width: $panel-width;
+  margin: 0 auto;
   min-height: 270px;
   padding: 0;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @include wrapper($panel-width, olivedrab);
+  outline: 1px solid olivedrab;
 }
 
 .page-footer__logo {

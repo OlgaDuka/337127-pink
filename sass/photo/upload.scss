@@ -1,16 +1,16 @@
 .upload {
+  width: $panel-width;
+  margin: 0 auto;
+  outline: 1px solid forestgreen;
   min-height: 920px;
   background-color: #f2f2f2;
-
-  @include wrapper($panel-width, forestgreen);
 }
 
 .upload__offer {
+  @include text-value(14px, 30px, 400, $text-color);
   padding: 30px 30px 40px;
   text-align: center;
   background-color: white;
-
-  @include text-value(14px, 30px, 400, $text-color);
 }
 
 .upload__photo {
@@ -18,9 +18,10 @@
 }
 
 .upload__edit {
+  width: $panel-width;
+  margin: 0 auto;
+  outline: 1px solid crimson;
   min-height: 140px;
-
-  @include wrapper($panel-width, crimson);
 }
 
 .upload__buttons {
@@ -36,9 +37,9 @@
 }*/
 
 .upload__button--execute {
-  @include btn(#cc3366);
+  @include btn($panel-width, #cc3366);
 }
 
 .upload__button--cancel {
-  @include btn(#333333);
+  @include btn($panel-width, #333333);
 }

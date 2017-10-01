@@ -1,19 +1,17 @@
 .gallery {
-  @include wrapper($panel-width, mediumvioletred);
+  width: $panel-width;
+  margin: 0 auto;
+  outline: 1px solid mediumvioletred;
 }
 
 .gallery__list {
-  margin: 0;
-  padding: 0;
+  @include list-init;
   display: flex;
   flex-direction: column;
-  list-style: none;
 }
 
 .gallery__panorama {
   margin: 0;
-
-  outline: 1px solid lime;
 }
 
 .gallery__item {
@@ -22,6 +20,4 @@
   display: flex;
   flex-direction: column;
   background-color: #f2f2f2;
-
-  outline: 1px solid skyblue;
 }

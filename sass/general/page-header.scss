@@ -1,12 +1,16 @@
 .page-header {
   width: $panel-width;
+  margin: 0 auto;
   min-height: 325px;
   background: $main-color;
-
-  @include wrapper($panel-width, red);
+  outline: 1px solid orange;
 }
 
-.page-header__menu-close {
+.page-header__nav-wrapper {
+  width: $panel-width;
+}
+
+.page-header__menu-locked {
   height: 70px;
   display: flex;
   justify-content: space-between;
@@ -26,66 +30,45 @@
   padding-top: 20px;
 }
 
-/*.page-header__logo-tablet {
-  height: 108px;
-  margin-left: 20px;
-  margin-top: 10px;
-  display: none;
-}
-
-.page-header__logo-desktop {
-  height: 100px;
-  margin-left: 10px;
-  padding-top: 8px;
-  display: none;
-} */
-
 @media (min-width: $tablet-width) {
-  $panel-width: $tablet-width;
-
   .page-header {
-    min-height: 365px;
-
-    @include wrapper($panel-width, orange);
+    width: $tablet-width;
+    outline: 1px solid orange;
   }
 
-  .page-header__menu-close {
+  .page-header__menu-locked {
     height: 108px;
   }
-
-  /*.page-header__logo-tablet {
-    display: block;
-  }
-
-  .page-header__logo {
-    display: none;
-  }*/
 }
 
 @media (min-width: $desktop-width) {
-  $panel-width: $desktop-width - 240px;
-
   .page-header {
+    width: 1200px;
     min-height: 108px;
     display: flex;
+    flex-direction: column;
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: contain;
+    outline: 1px solid orange;
+  }
 
-    @include wrapper($panel-width, green);
+  .page-header__nav-wrapper {
+    width: $desktop-width;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    outline: 1px solid white;
   }
 
   .page-header__toggle {
     display: none;
   }
 
-  /*.page-header__logo-desktop {
-    display: block;
+  .page-header__menu-locked {
+    width: 160px;
+    outline: 1px solid white;
   }
-
-  .page-header__logo-image {
-    max-width: 120%;
-    height: auto;
-  }
-
-  .page-header__logo-tablet {
-    display: none;
-  }*/
 }

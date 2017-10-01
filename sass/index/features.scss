@@ -1,5 +1,7 @@
 .features {
-  @include wrapper($panel-width, orange);
+  width: $panel-width;
+  margin: 0 auto;
+  outline: 1px solid magenta;
 }
 
 .features__slogans {
@@ -10,20 +12,18 @@
 }
 
 .features__slogan {
+  @include text-value(24px, 28px, 300, $text-color);
   margin-bottom: 30px;
   text-align: center;
-
-  @include text-value(24px, 28px, 300, $text-color);
 }
 
 .features__list {
+  @include list-init;
   width: 280px;
   margin: 0 auto 12px;
-  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  list-style: none;
 }
 
 .features__item {
@@ -32,10 +32,9 @@
 }
 
 .features__title {
+  @include text-value(18px, 24px, 700, $text-color);
   margin: 0;
   margin-bottom: 12px;
-
-  @include text-value(18px, 24px, 700, $text-color);
 }
 
 .features__text {

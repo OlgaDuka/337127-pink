@@ -1,7 +1,8 @@
 .reviews {
+  width: $panel-width;
+  margin: 0 auto;
   min-height: 444px;
-
-  @include wrapper($panel-width, fuchsia);
+  outline: 1px solid fuchsia;
 }
 
 /*.reviews__slider {
@@ -9,9 +10,8 @@
 }*/
 
 .reviews__list {
-  margin: 0;
+  @include list-init;
   padding: 43px 20px;
-  list-style: none;
   text-align: center;
 }
 
@@ -24,9 +24,8 @@
 }
 
 .reviews__nikname {
-  margin: 0 auto 14px;
-
   @include text-value(18px, 30px, 700, $text-color);
+  margin: 0 auto 14px;
 }
 
 /*.reviews__text {
