@@ -1,23 +1,13 @@
 .page-header {
-  width: $panel-width;
   margin: 0 auto;
   min-height: 325px;
-  background: $main-color;
+  background: transparent;
   outline: 1px solid orange;
 
-  @media (min-width: $tablet-width) {
-    width: $tablet-width;
-  }
-
   @media (min-width: $desktop-width) {
-    width: $desktop-width + 240px;
     min-height: 108px;
     display: flex;
     flex-direction: column;
-    background-image: url("../img/bg-back-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
   }
 }
 

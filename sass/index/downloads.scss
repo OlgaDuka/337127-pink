@@ -1,5 +1,4 @@
 .downloads {
-  width: $panel-width;
   margin: 0 auto;
   min-height: 240px;
   padding-top: 426px;
@@ -10,7 +9,6 @@
   outline: 1px solid green;
 
   @media (min-width: $tablet-width) {
-    width: $tablet-width;
     min-height: 617px;
     padding-top: 0;
     background-position: right bottom, center -70px;
@@ -18,7 +16,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width;
     min-height: 745px;
     background: transparent;
     background-image: url("../img/iphone-hand-mobile@1x.png");
@@ -86,6 +83,8 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 50px;
+    padding-left: 0;
+    margin-left: 10px;
   }
 }
 

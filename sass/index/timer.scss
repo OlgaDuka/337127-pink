@@ -2,15 +2,16 @@
   display: none;
 
   @media (min-width: $tablet-width) {
-    margin: 55px 20px;
+    padding: 55px 0;
     display: flex;
     justify-content: space-between;
+    outline: 1px solid green;
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width - 20px;
     margin: auto;
-    margin-top: 40px;
+    padding-bottom: 110px;
+    padding-top: 40px;
   }
 }
 

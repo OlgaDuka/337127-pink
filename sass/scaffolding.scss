@@ -8,6 +8,31 @@ body {
   background-color: $body-color;
 }
 
+.set-width {
+  width: $panel-width;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}
+
+.bg-container {
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.bg-container--main-1 {
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(175.5deg, #ffffff 0, #ffffff 28.7%, #f2f2f2 28.7%, #f2f2f2 100%);
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -33,22 +58,3 @@ a {
 
   @include text-value(14px, 30px, 400, $text-color);
 }
-
-/*.container {
-  width: auto;
-  padding: 0 20px;
-}
-
-@media (min-width: 660px) {
-  .container {
-    width: auto;
-    padding: 0 20px;
-  }
-}
-
-@media (min-width: 1088px) {
-  .container {
-    width: 960px;
-    padding: 0 64px;
-  }
-}*/
