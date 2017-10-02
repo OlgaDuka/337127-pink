@@ -37,9 +37,9 @@
 }*/
 
 .upload__button--execute {
-  @include btn($panel-width, #cc3366);
+  @include btn($panel-width, $violet-color);
 }
 
 .upload__button--cancel {
-  @include btn($panel-width, #333333);
+  @include btn($panel-width, $text-color);
 }

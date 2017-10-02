@@ -4,21 +4,57 @@
   min-height: 325px;
   background: $main-color;
   outline: 1px solid orange;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width + 240px;
+    min-height: 108px;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+  }
 }
 
 .page-header__nav-wrapper {
   width: $panel-width;
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    outline: 1px solid white;
+  }
 }
 
-.page-header__menu-locked {
+.page-header__panel {
   height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    height: 108px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 160px;
+    outline: 1px solid white;
+  }
 }
 
 .page-header__toggle {
   border: 0;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .page-header__logo {
@@ -28,47 +64,4 @@
 
 .page-header__logo-image {
   padding-top: 20px;
-}
-
-@media (min-width: $tablet-width) {
-  .page-header {
-    width: $tablet-width;
-    outline: 1px solid orange;
-  }
-
-  .page-header__menu-locked {
-    height: 108px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .page-header {
-    width: 1200px;
-    min-height: 108px;
-    display: flex;
-    flex-direction: column;
-    background-image: url("../img/bg-back-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: cover;
-    background-size: contain;
-    outline: 1px solid orange;
-  }
-
-  .page-header__nav-wrapper {
-    width: $desktop-width;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-
-    outline: 1px solid white;
-  }
-
-  .page-header__toggle {
-    display: none;
-  }
-
-  .page-header__menu-locked {
-    width: 160px;
-    outline: 1px solid white;
-  }
 }

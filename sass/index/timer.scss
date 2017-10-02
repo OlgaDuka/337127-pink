@@ -1,0 +1,73 @@
+.timer {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    margin: 55px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width - 20px;
+    margin: auto;
+    margin-top: 40px;
+  }
+}
+
+.timer__img {
+  @media (min-width: $tablet-width) {
+    outline: 1px solid blue;
+  }
+}
+
+.timer__description {
+  @media (min-width: $tablet-width) {
+    width: 310px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 575px;
+  }
+}
+
+.timer__title {
+  @media (min-width: $tablet-width) {
+    @include text-value(30px, 36px, 700, $text-color);
+    width: 180px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include text-value(30px, 30px, 700, $text-color);
+    width: 100%;
+    margin-top: 82px;
+  }
+}
+
+.timer__text {
+  @media (min-width: $tablet-width) {
+    @include text-value(14px, 24px, 400, $text-color);
+    margin: 10px;
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include text-value(18px, 30px, 400, $text-color);
+    margin-top: 25px;
+    margin-bottom: 30px;
+    padding-right: 30px;
+  }
+}
+
+.timer__link {
+  @media (min-width: $tablet-width) {
+    @include text-value(14px, 24px, 400, $violet-color);
+    text-decoration: underline;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include text-value(18px, 30px, 400, $violet-color);
+  }
+}

@@ -35,79 +35,99 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="container"></div>
-      <header class="page-header">
-        <div class="page-header__nav-wrapper">
-          <div class="page-header__menu-locked">
-            <a class="page-header__logo">
-              <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK">
-            </a>
-            <button class="page-header__toggle" type="button">Открыть меню</button>
-          </div>
-          <nav class="main-nav">
-            <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--active">
-                <a>Главная</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="photo.html">Фотографии</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="form.html">Конкурс</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-              </li>
-            </ul>
-          </nav>
+    <header class="page-header">
+      <div class="page-header__nav-wrapper">
+        <div class="page-header__panel">
+          <a class="page-header__logo">
+            <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK">
+          </a>
+          <button class="page-header__toggle" type="button">Открыть меню</button>
         </div>
-        <section class="downloads">
-          <div class="downloads__column-left">
-            <h2 class="downloads__title">Взгляните на жизнь иначе!</h2>
-            <div class="downloads__btn"><a class="downloads__link" href="#">Скачать приложение</a></div>
-            <div class="downloads__apps">
-              <a class="downloads__link" href="https://www.apple.com/itunes/">
-                <img  src="img/logo-apple.svg" alt="Apple" width="47" height="56">
-              </a>
-              <a class="downloads__link" href="https://play.google.com/store/">
-                <img src="img/logo-android.svg" alt="Android" width="43" height="47">
-              </a>
-              <a class="downloads__link" href="https://www.microsoft.com/ru-RU/store/apps/">
-                <img src="img/logo-microsoft.svg" alt="Microsoft" width="44" height="41">
-              </a>
-            </div>
-            <p class="downloads__text site-text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--active">
+              <a>Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="photo.html">Фотографии</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html">Конкурс</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <section class="downloads">
+        <div class="downloads__content">
+          <h2 class="downloads__title">Взгляните на жизнь иначе!</h2>
+          <div class="downloads__btn"><a class="downloads__link" href="#">Скачать приложение</a></div>
+          <div class="downloads__apps">
+            <a class="downloads__link" href="https://www.apple.com/itunes/">
+              <img  src="img/logo-apple.svg" alt="Apple" width="47" height="56">
+            </a>
+            <a class="downloads__link" href="https://play.google.com/store/">
+              <img src="img/logo-android.svg" alt="Android" width="43" height="47">
+            </a>
+            <a class="downloads__link" href="https://www.microsoft.com/ru-RU/store/apps/">
+              <img src="img/logo-microsoft.svg" alt="Microsoft" width="44" height="41">
+            </a>
           </div>
-        </section>
+          <p class="downloads__text site-text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
+      </section>
 
-      </header>
+    </header>
 
-      <main class="page-main">
-        <h1 class="visually-hidden">Путешествуйте вместе с PINK!</h1>
+    <main class="page-main">
+      <h1 class="visually-hidden">Путешествуйте вместе с PINK!</h1>
 
+      <div class="page-main__bg-container">
         <section class="features">
           <h2 class="visually-hidden">Достоинства нашего приложения</h2>
           <div class="features__slogans">
             <p class="features__slogan site-text">Устали от серости мегаполиса?</p>
-            <p class="features__slogan site-text">Нам есть, что вам предложить!</p>
+            <p class="features__slogan features__slogan--short site-text">Нам есть, что вам предложить!</p>
           </div>
-          <ul class="features__list">
-            <li class="features__item">
-              <h3 class="features__title">Поднимает настроение</h3>
-              <p class="features__text site-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            </li>
-            <li class="features__item">
-              <h3 class="features__title">Меняет мир вокруг</h3>
-              <p class="features__text site-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </li>
-            <li class="features__item">
-              <h3 class="features__title">Заводит новых друзей</h3>
-              <p class="features__text site-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-            </li>
-          </ul>
-          <div class="features__screen"><img src="img/iphone-screen-mobile@1x.png" alt="Скриншот айфона" width="157" height="320"></div>
+          <div class="features__wrap">
+            <ul class="features__list">
+              <li class="features__item">
+                <h3 class="features__title">Поднимает настроение</h3>
+                <p class="features__text site-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              </li>
+              <li class="features__item">
+                <h3 class="features__title">Меняет мир вокруг</h3>
+                <p class="features__text site-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</p>
+              </li>
+              <li class="features__item">
+                <h3 class="features__title">Заводит новых&nbsp;друзей</h3>
+                <p class="features__text site-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+              </li>
+            </ul>
+            <div class="features__screen">
+              <img src="img/iphone-screen-mobile@1x.png" alt="Скриншот айфона" width="157" height="320">
+              <img src="img/iphone-screen-mobile@1x.png" alt="Скриншот айфона" width="157" height="320">
+              <img src="img/iphone-screen-mobile@1x.png" alt="Скриншот айфона" width="157" height="320">
+            </div>
+          </div>
         </section>
 
+        <section class="timer">
+          <div class="timer__img">
+            <img src="img/24.png" alt="Таймер" width="240" height="277">
+          </div>
+          <div class="timer__description">
+            <h3 class="timer__title">Эффект на&nbsp;24 часа!</h3>
+            <p class="timer__text">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
+            <a href="#" class="timer__link">Узнать больше об исследовании</a>
+          </div>
+        </section>
+      </div>
+
+      <div class="page-main__bg-container page-main__bg-container--second">
         <section class="reviews">
           <h2 class="visually-hidden">Отзывы пользователей приложения</h2>
           <div class="reviews__slider">
@@ -182,32 +202,33 @@
             </tr>
           </table>
         </section>
-      </main>
+      </div>
+    </main>
 
-      <footer class="page-footer">
-        <section class="contacts">
-          <h2 class="visually-hidden">Контакты</h2>
-          <div class="contacts__relationships">
-            <p class="contacts__relationship">Остались вопросы?</p>
-            <p class="contacts__relationship">Свяжитесь с нами!</p>
-          </div>
-          <ul class="contacts__list">
-            <li class="contacts__item">
-              <h3 class="contacts__title">Звоните:</h3>
-              <a  class="contacts__text" href="tel:+7(812)555-66-66">+7 (812) 555-66-66</a>
-            </li>
-            <li class="contacts__item">
-              <h3 class="contacts__title">Пишите:</h3>
-              <a  class="contacts__text contacts__text--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-            <li class="contacts__item">
-              <h3 class="contacts__title">Приезжайте в гости</h3>
-              <span class="contacts__text contacts__text--address">ул. Большая Конюшенная, 19/8</span>
-            </li>
-          </ul>
-          <img class="contacts__map" src="img/bg-map-mobile@1x.png" alt="Схема проезда">
-        </section>
-      </footer>
-    </div>
+    <footer class="page-footer">
+      <section class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="contacts__relationships">
+          <p class="contacts__relationship">Остались вопросы?</p>
+          <p class="contacts__relationship">Свяжитесь с нами!</p>
+        </div>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <h3 class="contacts__title">Звоните:</h3>
+            <a  class="contacts__text" href="tel:+7(812)555-66-66">+7 (812) 555-66-66</a>
+          </li>
+          <li class="contacts__item">
+            <h3 class="contacts__title">Пишите:</h3>
+            <a  class="contacts__text contacts__text--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </li>
+          <li class="contacts__item">
+            <h3 class="contacts__title">Приезжайте в гости</h3>
+            <span class="contacts__text contacts__text--address">ул. Большая Конюшенная, 19/8</span>
+          </li>
+        </ul>
+        <img class="contacts__map" src="img/bg-map-mobile@1x.png" alt="Схема проезда">
+      </section>
+    </footer>
+
   </body>
 </html>
