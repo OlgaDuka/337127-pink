@@ -1,15 +1,38 @@
-.controls {
+/*.controls {
+
+}*/
+
+.controls__point {
   display: none;
 }
 
-/*.controls__point {
-
-}
-
 .controls__labels {
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  transform: translateX(-50%);
 
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .controls__label {
+  width: 3px;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
 
-}*/
+.controls__label:first-child {
+  width: 6px;
+  height: 6px;
+  border: 3px solid #000000;
+  border-radius: 50%;
+  background-color: #ffffff;
+}

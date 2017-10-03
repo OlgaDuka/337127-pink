@@ -2,34 +2,32 @@
   display: none;
 
   @media (min-width: $tablet-width) {
-    padding: 55px 0;
+    padding: 60px 0 30px;
     display: flex;
     justify-content: space-between;
     outline: 1px solid green;
   }
 
   @media (min-width: $desktop-width) {
-    margin: auto;
-    padding-bottom: 110px;
-    padding-top: 40px;
-  }
-}
-
-.timer__img {
-  @media (min-width: $tablet-width) {
-    outline: 1px solid blue;
+    padding: 25px 0 60px;
   }
 }
 
 .timer__description {
   @media (min-width: $tablet-width) {
     width: 310px;
-    margin-left: 0;
-    margin-top: 10px;
+    margin: 0 auto;
+    padding-left: 310px;
+    padding-bottom: 30px;
+    background-image: url("../img/24.png");
+    background-repeat: no-repeat;
   }
 
   @media (min-width: $desktop-width) {
     width: 575px;
+    padding-left: 365px;
+    padding-bottom: 50px;
+    background-size: 32%;
   }
 }
 
@@ -37,13 +35,14 @@
   @media (min-width: $tablet-width) {
     @include text-value(30px, 36px, 700, $text-color);
     width: 180px;
+    margin-top: 38px;
     margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
-    @include text-value(30px, 30px, 700, $text-color);
+    line-height: 30px;
     width: 100%;
-    margin-top: 82px;
+    margin-top: 95px;
   }
 }
 

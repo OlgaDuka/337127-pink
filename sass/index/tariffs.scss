@@ -1,36 +1,93 @@
 .tariffs {
-  margin: 0 auto;
   outline: 1px solid lime;
-  min-height: 380px;
+  padding-bottom: 105px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 100px;
+  }
 }
 
 .tariffs__slider {
-  width: $panel-width;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  border-collapse: collapse;
+  margin: auto;
   overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 940px;
+  }
 }
 
 .tariffs__str {
   height: 60px;
+
+  @media (min-width: $tablet-width) {
+    height: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 60px;
+  }
 }
 
 .tariffs__str:first-child {
   height: 96px;
   background-color: $main-color;
+
+  @media (min-width: $tablet-width) {
+    height: 78px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 96px;
+  }
+}
+
+.tariffs__empty {
+  border: 0;
+  background-color: #f2f2f2;
 }
 
 .tariffs__name {
   text-align: center;
+  border-left: 2px solid #e5e5e5;
 }
 
 .tariffs__title {
   @include text-value(18px, 30px, 700, white);
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .tariffs__value {
   @include text-value(24px, 30px, 300, white);
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+  }
 }
 
 /*.tariffs__name--hit {
@@ -41,10 +98,20 @@
 
 }*/
 
-.tariffs__name,
 .tariffs__option {
-  flex-basis: 280px;
-  flex-shrink: 0;
+  border: 2px solid #e5e5e5;
+  background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    @include text-value(14px, 30px, 400, $text-color);
+    width: 155px;
+    padding-left: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    width: 235px;
+  }
 }
 
 /*.tariffs__name:first-child,

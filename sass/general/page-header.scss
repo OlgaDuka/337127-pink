@@ -1,5 +1,4 @@
 .page-header {
-  margin: 0 auto;
   min-height: 325px;
   background: transparent;
   outline: 1px solid orange;
@@ -12,11 +11,7 @@
 }
 
 .page-header__nav-wrapper {
-  width: $panel-width;
-
   @media (min-width: $desktop-width) {
-    width: $desktop-width;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     outline: 1px solid white;
@@ -24,6 +19,7 @@
 }
 
 .page-header__panel {
+  position: relative;
   height: 70px;
   display: flex;
   justify-content: space-between;
@@ -31,19 +27,11 @@
 
   @media (min-width: $tablet-width) {
     height: 108px;
+    outline: 1px solid white;
   }
 
   @media (min-width: $desktop-width) {
     width: 160px;
-    outline: 1px solid white;
-  }
-}
-
-.page-header__toggle {
-  border: 0;
-
-  @media (min-width: $desktop-width) {
-    display: none;
   }
 }
 
@@ -54,4 +42,29 @@
 
 .page-header__logo-image {
   padding-top: 20px;
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+  display: block;
+  width: 70px;
+  height: 50px;
+
+  background-color: #ff00ae;
+
+  cursor: pointer;
+  border: none;
+
+  &:hover,
+  &:active {
+    background-color: #E7009E;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }

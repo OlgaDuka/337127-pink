@@ -1,5 +1,4 @@
 .features {
-  margin: 0 auto;
   outline: 1px solid green;
 
   @media (min-width: $tablet-width) {
@@ -15,12 +14,13 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 50px;
-    margin-bottom: 125px;
+    margin-bottom: 50px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 65px;
-    margin-bottom: 80px;
+    margin-bottom: 73px;
+    outline: 1px solid magenta;
   }
 }
 
@@ -51,55 +51,55 @@
   }
 }
 
-.features__wrap {
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  @media (min-width: $desktop-width) {
-    flex-direction: column;
-  }
-}
-
 .features__list {
   @include list-init;
   width: 280px;
-  margin: 0 auto 12px;
+  margin: 0 auto;
+  padding-bottom: 292px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("../img/iphone-screen-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center bottom -42px;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    width: 310px;
-    margin-right: 20px;
-    margin-left: 0;
-    order: 2;
+    width: $tablet-width - 40px;
+    padding-top: 73px;
+    padding-left: 310px;
+    padding-bottom: 8px;
+    margin-left: 20px;
+    background-position: left bottom -70px;
+    background-size: 43.5%;
   }
 
   @media (min-width: $desktop-width) {
     width: $desktop-width;
     margin: 0;
-    padding: 0;
+    padding-top: 300px;
+    padding-left: 0;
+    padding-right: 0;
     flex-direction: row;
     justify-content: space-around;
     align-items: baseline;
+    background: transparent;
+    outline: 1px solid green;
   }
 }
 
 .features__item {
-  margin-bottom: 30px;
+  margin-bottom: 17px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
     text-align: left;
   }
 
   @media (min-width: $desktop-width) {
-    width: 244px;
+    width: 246px;
+    margin-top: 62px;
     text-align: center;
   }
 }
@@ -107,7 +107,6 @@
 .features__title {
   @include text-value(18px, 24px, 700, $text-color);
   margin: 0;
-  margin-bottom: 13px;
 
   @media (min-width: $desktop-width) {
     @include text-value(30px, 30px, 700, $text-color);
@@ -116,31 +115,12 @@
 }
 
 .features__text {
+  margin-bottom: 12px;
+  margin-top: 12px;
+
   @include text-value(14px, 24px, 400, $text-color);
 
   @media (min-width: $desktop-width) {
     @include text-value(18px, 30px, 400, $text-color);
-  }
-}
-
-.features__screen {
-  height: 277px;
-  width: 157px;
-  margin: 0 auto;
-  overflow: hidden;
-  outline: 1px solid green;
-
-  @media (min-width: $tablet-width) {
-    width: 270px;
-    min-height: 410px;
-    order: 1;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 840px;
-    min-height: 300px;
-    margin-bottom: 55px;
-    display: flex;
-    justify-content: space-between;
   }
 }

@@ -1,15 +1,6 @@
 .page-main {
-  width: $panel-width;
-  margin: 0 auto;
+  margin: auto;
   outline: 1px solid blue;
-
-  @media (min-width: $tablet-width) {
-    width: $tablet-width;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: auto;
-  }
 }
 
 .page-main__title {

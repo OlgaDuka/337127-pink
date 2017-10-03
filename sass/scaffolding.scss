@@ -10,6 +10,7 @@ body {
 
 .set-width {
   width: $panel-width;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     width: $tablet-width;
@@ -28,9 +29,34 @@ body {
 }
 
 .bg-container--main-1 {
-  @media (min-width: $desktop-width) {
-    background-image: linear-gradient(175.5deg, #ffffff 0, #ffffff 28.7%, #f2f2f2 28.7%, #f2f2f2 100%);
+  @include bg-gradient(25%);
+
+  @media (min-width: $tablet-width) {
+    @include bg-gradient(25%);
   }
+
+  @media (min-width: $desktop-width) {
+    @include bg-gradient(28.5%);
+  }
+}
+
+.bg-container--main-2 {
+  @include bg-gradient(44.5%);
+
+  @media (min-width: $tablet-width) {
+    @include bg-gradient(40%);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include bg-gradient(50%);
+  }
+}
+
+.bg-container--main-3 {
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
 }
 
 img {
@@ -42,13 +68,18 @@ a {
   text-decoration: none;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
