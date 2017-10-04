@@ -5,17 +5,47 @@
   flex-direction: column;
   align-items: center;
   outline: 1px solid olivedrab;
+
+  @media (min-width: $tablet-width) {
+    min-height: 127px;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 198px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.page-footer--mobile {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }
 
 .page-footer__logo {
   margin-top: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -20px;
+  }
 }
 
-/*.page-footer__logo-image {
+/*.page-footer__social {
 
 }
 
-.page-footer__social {
+.page-footer__logo-image {
 
 }
 

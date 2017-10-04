@@ -70,10 +70,6 @@
     margin-bottom: 25px;
   }
 
-  @media (min-width: $desktop-width) {
-
-  }
-
   &:first-child {
     @media (min-width: $desktop-width) {
       order: 0;
