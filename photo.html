@@ -33,34 +33,40 @@
 
     <link rel="stylesheet" href="css/style.css">
   </head>
+
   <body>
-    <header class="page-header">
-      <div class="page-header__panel">
-        <a class="page-header__logo">
-          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK">
-        </a>
-        <button class="page-header__toggle" type="button">Открыть меню</button>
-      </div>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item  main-nav__item--active">
-            <a>Фотографии</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="form.html">Конкурс</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <div class="bg-container bg-container--heder">
+      <header class="page-header set-width">
+        <div class="page-header__nav-wrapper">
+          <div class="page-header__panel">
+            <a class="page-header__logo">
+              <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK">
+            </a>
+            <button class="page-header__toggle" type="button">Открыть меню</button>
+          </div>
+          <nav class="main-nav set-width">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="main-nav__item  main-nav__item--active">
+                <a>Фотографии</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html">Конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <h1 class="page-header__title">Фотографии пользователей</h1>
+      </header>
+    </div>
+
     <main class="page-main">
-      <h1 class="page-main__title">Фотографии пользователей</h2>
-      <p class="page-main__text site-text">Взгляните на фотографии, которые выкладывают пользователи! Видите,&nbsp;как&nbsp;не хватает ваших?</p>
+      <p class="page-main__text">Взгляните на фотографии, которые выкладывают пользователи! Видите,&nbsp;как&nbsp;не хватает ваших?</p>
       <section class="gallery">
         <img class="gallery__panorama" src="img/panorama-mobile@1x.jpg" alt="Панорама дня" width="320" height="137">
         <ul class="gallery__list">

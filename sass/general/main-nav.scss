@@ -1,4 +1,6 @@
 .main-nav {
+  background-color: $main-color;
+
   @media (min-width: $desktop-width) {
     width: 790px;
     outline: 1px solid white;

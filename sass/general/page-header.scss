@@ -1,10 +1,10 @@
 .page-header {
   min-height: 325px;
-  background: transparent;
+  background-color: transparent;
   outline: 1px solid orange;
 
   @media (min-width: $desktop-width) {
-    min-height: 108px;
+    min-height: 390px;
     display: flex;
     flex-direction: column;
   }
@@ -66,5 +66,24 @@
 
   @media (min-width: $desktop-width) {
     display: none;
+  }
+}
+
+.page-header__title {
+  margin: 0;
+  padding: 30px 20px 84px;
+  background-color: transparent;
+
+  @include text-value(24px, 28px, 300, white);
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 50px;
+    line-height: 60px;
+    padding: 70px 20px 140px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 65px 170px 100px;
   }
 }
