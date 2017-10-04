@@ -6,6 +6,13 @@
   position: relative;
 }
 
+.reviews__control {
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .reviews__list {
   @include list-init;
   margin-bottom: 120px;

@@ -1,6 +1,8 @@
 .tariffs {
   outline: 1px solid lime;
   padding-bottom: 105px;
+  position: relative;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 64px;
@@ -12,9 +14,9 @@
 }
 
 .tariffs__slider {
+  width: 1120px;
+  margin-left: -540px;
   border-collapse: collapse;
-  margin: auto;
-  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     width: 620px;
@@ -24,6 +26,13 @@
   @media (min-width: $desktop-width) {
     width: 940px;
   }
+}
+
+.tariffs__control {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .tariffs__str {
@@ -99,6 +108,7 @@
 }*/
 
 .tariffs__option {
+  width: 280px;
   border: 2px solid #e5e5e5;
   background-color: #ffffff;
 
