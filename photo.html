@@ -66,10 +66,12 @@
     </div>
 
     <main class="page-main">
-      <p class="page-main__text">Взгляните на фотографии, которые выкладывают пользователи! Видите,&nbsp;как&nbsp;не хватает ваших?</p>
+      <p class="page-main__text set-width">Взгляните на фотографии, которые выкладывают пользователи! Видите,&nbsp;как&nbsp;не хватает ваших?</p>
       <section class="gallery">
-        <img class="gallery__panorama" src="img/panorama-mobile@1x.jpg" alt="Панорама дня" width="320" height="137">
-        <ul class="gallery__list">
+        <div class="gallery__panorama-wrap">
+          <img class="gallery__panorama" src="img/panorama-mobile@1x.jpg" alt="Панорама дня" width="320" height="137">
+        </div>
+        <ul class="gallery__list set-width">
           <li class="gallery__item post">
             <div class="post__wrap">
               <div class="post__author">
@@ -81,7 +83,7 @@
             </div>
           </li>
           <li class="gallery__item post">
-            <img  src="img/photo-car-mobile@1x.jpg" alt="Фото 1" width="280" height="180">
+            <img  class="gallery__img" src="img/photo-car-mobile@1x.jpg" alt="Фото 1" width="280" height="180">
             <div class="post__wrap">
               <div class="post__author">
                 <span class="post__name">Левон</span>
@@ -92,7 +94,7 @@
             </div>
           </li>
           <li class="gallery__item post">
-            <img  src="img/photo-drumset-mobile@1x.jpg" alt="Фото 2" width="280" height="180">
+            <img class="gallery__img"  src="img/photo-drumset-mobile@1x.jpg" alt="Фото 2" width="280" height="180">
             <div class="post__wrap">
               <div class="post__author">
                 <span class="post__name">Антон</span>
@@ -103,7 +105,7 @@
             </div>
           </li>
           <li class="gallery__item post">
-            <img  src="img/photo-window-mobile@1x.jpg" alt="Фото 3" width="280" height="180">
+            <img class="gallery__img"  src="img/photo-window-mobile@1x.jpg" alt="Фото 3" width="280" height="180">
             <div class="post__wrap">
               <div class="post__author">
                 <span class="post__name">Борис</span>
@@ -114,7 +116,7 @@
             </div>
           </li>
           <li class="gallery__item post">
-            <img  src="img/photo-fair-mobile@1x.jpg" alt="Фото 4" width="280" height="180">
+            <img class="gallery__img" src="img/photo-fair-mobile@1x.jpg" alt="Фото 4" width="280" height="180">
             <div class="post__wrap">
               <div class="post__author">
                 <span class="post__name">Сергей</span>
@@ -125,7 +127,7 @@
             </div>
           </li>
           <li class="gallery__item post">
-            <img  src="img/photo-pov-mobile@1x.jpg" alt="Фото 5" width="280" height="180">
+            <img class="gallery__img" src="img/photo-pov-mobile@1x.jpg" alt="Фото 5" width="280" height="180">
             <div class="post__wrap">
               <div class="post__author">
                 <span class="post__name">Максим</span>
@@ -136,7 +138,7 @@
             </div>
           </li>
           <li class="gallery__item post">
-            <img  src="img/photo-wing-mobile@1x.jpg" alt="Фото 6" width="280" height="180">
+            <img class="gallery__img" src="img/photo-wing-mobile@1x.jpg" alt="Фото 6" width="280" height="180">
             <div class="post__wrap">
               <div class="post__author">
                 <span class="post__name">Надежда</span>
@@ -148,7 +150,7 @@
           </li>
         </ul>
       </section>
-      <section class="upload">
+      <section class="upload set-width">
         <h2 class="visually-hidden">Загрузите свою фотографию!</h2>
         <p class="upload__offer site-text">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
         <img class="upload__photo" src="img/photo-road-mobile@1x.jpg" alt="Ваше фото" width="280" height="374">
@@ -166,7 +168,7 @@
         </div>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer set-width">
       <a class="page-footer__logo" href="index.html">
         <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="PINK">
       </a>

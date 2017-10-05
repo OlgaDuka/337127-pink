@@ -33,6 +33,10 @@
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .tariffs__str {

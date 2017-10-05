@@ -3,11 +3,29 @@
 }*/
 
 .post__wrap {
-  padding: 14px 17px 20px;
+  padding: 17px 17px 20px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    height: 131px;
+    padding: 24px 27px 0;
+  }
+
+  &:first-child {
+    @media (min-width: $tablet-width) {
+      height: auto;
+      padding: 24px 27px 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 22px 27px 18px;
+    }
+  }
 }
 
 /*.post__author {
-
+      @include btn-like-after(130px, 0, 20px, 0);
+        @include btn-like-after(130px, 0, 20px, 0);
 }*/
 
 .post__name {
@@ -22,13 +40,17 @@
 .post__message {
   @include text-value(14px, 24px, 400, $text-color);
   margin: 0;
-  margin-bottom: 9px;
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 6px;
+  }
 }
 
 .post__like {
-  @include text-value(12px, 24px, 400, #cc3366);
-  padding-left: 33px;
-  align-self: flex-start;
-  border: none;
-  text-transform: uppercase;
+  @include btn-like-before(132px, 13px, 20px);
+
+  @media (min-width: $tablet-width) {
+    @include btn-like-after(252px, 22px, 22px);
+  }
 }

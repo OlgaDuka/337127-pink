@@ -1,23 +1,91 @@
 .gallery {
-  width: $panel-width;
   margin: 0 auto;
   outline: 1px solid mediumvioletred;
 }
 
 .gallery__list {
-  @include list-init;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
   display: flex;
   flex-direction: column;
+  outline: 1px solid magenta;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.gallery__panorama-wrap {
+  width: 100vw;
+  height: 137px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    height: 509px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 506px;
+  }
 }
 
 .gallery__panorama {
-  margin: 0;
+  margin: auto;
 }
 
 .gallery__item {
   width: 280px;
-  margin: 0 auto 23px;
+  margin: 0 auto 20px;
   display: flex;
   flex-direction: column;
   background-color: #f2f2f2;
+
+  &:nth-child(2n) {
+    @media (min-width: $tablet-width) {
+      width: 300px;
+      margin-left: 20px;
+      margin-right: 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0 10px 55px;
+    }
+  }
+
+  &:nth-child(2n+1) {
+    @media (min-width: $tablet-width) {
+      width: 300px;
+      margin-right: 20px;
+      margin-left: 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0 10px 55px;
+    }
+  }
+
+  &:first-child {
+    @media (min-width: $tablet-width) {
+      width: 620px;
+      margin: 0 auto 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 940px;
+    }
+  }
+}
+
+.gallery__img {
+  @media (min-width: $tablet-width) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 400px;
+  }
 }
