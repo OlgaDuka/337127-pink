@@ -37,17 +37,12 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  position: absolute;
-
-  left: $positionX;
-  bottom: $positionY;
 
   @include text-value(11.5px, 24px, 400, $violet-color);
   border: none;
   background-color: transparent;
   text-transform: uppercase;
 
-  &::before,
   &::after {
     display: none;
   }
@@ -68,18 +63,13 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  position: absolute;
-
-  left: $positionX;
-  bottom: $positionY;
 
   @include text-value(11.5px, 24px, 400, $violet-color);
   border: none;
   background-color: transparent;
   text-transform: uppercase;
 
-  &::before,
-  &::after {
+  &::before {
     display: none;
   }
 

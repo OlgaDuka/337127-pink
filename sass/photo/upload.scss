@@ -1,5 +1,4 @@
 .upload {
-  width: $panel-width;
   margin: 0 auto;
   outline: 1px solid forestgreen;
   min-height: 920px;
@@ -8,9 +7,15 @@
 
 .upload__offer {
   @include text-value(14px, 30px, 400, $text-color);
-  padding: 30px 30px 40px;
+  margin: 0;
+  padding: 22px 28px 40px;
   text-align: center;
   background-color: white;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    padding: 45px 28px 68px;
+  }
 }
 
 .upload__photo {

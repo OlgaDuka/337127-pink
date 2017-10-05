@@ -4,21 +4,30 @@
 }
 
 .gallery__list {
+  @include list-init;
+}
+
+.gallery__wrap {
   margin: 0 auto;
   padding: 0;
-  list-style: none;
   display: flex;
   flex-direction: column;
   outline: 1px solid magenta;
 
   @media (min-width: $tablet-width) {
+    padding: 0 10px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 
-.gallery__panorama-wrap {
+.gallery__item--panorama img {
   width: 100vw;
   height: 137px;
   text-align: center;
@@ -32,10 +41,6 @@
   }
 }
 
-.gallery__panorama {
-  margin: auto;
-}
-
 .gallery__item {
   width: 280px;
   margin: 0 auto 20px;
@@ -43,40 +48,18 @@
   flex-direction: column;
   background-color: #f2f2f2;
 
-  &:nth-child(2n) {
-    @media (min-width: $tablet-width) {
-      width: 300px;
-      margin-left: 20px;
-      margin-right: 10px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin: 0 10px 55px;
-    }
+  @media (min-width: $tablet-width) {
+    width: 300px;
   }
 
-  &:nth-child(2n+1) {
-    @media (min-width: $tablet-width) {
-      width: 300px;
-      margin-right: 20px;
-      margin-left: 10px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin: 0 10px 55px;
-    }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
   }
+}
 
-  &:first-child {
-    @media (min-width: $tablet-width) {
-      width: 620px;
-      margin: 0 auto 50px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 940px;
-    }
-  }
+.gallery__item--panorama {
+  width: 100vw;
+  margin: auto;
 }
 
 .gallery__img {

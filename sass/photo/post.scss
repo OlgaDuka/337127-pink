@@ -4,7 +4,6 @@
 
 .post__wrap {
   padding: 17px 17px 20px;
-  position: relative;
 
   @media (min-width: $tablet-width) {
     height: 131px;
@@ -24,8 +23,7 @@
 }
 
 /*.post__author {
-      @include btn-like-after(130px, 0, 20px, 0);
-        @include btn-like-after(130px, 0, 20px, 0);
+
 }*/
 
 .post__name {
