@@ -1,4 +1,4 @@
-.post__wrap {
+.post {
   padding: 17px 17px 19px;
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@
   }
 }
 
-.post--panorama .post__wrap {
+.post--panorama {
   width: $panel-width - 40px;
   margin: auto;
   height: auto;

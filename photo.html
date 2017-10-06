@@ -67,11 +67,14 @@
 
     <main class="page-main">
       <p class="page-main__text set-width">Взгляните на фотографии, которые выкладывают пользователи! Видите,&nbsp;как&nbsp;не хватает ваших?</p>
-      <section class="gallery">
+      <section class="gallery set-width">
+        <h2 class="visually-hidden">Фотогалерея</h2>
         <ul class="gallery__list">
-          <li class="gallery__item gallery__item--panorama post post--panorama">
-            <img class="gallery__img" src="img/panorama-mobile@1x.jpg" alt="Панорама дня" width="320" height="137">
-            <div class="post__wrap">
+          <li class="gallery__item gallery__item--panorama">
+            <div class="gallery__img-wrapper">
+              <img class="gallery__img gallery__img--panorama" src="img/panorama-mobile@1x.jpg" alt="Панорама дня" width="320" height="137">
+            </div>
+            <div class="gallery__post post post--panorama">
               <div class="post__author">
                 <span class="post__name">Анна</span>
                 <span class="post__time">(5 минут назад)</span>
@@ -80,74 +83,72 @@
               <button class="post__like" type="button">Нравится: 215</button>
             </div>
           </li>
-          <div class="gallery__wrap set-width">
-            <li class="gallery__item post">
-              <img  class="gallery__img" src="img/photo-car-mobile@1x.jpg" alt="Фото 1" width="280" height="180">
-              <div class="post__wrap">
-                <div class="post__author">
-                  <span class="post__name">Левон</span>
-                  <span class="post__time">(5 часов назад)</span>
-                </div>
-                <p class="post__message">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-                <button class="post__like" type="button">Нравится: 356</button>
+          <li class="gallery__item">
+            <img  class="gallery__img" src="img/photo-car-mobile@1x.jpg" alt="Фото 1" width="280" height="180">
+            <div class="gallery__post post">
+              <div class="post__author">
+                <span class="post__name">Левон</span>
+                <span class="post__time">(5 часов назад)</span>
               </div>
-            </li>
-            <li class="gallery__item post">
-              <img class="gallery__img"  src="img/photo-drumset-mobile@1x.jpg" alt="Фото 2" width="280" height="180">
-              <div class="post__wrap">
-                <div class="post__author">
-                  <span class="post__name">Антон</span>
-                  <span class="post__time">(12 часов назад)</span>
-                </div>
-                <p class="post__message">Соседи будут рады!</p>
-                <button class="post__like" type="button">Нравится: 666</button>
+              <p class="post__message">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <button class="post__like" type="button">Нравится: 356</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <img class="gallery__img"  src="img/photo-drumset-mobile@1x.jpg" alt="Фото 2" width="280" height="180">
+            <div class="gallery__post post">
+              <div class="post__author">
+                <span class="post__name">Антон</span>
+                <span class="post__time">(12 часов назад)</span>
               </div>
-            </li>
-            <li class="gallery__item post">
-              <img class="gallery__img"  src="img/photo-window-mobile@1x.jpg" alt="Фото 3" width="280" height="180">
-              <div class="post__wrap">
-                <div class="post__author">
-                  <span class="post__name">Борис</span>
-                  <span class="post__time">(20 часов назад)</span>
-                </div>
-                <p class="post__message">Здесь могла быть ваша цитата о высоком и вечном.</p>
-                <button class="post__like" type="button">Нравится: 215</button>
+              <p class="post__message">Соседи будут рады!</p>
+              <button class="post__like" type="button">Нравится: 666</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <img class="gallery__img"  src="img/photo-window-mobile@1x.jpg" alt="Фото 3" width="280" height="180">
+            <div class="gallery__post post">
+              <div class="post__author">
+                <span class="post__name">Борис</span>
+                <span class="post__time">(20 часов назад)</span>
               </div>
-            </li>
-            <li class="gallery__item post">
-              <img class="gallery__img" src="img/photo-fair-mobile@1x.jpg" alt="Фото 4" width="280" height="180">
-              <div class="post__wrap">
-                <div class="post__author">
-                  <span class="post__name">Сергей</span>
-                  <span class="post__time">(25 часов назад)</span>
-                </div>
-                <p class="post__message">Самая кубанская в мире!</p>
-                <button class="post__like" type="button">Нравится: 4</button>
+              <p class="post__message">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <button class="post__like" type="button">Нравится: 215</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <img class="gallery__img" src="img/photo-fair-mobile@1x.jpg" alt="Фото 4" width="280" height="180">
+            <div class="gallery__post post">
+              <div class="post__author">
+                <span class="post__name">Сергей</span>
+                <span class="post__time">(25 часов назад)</span>
               </div>
-            </li>
-            <li class="gallery__item post">
-              <img class="gallery__img" src="img/photo-pov-mobile@1x.jpg" alt="Фото 5" width="280" height="180">
-              <div class="post__wrap">
-                <div class="post__author">
-                  <span class="post__name">Максим</span>
-                  <span class="post__time">(40 часов назад)</span>
-                </div>
-                <p class="post__message">Где снег-то?</p>
-                <button class="post__like" type="button">Нравится: 150</button>
+              <p class="post__message">Самая кубанская в мире!</p>
+              <button class="post__like" type="button">Нравится: 4</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <img class="gallery__img" src="img/photo-pov-mobile@1x.jpg" alt="Фото 5" width="280" height="180">
+              <div class="gallery__post post">
+              <div class="post__author">
+                <span class="post__name">Максим</span>
+                <span class="post__time">(40 часов назад)</span>
               </div>
-            </li>
-            <li class="gallery__item post">
-              <img class="gallery__img" src="img/photo-wing-mobile@1x.jpg" alt="Фото 6" width="280" height="180">
-              <div class="post__wrap">
-                <div class="post__author">
-                  <span class="post__name">Надежда</span>
-                  <span class="post__time">(45 часов назад)</span>
-                </div>
-                <p class="post__message">Всем GM и взаимные лайки!</p>
-                <button class="post__like" type="button">Нравится: 2560</button>
+              <p class="post__message">Где снег-то?</p>
+              <button class="post__like" type="button">Нравится: 150</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <img class="gallery__img" src="img/photo-wing-mobile@1x.jpg" alt="Фото 6" width="280" height="180">
+            <div class="gallery__post post">
+              <div class="post__author">
+                <span class="post__name">Надежда</span>
+                <span class="post__time">(45 часов назад)</span>
               </div>
-            </li>
-          </div>
+              <p class="post__message">Всем GM и взаимные лайки!</p>
+              <button class="post__like" type="button">Нравится: 2560</button>
+            </div>
+          </li>
         </ul>
       </section>
 
