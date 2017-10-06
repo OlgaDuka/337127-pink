@@ -46,7 +46,6 @@
   margin: 0 auto 20px;
   display: flex;
   flex-direction: column;
-  background-color: #f2f2f2;
 
   @media (min-width: $tablet-width) {
     width: 300px;
@@ -60,6 +59,11 @@
 .gallery__item--panorama {
   width: 100vw;
   margin: auto;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
 }
 
 .gallery__img {
