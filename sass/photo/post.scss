@@ -1,19 +1,20 @@
 .post {
-  padding: 17px 17px 19px;
+  padding: 15px 17px 19px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background-color: $gray-color;
+  outline: 1px solid lime;
 
   @media (min-width: $tablet-width) {
     height: 131px;
-    padding: 24px 27px 0;
+    padding: 20px 27px 0;
   }
 }
 
 .post--panorama {
   width: $panel-width - 40px;
-  margin: auto;
   height: auto;
   box-sizing: border-box;
 

@@ -11,27 +11,42 @@
 .upload__offer {
   @include text-value(14px, 30px, 400, $text-color);
   margin: 0;
-  padding: 22px 27px 40px 25px;
+  padding: 18px 27px 42px 25px;
   text-align: center;
   background-color: white;
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
-    padding: 44px 28px 68px;
+    padding: 46px 28px 68px;
+    flex-grow: 1;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 0;
+    padding-top: 5px;
+    padding-bottom: 66px;
+  }
+}
+
+.upload__photo-editor {
+  padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 57px 80px;
   }
 }
 
 .upload__photo {
-  padding: 20px;
-
-  @media (min-width: $desktop-width) {
-    padding: 57px 80px;
+  @media (min-width: $tablet-width) {
     width: 300px;
     height: 398px;
+    padding-top: 20px;
   }
 }
 
@@ -40,7 +55,14 @@
   margin: 0 auto;
   outline: 1px solid crimson;
   min-height: 140px;
+  display: flex;
+  justify-content: space-around;
 }
+
+
+/*.upload__scale {
+  display: none;
+}*/
 
 .upload__buttons {
   min-height: 120px;

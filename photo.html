@@ -155,28 +155,30 @@
       <section class="upload set-width">
         <h2 class="visually-hidden">Загрузите свою фотографию!</h2>
         <p class="upload__offer">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
-        <img class="upload__photo" src="img/photo-road-mobile@1x.jpg" alt="Ваше фото" width="280" height="374">
-        <div class="upload__wrapper">
-          <div class="upload__edit editor">
-            <div class="editor__wrapper">
-              <div class="editor__crop-wrap">
-                <button class="editor__crop" type="button"><span class="visually-hidden">Кадрировать</span></button>
-                <div class="editor__scale"><span class="visually-hidden">Ползунок</span></div>
+        <div class="upload__photo-editor">
+          <img class="upload__photo" src="img/photo-road-mobile@1x.jpg" alt="Ваше фото" width="280" height="374">
+          <div class="upload__wrapper">
+            <div class="upload__edit editor">
+              <div class="editor__wrapper">
+                <div class="editor__mini-wrap">
+                  <button class="editor__crop" type="button"><span class="visually-hidden">Кадрировать</span></button>
+                  <div class="editor__scale editor__scale--pos1"><span class="visually-hidden">Ползунок</span></div>
+                </div>
+                <div class="editor__mini-wrap">
+                  <button class="editor__fill"  type="button"><span class="visually-hidden">Контрастность</span></button>
+                  <div class="editor__scale editor__scale--pos2  editor__scale--pos3"><span class="visually-hidden">Ползунок</span></div>
+                </div>
+                <div class="editor__mini-wrap">
+                  <button class="editor__contrast" type="button"><span class="visually-hidden">Заливка</span></button>
+                  <div class="editor__scale editor__scale--pos4  editor__scale--pos5"><span class="visually-hidden">Ползунок</span></div>
+                </div>
               </div>
-              <div class="editor__crop-wrap">
-                <button class="editor__contrast"  type="button"><span class="visually-hidden">Контрастность</span></button>
-                <div class="editor__scale"><span class="visually-hidden">Ползунок</span></div>
-              </div>
-              <div class="editor__crop-wrap">
-                <button class="editor__fill" type="button"><span class="visually-hidden">Заливка</span></button>
-                <div class="editor__scale"><span class="visually-hidden">Ползунок</span></div>
-              </div>
+              <div class="editor__scale editor__scale--mobile"><span class="visually-hidden">Ползунок</span></div>
             </div>
-            <div class="editor__scale--mobile"><span class="visually-hidden">Ползунок</span></div>
-          </div>
-          <div class="upload__buttons">
-            <button class="upload__button upload__button--execute" type="submit">Запостить</button>
-            <button class="upload__button upload__button--cancel" type="reset">Отмена</button>
+            <div class="upload__buttons">
+              <button class="upload__button upload__button--execute" type="submit">Запостить</button>
+              <button class="upload__button upload__button--cancel" type="reset">Отмена</button>
+            </div>
           </div>
         </div>
       </section>

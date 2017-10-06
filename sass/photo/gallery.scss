@@ -1,15 +1,15 @@
 .gallery {
-  outline: 1px solid mediumvioletred;
+  outline: 5px solid mediumvioletred;
 }
 
 .gallery__list {
   @include list-init;
   margin: auto;
-  outline: 1px solid magenta;
+  padding: 0 20px;
+  outline: 3px solid yellow;
 
   @media (min-width: $tablet-width) {
     max-width: $tablet-width;
-    padding: 0 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -23,24 +23,27 @@
 
 .gallery__item {
   width: 280px;
-  margin: 0 auto 20px;
+  margin-bottom: 20px;
   box-sizing: border-box;
+  outline: 1px solid blue;
 
   @media (min-width: $tablet-width) {
-    width: 50%;
+    width: 300px;
 
     &--panorama {
       width: 100%;
+      margin-bottom: 50px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    width: 33%;
     flex-grow: 1;
     margin-bottom: 55px;
+    padding: 0 10px;
 
     &--panorama {
       width: 100%;
+      margin-bottom: 48px;
     }
   }
 }
@@ -52,6 +55,8 @@
   left: 50%;
   transform: translate(-50%);
   outline: 1px solid red;
+  display: flex;
+  justify-content: center;
 }
 
 .gallery__img {
@@ -68,8 +73,6 @@
     display: block;
     position: relative;
     height: 137px;
-    left: 50%;
-    transform: translate(-50%);
 
     @media (min-width: $tablet-width) {
       height: 509px;

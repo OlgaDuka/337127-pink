@@ -1,23 +1,99 @@
-/*.editor {
-
+.editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .editor__wrapper {
+  width: 237px;
+  height: 50px;
+  padding-right: 10px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
+  @media (min-width: $tablet-width) {
+    width: 300px;
+    height: 216px;
+    padding-right: 0;
+    margin: 0;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .editor__crop {
-
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background-color: transparent;
+  background-image: url("..//img/icon-editor-crop.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
 }
 
 .editor__contrast {
-
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background-color: transparent;
+  background-image: url("..//img/icon-editor-contrast.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
 }
 
 .editor__fill {
-
+  width: 48px;
+  height: 43px;
+  border: 0;
+  background-color: transparent;
+  background-image: url("..//img/icon-editor-fill.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
 }
 
 .editor__scale {
+  display: block;
+  width: 210px;
+  height: 1px;
+  margin-top: 30px;
+  border-bottom: 2px solid #000000;
+  position: relative;
 
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -5px;
+    height: 10px;
+    width: 10px;
+    border: 2px solid $violet-color;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+  }
+}
+
+/*  &--pos1 {
+    &::before {
+      left: 144px;
+    }
+  }
+
+
+  &--mobile {
+    padding-left: 30px;
+    margin-bottom: 27px;
+    @include scale(190px);
+  }
 }*/
+
+.editor__mini-wrap {
+  width: 300px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #333333;
+}
