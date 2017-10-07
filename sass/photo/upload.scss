@@ -42,7 +42,7 @@
   }
 }
 
-.upload__photo {
+.upload__img {
   @media (min-width: $tablet-width) {
     width: 300px;
     height: 398px;
@@ -50,36 +50,11 @@
   }
 }
 
-.upload__edit {
+/*.upload__edit {
   width: $panel-width;
   margin: 0 auto;
   outline: 1px solid crimson;
   min-height: 140px;
   display: flex;
   justify-content: space-around;
-}
-
-
-/*.upload__scale {
-  display: none;
 }*/
-
-.upload__buttons {
-  min-height: 120px;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/*.upload__button {
-
-}*/
-
-.upload__button--execute {
-  @include btn($panel-width, $violet-color);
-}
-
-.upload__button--cancel {
-  @include btn($panel-width, $text-color);
-}

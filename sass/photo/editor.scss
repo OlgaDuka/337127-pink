@@ -1,71 +1,96 @@
 .editor {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+
+  }
 }
 
-.editor__wrapper {
+.editor__tools {
+  @include list-init;
   width: 237px;
   height: 50px;
   padding-right: 10px;
-  margin: 20px auto;
+  margin: 36px auto 73px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    width: 300px;
+    width: 270px;
     height: 216px;
-    padding-right: 0;
+    padding-left: 30px;
     margin: 0;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
   }
 }
 
-.editor__crop {
-  width: 44px;
-  height: 44px;
-  border: 0;
-  background-color: transparent;
-  background-image: url("..//img/icon-editor-crop.svg");
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-
-.editor__contrast {
-  width: 32px;
-  height: 32px;
-  border: 0;
-  background-color: transparent;
-  background-image: url("..//img/icon-editor-contrast.svg");
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-
-.editor__fill {
-  width: 48px;
-  height: 43px;
-  border: 0;
-  background-color: transparent;
-  background-image: url("..//img/icon-editor-fill.svg");
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-
-.editor__scale {
-  display: block;
-  width: 210px;
-  height: 1px;
-  margin-top: 30px;
-  border-bottom: 2px solid #000000;
+.editor__item {
   position: relative;
 
   &::before {
     content: "";
     display: block;
+    width: 320px;
+    height: 1px;
+    border-bottom: 1px solid #dddfe0;
     position: absolute;
-    left: 0;
+    top: 120px;
+    left: -55px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    &:not(.editor__item--mobile-active) {
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.editor__btn {
+  border: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.editor__btn--crop {
+  width: 44px;
+  height: 44px;
+  background-image: url("..//img/icon-editor-crop.svg");
+}
+
+.editor__btn--contrast {
+  width: 32px;
+  height: 32px;
+  background-image: url("..//img/icon-editor-contrast.svg");
+}
+
+.editor__btn--fill {
+  width: 48px;
+  height: 43px;
+  background-image: url("..//img/icon-editor-fill.svg");
+}
+
+.editor__scale {
+  width: 240px;
+  height: 1px;
+  margin: auto;
+  border-bottom: 2px solid #000000;
+  position: absolute;
+  left: -17px;
+  top: 82px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 193px;
     top: -5px;
     height: 10px;
     width: 10px;
@@ -73,27 +98,72 @@
     border-radius: 50%;
     background-color: #f1f1f1;
   }
-}
 
-/*  &--pos1 {
-    &::before {
-      left: 144px;
+  @media (max-width: $mobile-width-only) {
+    &:not(.editor__scale--mobile-active) {
+      display: none;
     }
   }
 
+  @media (min-width: $tablet-width) {
+    display: block;
 
-  &--mobile {
-    padding-left: 30px;
-    margin-bottom: 27px;
-    @include scale(190px);
+    &--pos1 {
+      &::before {
+        left: 144px;
+      }
+    }
+
+    &--pos3 {
+      &::before {
+        left: 14px;
+      }
+    }
+
+    &--pos5 {
+      &::before {
+        left: 58px;
+      }
+    }
   }
-}*/
 
-.editor__mini-wrap {
-  width: 300px;
-  height: 70px;
+  @media (min-width: $desktop-width) {
+    &--pos2 {
+      &::before {
+        left: 45px;
+      }
+    }
+
+    &--pos4 {
+      &::before {
+        left: 214px;
+      }
+    }
+
+    &--pos6 {
+      &::before {
+        left: 158px;
+      }
+    }
+  }
+}
+
+.editor__buttons {
+  min-height: 120px;
+  margin: 40px auto 20px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
-  border-bottom: 1px solid #333333;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.editor__button--execute {
+  @include btn($panel-width, $violet-color);
+}
+
+.editor__button--cancel {
+  @include btn($panel-width, $text-color);
 }
