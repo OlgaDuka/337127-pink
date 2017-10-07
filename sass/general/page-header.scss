@@ -77,6 +77,10 @@
   @include text-value(24px, 28px, 300, white);
   text-align: center;
 
+  &--form {
+    padding-bottom: 56px;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 50px;
     line-height: 60px;
