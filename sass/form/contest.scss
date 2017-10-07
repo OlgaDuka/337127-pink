@@ -1,7 +1,4 @@
 .contest {
-  width: $panel-width;
-  margin: 0 auto;
-  min-height: 2060px;
   display: flex;
   flex-direction: column;
 }
@@ -12,6 +9,12 @@
   display: flex;
   flex-direction: column;
   border: 0;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .contest__group--background {
@@ -21,25 +24,78 @@
 }
 
 .contest__label {
-  @include text-value(14px, 30px, 400, #cc3366);
+  @include text-value(14px, 30px, 400, $violet-color);
   padding-left: 20px;
   padding-top: 2px;
   margin-bottom: 5px;
   text-transform: uppercase;
+
+  &--checkbox {
+    @include text-value(18px, 30px, 400, $text-color);
+    margin-bottom: 42px;
+    padding: 5px 0 5px 68px;
+    text-transform: none;
+    position: relative;
+  }
+
+  &--radio {
+    @include text-value(18px, 30px, 400, $text-color);
+    margin-bottom: 40px;
+    padding: 0 0 5px 68px;
+    text-transform: none;
+    position: relative;
+  }
 }
 
-.contest__label--checkbox {
-  @include text-value(18px, 30px, 400, $text-color);
-  text-transform: none;
-  margin-bottom: 42px;
-  padding: 5px 0 5px 68px;
+.contest__checkbox,
+.contest__radio {
+  display: none;
 }
 
-.contest__label--radio {
-  @include text-value(18px, 30px, 400, $text-color);
-  text-transform: none;
-  margin-bottom: 40px;
-  padding: 0 0 5px 68px;
+.contest__custom-checkbox {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #e5e5e5e5;
+  border-radius: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+
+.contest__checkbox:checked + .contest__custom-checkbox::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 6px;
+  width: 19px;
+  height: 7px;
+  border-left: 2px solid $violet-color;
+  border-bottom: 2px solid $violet-color;
+  transform: rotate(-43deg);
+}
+
+.contest__custom-radio {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #e5e5e5e5;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.contest__radio:checked + .contest__custom-radio::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 11px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid $violet-color;
+  background-color: $violet-color;
+  border-radius: 50%;
 }
 
 .contest__label--letter {
@@ -50,9 +106,14 @@
 
 .contest__field {
   @include text-value(18px, 30px, 400, $text-color);
+  width: 240px;
   padding: 14px 18px;
   margin-bottom: 16px;
   border: 2px solid #cccccc;
+
+  @media (min-width: $tablet-width) {
+    width: 500px;
+  }
 }
 
 .contest__description {
@@ -68,7 +129,7 @@
 .contest__letter {
   @include text-value(18px, 30px, 400, $text-color);
   margin: 0 20px 25px;
-  padding: 18px 20px;
+  padding: 18px 20px 6px;
   resize: none;
   font-family: inherit;
 }

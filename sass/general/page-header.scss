@@ -85,6 +85,10 @@
     font-size: 50px;
     line-height: 60px;
     padding: 70px 20px 140px;
+
+    &--form {
+      padding-bottom: 80px;
+    }
   }
 
   @media (min-width: $desktop-width) {

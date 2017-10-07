@@ -21,8 +21,17 @@
   @media (min-width: $desktop-width) {
     padding: 93px 150px 90px;
   }
-}
 
-.page-main__text--form {
-  padding-bottom: 30px;
+  &--form {
+    padding-bottom: 30px;
+  }
+
+  &--absent-in-mobile {
+    padding: 0;
+    margin: 0;
+
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
 }
