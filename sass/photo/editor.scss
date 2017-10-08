@@ -41,7 +41,7 @@
     border-bottom: 1px solid #dddfe0;
     position: absolute;
     top: 120px;
-    left: -55px;
+    left: -54px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -110,10 +110,9 @@
     background-color: #f1f1f1;
   }
 
-  @media (max-width: $mobile-width-only) {
-    &:not(.editor__scale--mobile-active) {
-      display: none;
-    }
+  &--fill,
+  &--contrast {
+    display: none;
   }
 
   @media (min-width: $tablet-width) {
@@ -122,22 +121,16 @@
     left: 50px;
     top: 24px;
 
-    &--pos1 {
-      &::before {
-        left: 144px;
-      }
+    &--crop-pos1::before {
+      left: 144px;
     }
 
-    &--pos3 {
-      &::before {
-        left: 24px;
-      }
+    &--fill-pos1::before {
+      left: 24px;
     }
 
-    &--pos5 {
-      &::before {
-        left: 96px;
-      }
+    &--contrast-pos1::before {
+      left: 96px;
     }
   }
 
@@ -145,22 +138,16 @@
     width: 285px;
     left: 92px;
 
-    &--pos2 {
-      &::before {
-        left: 70px;
-      }
+    &--crop-pos2::before {
+      left: 70px;
     }
 
-    &--pos4 {
-      &::before {
-        left: 245px;
-      }
+    &--fill-pos2::before {
+      left: 245px;
     }
 
-    &--pos6 {
-      &::before {
-        left: 160px;
-      }
+    &--contrast-pos2::before {
+      left: 160px;
     }
   }
 }
@@ -174,8 +161,7 @@
 
   @media (min-width: $tablet-width) {
     min-height: 133px;
-    margin: 0 auto;
-    margin-top: auto;
+    margin: auto auto 0;
   }
 
   @media (min-width: $desktop-width) {
