@@ -1,6 +1,15 @@
 .contest {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.contest__list {
+  @include list-init;
 }
 
 .contest__group {
@@ -8,19 +17,41 @@
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  border: 0;
+  border-color: transparent;
+  outline: 1px solid blue;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    border-color: green;
+
+    &--name {
+      order: -4;
+    }
+
+    &--travel {
+      order: -1;
+      width: 100%;
+    }
+
+    &--contact {
+      order: -2;
+      width: 100%;
+    }
+
+    &--apps {
+      order: -3;
+    }
   }
 }
 
 .contest__group--background {
-  position: relative;
-  padding-top: 110px;
-  background-color: #f2f2f2;
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+    padding-top: 110px;
+    background-color: #f2f2f2;
+  }
 }
 
 .contest__label {
@@ -29,6 +60,7 @@
   padding-top: 2px;
   margin-bottom: 5px;
   text-transform: uppercase;
+  outline: 1px solid red;
 
   &--checkbox {
     @include text-value(18px, 30px, 400, $text-color);
@@ -45,6 +77,10 @@
     text-transform: none;
     position: relative;
   }
+
+  @media (min-width: $tablet-width) {
+    align-self: flex-start;
+  }
 }
 
 .contest__checkbox,
@@ -55,7 +91,7 @@
 .contest__custom-checkbox {
   width: 35px;
   height: 35px;
-  border: 2px solid #e5e5e5e5;
+  border: 2px solid #e5e5e5;
   border-radius: 2px;
   background-color: #ffffff;
   position: absolute;
@@ -78,7 +114,7 @@
 .contest__custom-radio {
   width: 35px;
   height: 35px;
-  border: 2px solid #e5e5e5e5;
+  border: 2px solid #e5e5e5;
   border-radius: 50%;
   background-color: #ffffff;
   position: absolute;
@@ -112,7 +148,8 @@
   border: 2px solid #cccccc;
 
   @media (min-width: $tablet-width) {
-    width: 500px;
+    width: 400px;
+    outline: 1px solid green;
   }
 }
 
@@ -123,7 +160,11 @@
   left: 0;
   text-align: center;
   text-transform: uppercase;
-  border: 0;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    top: 0;
+  }
 }
 
 .contest__letter {

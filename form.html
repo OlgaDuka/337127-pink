@@ -70,63 +70,99 @@
       <span class="page-main__text page-main__text--absent-in-mobile">Пожалуйста, заполните форму ниже:</span></p>
 
       <form class="contest set-width" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="contest__group">
+        <fieldset class="contest__group contest__group--name">
           <legend class="visually-hidden">Представьтесь, пожалуйста</legend>
-          <label for="surname" class="contest__label">Фамилия:</label>
-          <input type="text" class="contest__field" name="surname" id="surname" placeholder="Укажите фамилию *" required>
-          <label for="name" class="contest__label">Имя:</label>
-          <input type="text" class="contest__field" name="name" id="name" placeholder="Введите Ваше имя *" required>
-          <label for="patronymic-name" class="contest__label">Отчество:</label>
-          <input type="text" class="contest__field" name="patronymic-name" id="patronymic-name" placeholder="Ну и отчество тоже">
+          <ul class="contest__list">
+            <li>
+              <label for="surname" class="contest__label">Фамилия:</label>
+              <input type="text" class="contest__field" name="surname" id="surname" placeholder="Укажите фамилию *" required>
+            </li>
+            <li>
+              <label for="name" class="contest__label">Имя:</label>
+              <input type="text" class="contest__field" name="name" id="name" placeholder="Введите Ваше имя *" required>
+            </li>
+            <li>
+              <label for="patronymic-name" class="contest__label">Отчество:</label>
+              <input type="text" class="contest__field" name="patronymic-name" id="patronymic-name" placeholder="Ну и отчество тоже">
+            </li>
+          </ul>
         </fieldset>
-        <fieldset class="contest__group contest__group--background">
-          <legend><span class="contest__description">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии<span></legend>
-          <label class="contest__label contest__label--checkbox">
-            <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" value="shark" checked>
-            <span class="contest__custom-checkbox"></span>Сделал селфи с акулой
-          </label>
-          <label class="contest__label contest__label--checkbox">
-            <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" value="beach" checked>
-            <span class="contest__custom-checkbox"></span>Обгорел на пляже
-          </label>
-          <label class="contest__label contest__label--checkbox">
-            <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" value="Norris">
-            <span class="contest__custom-checkbox"></span>Видел Чака Норриса
-          </label>
-          <label class="contest__label contest__label--checkbox">
-            <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" value="souvenir">
-            <span class="contest__custom-checkbox"></span>Накупил сувениров
-          </label>
-          <label class="contest__label contest__label--checkbox">
-            <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" value="tower" checked>
-            <span class="contest__custom-checkbox"></span>Удержал башню
-          </label>
-          <label class="contest__label contest__label--checkbox">
-            <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" value="hotel" checked>
-            <span class="contest__custom-checkbox"></span>Разгромил отель
-          </label>
+        <fieldset class="contest__group contest__group--travel contest__group--background">
+          <legend class="contest__description">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</legend>
+          <ul class="contest__list">
+            <li class="contest__item">
+              <label class="contest__label contest__label--checkbox">
+                <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" value="shark" checked>
+                <span class="contest__custom-checkbox"></span>Сделал селфи с акулой
+              </label>
+            </li>
+            <li class="contest__item">
+              <label class="contest__label contest__label--checkbox">
+                <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" value="beach" checked>
+                <span class="contest__custom-checkbox"></span>Обгорел на пляже
+              </label>
+            </li>
+            <li class="contest__item">
+              <label class="contest__label contest__label--checkbox">
+                <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" value="Norris">
+                <span class="contest__custom-checkbox"></span>Видел Чака Норриса
+              </label>
+            </li>
+            <li class="contest__item">
+              <label class="contest__label contest__label--checkbox">
+                <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" value="souvenir">
+                <span class="contest__custom-checkbox"></span>Накупил сувениров
+              </label>
+            </li>
+            <li class="contest__item">
+              <label class="contest__label contest__label--checkbox">
+                <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" value="tower" checked>
+                <span class="contest__custom-checkbox"></span>Удержал башню
+              </label>
+            </li>
+            <li class="contest__item">
+              <label class="contest__label contest__label--checkbox">
+                <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" value="hotel" checked>
+                <span class="contest__custom-checkbox"></span>Разгромил отель
+              </label>
+            </li>
+          </ul>
         </fieldset>
-        <fieldset class="contest__group">
-          <legend class="visually-hidden">Ваши контакты</legend>
-          <label for="telephone" class="contest__label">Номер телефона</label>
-          <input type="text" class="contest__field" name="telephone" id="telephone" placeholder="Номер, пожалуйста">
-          <label for="email" class="contest__label">Адрес почты</label>
-          <input type="email" class="contest__field" name="email" id="email" placeholder="Введите почту *" required>
+        <fieldset class="contest__group contest__group--contact">
+          <legend class="visually-hidden">Контактная информация</legend>
+          <ul class="contest__list">
+            <li class="contest__item">
+              <label for="telephone" class="contest__label">Номер телефона</label>
+              <input type="text" class="contest__field" name="telephone" id="telephone" placeholder="Номер, пожалуйста">
+            </li>
+            <li class="contest__item">
+              <label for="email" class="contest__label">Адрес почты</label>
+              <input type="email" class="contest__field" name="email" id="email" placeholder="Введите почту *" required>
+            </li>
+          </ul>
         </fieldset>
-        <fieldset class="contest__group contest__group--background">
-          <legend><span class="contest__description">С каким приложением путешествовали?</span></legend>
-          <label class="contest__label contest__label--radio">
-            <input class="contest__radio" type="radio" class="visually-hidden" name="app" value="for_iOS" checked>
-            <span class="contest__custom-radio"></span>Pink для iOS
-          </label>
-          <label class="contest__label contest__label--radio">
-            <input class="contest__radio" type="radio" class="visually-hidden" name="app" value="for_Android">
-            <span class="contest__custom-radio"></span>Pink на Android
-          </label>
-          <label class="contest__label contest__label--radio">
-            <input class="contest__radio" type="radio" class="visually-hidden" name="app" value="for_Windows">
-            <span class="contest__custom-radio"></span>Windows Phone
-          </label>
+        <fieldset class="contest__group contest__group--apps contest__group--background">
+          <legend class="contest__description">С каким приложением путешествовали?</legend>
+          <ul class="contest__list">
+            <li class="contest__item">
+              <label class="contest__label contest__label--radio">
+                <input class="contest__radio" type="radio" class="visually-hidden" name="app" value="for_iOS" checked>
+                <span class="contest__custom-radio"></span>Pink для iOS
+              </label>
+            </li class="contest__item">
+            <li>
+              <label class="contest__label contest__label--radio">
+                <input class="contest__radio" type="radio" class="visually-hidden" name="app" value="for_Android">
+                <span class="contest__custom-radio"></span>Pink на Android
+              </label>
+            </li>
+            <li class="contest__item">
+              <label class="contest__label contest__label--radio">
+                <input class="contest__radio" type="radio" class="visually-hidden" name="app" value="for_Windows">
+                <span class="contest__custom-radio"></span>Windows Phone
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <label for="fantasy" class="contest__label contest__label--letter">Опишите свои эмоции</label>
         <textarea class="contest__letter" name="fantasy" id="fantasy" cols="25" rows="6" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
