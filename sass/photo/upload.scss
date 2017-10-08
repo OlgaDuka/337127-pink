@@ -28,11 +28,10 @@
 }
 
 .upload__photo-editor {
-  padding: 20px;
+  padding: 20px 0;
 
   @media (min-width: $tablet-width) {
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding: 40px 20px 60px;
     display: flex;
     justify-content: space-between;
   }
@@ -43,10 +42,13 @@
 }
 
 .upload__img {
+  padding-left: 20px;
+
   @media (min-width: $tablet-width) {
     width: 300px;
     height: 398px;
     padding-top: 20px;
+    padding-left: 0;
 
     & img {
       width: 100%;

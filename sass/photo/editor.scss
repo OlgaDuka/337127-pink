@@ -6,17 +6,16 @@
 
 .editor__tools {
   @include list-init;
-  width: 252px;
+  width: 246px;
   height: 50px;
-  padding-left: 2px;
   margin: 36px auto 73px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    width: 273px;
-    height: 220px;
+    width: 271px;
+    height: auto;
     padding-left: 27px;
     padding-right: 2px;
     margin: 0;
@@ -25,8 +24,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 400px;
-    padding-right: 16px;
+    width: 395px;
+    padding-right: 15px;
   }
 }
 
@@ -35,41 +34,15 @@
   justify-content: space-between;
   position: relative;
 
-  &::before {
-    content: "";
-    display: block;
-    width: 320px;
-    height: 1px;
-    border-bottom: 1px solid #dddfe0;
-    position: absolute;
-    top: 120px;
-    left: -54px;
-  }
-
   @media (max-width: $mobile-width-only) {
     flex-direction: column;
-
-    &:not(.editor__item--mobile-active) {
-      &::before {
-        display: none;
-      }
-    }
   }
 
   @media (min-width: $tablet-width) {
     width: 100%;
-
-    &::before {
-      width: 275px;
-      top: 55px;
-      left: 0;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    &::before {
-      width: 410px;
-    }
+    height: 72px;
+    align-items: center;
+    border-bottom: 1px solid #dddfe0;
   }
 }
 
@@ -79,7 +52,7 @@
   border: 0;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: center;
 }
 
 .editor__btn--crop {
@@ -126,17 +99,17 @@
     margin: 0;
     width: 200px;
     position: relative;
-    top: 20px;
+    top: 0;
 
-    &--crop-pos1::before {
+    &--crop::before {
       left: 144px;
     }
 
-    &--fill-pos1::before {
+    &--fill::before {
       left: 24px;
     }
 
-    &--contrast-pos1::before {
+    &--contrast::before {
       left: 96px;
     }
   }
@@ -144,15 +117,15 @@
   @media (min-width: $desktop-width) {
     width: 285px;
 
-    &--crop-pos2::before {
+    &--crop::before {
       left: 70px;
     }
 
-    &--fill-pos2::before {
+    &--fill::before {
       left: 245px;
     }
 
-    &--contrast-pos2::before {
+    &--contrast::before {
       left: 160px;
     }
   }
@@ -160,12 +133,16 @@
 
 .editor__buttons {
   min-height: 120px;
-  margin: 40px auto 20px;
+  margin: 0 auto;
+  padding: 38px 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-top: 1px solid #dddfe0;
 
   @media (min-width: $tablet-width) {
+    border: 0;
+    padding: 0;
     min-height: 133px;
     margin: auto auto 0;
   }
