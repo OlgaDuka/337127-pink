@@ -31,6 +31,11 @@
       margin-bottom: 12px;
     }
 
+    &--contact {
+      flex-direction: column;
+      margin-top: 26px;
+    }
+
     &--apps {
       margin-top: 0;
       margin-bottom: 12px;
@@ -60,16 +65,20 @@
 
     &--travel {
       order: -1;
-      width: 100%;
+      margin-bottom: 45px;
+      padding-top: 42px;
+      padding-bottom: 7px;
     }
 
     &--contact {
       order: -2;
-      width: 100%;
+      padding: 12px 60px 17px;
+      margin-bottom: 57px;
     }
 
     &--apps {
       order: -3;
+      margin-bottom: 55px;
       padding-top: 40px;
       padding-bottom: 17px;
     }
@@ -116,6 +125,17 @@
       padding-left: 60px;
       margin-bottom: 31px;
       margin-left: 57px;
+    }
+
+    &--checkbox {
+      margin-left: 57px;
+      padding-left: 60px;
+    }
+
+    &--contact {
+      align-self: flex-start;
+      padding-left: 17px;
+      padding-top: 9px;
     }
   }
 }
@@ -189,6 +209,11 @@
   @media (min-width: $tablet-width) {
     width: 100%;
     margin-bottom: 0;
+
+    &--contact {
+      order: -1;
+      padding-right: 60px;
+    }
   }
 }
 
@@ -201,6 +226,12 @@
   left: 0;
   text-align: center;
   text-transform: uppercase;
+
+  @media (max-width: $mobile-width-only) {
+    &--contact {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     position: relative;
@@ -216,6 +247,16 @@
   font-family: inherit;
 }
 
+.contest__submit-wrap {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .contest__submit {
   @include text-value(18px, 30px, 700, white);
   padding: 17px 20px;
@@ -224,6 +265,11 @@
   border: none;
   border-radius: 3px;
   background-color: #2aab6d;
+
+  @media (min-width: $tablet-width) {
+    width: 300px;
+    box-sizing: border-box;
+  }
 }
 
 .contest__note {
