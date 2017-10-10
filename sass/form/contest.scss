@@ -6,6 +6,11 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 12px;
+    justify-content: space-between;
+  }
 }
 
 .contest__list {
@@ -15,6 +20,33 @@
 
   @media (min-width: $tablet-width) {
     justify-content: space-around;
+  }
+
+  @media (min-width: $desktop-width) {
+    &--contact {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &--travel {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+
+    &--apps {
+      width: 432px;
+      margin-top: 34px;
+    }
+
+    &--name {
+      justify-content: space-between;
+      width: 432px;
+      min-height: 295px;
+      margin-top: 30px;
+    }
   }
 }
 
@@ -41,6 +73,17 @@
       margin-bottom: 12px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &--apps {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    &--name {
+      margin: 0;
+    }
+  }
 }
 
 .contest__group {
@@ -49,7 +92,14 @@
   border-color: transparent;
 
   &--apps {
+    position: relative;
+    padding-top: 110px;
     padding-bottom: 10px;
+  }
+
+  &--travel {
+    position: relative;
+    padding-top: 110px;
   }
 
   @media (min-width: $tablet-width) {
@@ -83,12 +133,35 @@
       padding-bottom: 17px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 10px 23px;
+
+    &--contact {
+      width: 100%;
+      margin-top: 32px;
+      margin-bottom: 52px;
+      padding: 10px 60px;
+    }
+
+    &--travel {
+      width: 100%;
+      padding-bottom: 12px;
+    }
+
+    &--apps {
+      margin-top: 30px;
+      padding: 0;
+    }
+
+    &--name {
+      margin-top: 8px;
+    }
+  }
 }
 
 .contest__group--background {
   @media (max-width: $mobile-width-only) {
-    position: relative;
-    padding-top: 110px;
     background-color: #f2f2f2;
   }
 }
@@ -101,41 +174,85 @@
   padding-left: 22px;
   text-transform: uppercase;
 
-  &--checkbox {
+  &--checkbox,
+  &--radio {
     @include text-value(18px, 30px, 400, $text-color);
-    margin-bottom: 48px;
-    padding-left: 69px;
+    margin-top: 0;
+    margin-bottom: 43px;
+    padding-left: 0;
     text-transform: none;
     position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      width: 35px;
+      height: 35px;
+      margin-right: 29px;
+      border: 2px solid #e5e5e5;
+      border-radius: 2px;
+      background-color: #ffffff;
+    }
   }
 
   &--radio {
-    @include text-value(18px, 30px, 400, $text-color);
-    margin-bottom: 40px;
-    padding-left: 69px;
-    text-transform: none;
-    position: relative;
+    margin-bottom: 35px;
+
+    &::before {
+      border-radius: 50%;
+    }
   }
 
   @media (min-width: $tablet-width) {
     padding-left: 0;
     padding-right: 16px;
 
+    &--letter {
+      width: 250px;
+      align-self: center;
+      margin: -17px 0 25px;
+      padding: 0;
+      border: 1px solid transparent;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
     &--radio {
-      padding-left: 60px;
-      margin-bottom: 31px;
+      margin-bottom: 25px;
       margin-left: 57px;
+
+      &::before {
+        margin-right: 23px;
+      }
     }
 
     &--checkbox {
-      margin-left: 57px;
-      padding-left: 60px;
+      margin-left: 60px;
+
+      &::before {
+        margin-right: 18px;
+      }
     }
 
     &--contact {
       align-self: flex-start;
       padding-left: 17px;
       padding-top: 9px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--radio {
+      margin-left: 75px;
+
+      &::before {
+        margin-right: 20px;
+      }
+    }
+
+    &--checkbox {
+      margin-left: 0;
     }
   }
 }
@@ -145,22 +262,11 @@
   display: none;
 }
 
-.contest__custom-checkbox {
-  width: 35px;
-  height: 35px;
-  border: 2px solid #e5e5e5;
-  border-radius: 2px;
-  background-color: #ffffff;
-  position: absolute;
-  left: 0;
-  top: -3px;
-}
-
-.contest__checkbox:checked + .contest__custom-checkbox::before {
+.contest__checkbox:checked + .contest__label::after {
   content: "";
   position: absolute;
   top: 11px;
-  left: 6px;
+  left: 7px;
   width: 19px;
   height: 7px;
   border-left: 2px solid $violet-color;
@@ -168,22 +274,11 @@
   transform: rotate(-43deg);
 }
 
-.contest__custom-radio {
-  width: 35px;
-  height: 35px;
-  border: 2px solid #e5e5e5;
-  border-radius: 50%;
-  background-color: #ffffff;
-  position: absolute;
-  left: 0;
-  top: -3px;
-}
-
-.contest__radio:checked + .contest__custom-radio::before {
+.contest__radio:checked + .contest__label::after {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 11px;
+  top: 12px;
+  left: 12px;
   width: 10px;
   height: 10px;
   border: 2px solid $violet-color;
@@ -191,18 +286,12 @@
   border-radius: 50%;
 }
 
-.contest__label--letter {
-  padding-left: 0;
-  margin-bottom: 10px;
-  align-self: center;
-}
-
 .contest__field {
   @include text-value(18px, 30px, 400, $text-color);
+  font-family: inherit;
   width: 280px;
   padding: 14px 20px;
   margin-bottom: 16px;
-  letter-spacing: 0.5px;
   border: 2px solid #cccccc;
   box-sizing: border-box;
 
@@ -213,6 +302,12 @@
     &--contact {
       order: -1;
       padding-right: 60px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--contact {
+      width: 375px;
     }
   }
 }
@@ -239,12 +334,42 @@
   }
 }
 
+.contest__letter-border {
+  @media (max-width: $mobile-width-only) {
+    border-color: transparent;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 45px 10px;
+    padding: 0 60px 45px;
+    border: 2px solid #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
 .contest__letter {
   @include text-value(18px, 30px, 400, $text-color);
+  min-height: 164px;
   margin: 0 20px 25px;
-  padding: 18px 20px 6px;
+  padding: 18px 20px;
   resize: none;
   font-family: inherit;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 100%;
+    padding: 17px 18px 0;
+    box-sizing: border-box;
+  }
 }
 
 .contest__submit-wrap {
@@ -252,6 +377,7 @@
   flex-direction: column;
 
   @media (min-width: $tablet-width) {
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -276,4 +402,14 @@
   @include text-value(14px, 30px, 400, $text-color);
   text-transform: uppercase;
   text-align: center;
+
+  &--desktop-only {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    &--desktop-only {
+      display: inline-block;
+    }
+  }
 }

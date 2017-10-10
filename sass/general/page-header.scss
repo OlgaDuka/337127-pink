@@ -93,5 +93,9 @@
 
   @media (min-width: $desktop-width) {
     padding: 65px 170px 100px;
+
+    &--form {
+      padding: 65px 100px 100px;
+    }
   }
 }
