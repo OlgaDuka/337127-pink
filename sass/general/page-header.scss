@@ -1,14 +1,39 @@
 .page-header {
   min-height: 325px;
-  background: $main-color;
+  background-color: transparent;
+  outline: 1px solid orange;
 
-  @include wrapper(red);
+  @media (min-width: $desktop-width) {
+    min-height: 390px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-.page-header__menu-close {
+.page-header__nav-wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    outline: 1px solid white;
+  }
+}
+
+.page-header__panel {
+  position: relative;
   height: 70px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    height: 108px;
+    outline: 1px solid white;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 160px;
+    background-color: rgba(16, 21, 27, 0.3);
+  }
 }
 
 .page-header__logo {
@@ -18,4 +43,59 @@
 
 .page-header__logo-image {
   padding-top: 20px;
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+  display: block;
+  width: 70px;
+  height: 50px;
+
+  background-color: #ff00ae;
+
+  cursor: pointer;
+  border: none;
+
+  &:hover,
+  &:active {
+    background-color: #e7009e;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__title {
+  margin: 0;
+  padding: 30px 20px 84px;
+
+  @include text-value(24px, 28px, 300, white);
+  text-align: center;
+
+  &--form {
+    padding-bottom: 56px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 50px;
+    line-height: 60px;
+    padding: 70px 20px 140px;
+
+    &--form {
+      padding-bottom: 80px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 65px 170px 100px;
+
+    &--form {
+      padding: 65px 100px 100px;
+    }
+  }
 }

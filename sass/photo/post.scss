@@ -1,37 +1,117 @@
-/*.post {
+.post {
+  padding: 15px 17px 19px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: $gray-color;
+  outline: 1px solid lime;
 
-}*/
-
-.post__wrap {
-  padding: 14px 17px 20px;
+  @media (min-width: $tablet-width) {
+    height: 131px;
+    padding: 20px 27px 0;
+  }
 }
 
-/*.post__author {
+.post--panorama {
+  width: $panel-width - 40px;
+  height: auto;
+  box-sizing: border-box;
 
-}*/
+  @media (min-width: $tablet-width) {
+    width: $tablet-width - 40px;
+    padding: 24px 27px 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .post__author {
+      order: 1;
+    }
+
+    .post__like {
+      order: 2;
+      width: 128px;
+      margin-bottom: 0;
+    }
+
+    .post__message {
+      order: 3;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width - 20px;
+    padding: 22px 27px 18px;
+  }
+}
+
+.post__author {
+  order: 0;
+}
 
 .post__name {
   @include text-value(14px, 24px, 700, $text-color);
 }
 
 .post__time {
-  text-transform: uppercase;
-
   @include text-value(12px, 24px, 300, $text-color);
+  text-transform: uppercase;
 }
 
 .post__message {
+  @include text-value(14px, 24px, 400, $text-color);
   margin: 0;
   margin-bottom: 9px;
 
-  @include text-value(14px, 24px, 400, $text-color);
+  @media (min-width: $tablet-width) {
+    margin-bottom: 6px;
+  }
 }
 
 .post__like {
-  padding-left: 33px;
-  align-self: flex-start;
+  width: 132px;
+  margin-top: auto;
+  margin-left: -5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  @include text-value(11.5px, 24px, 400, $violet-color);
   border: none;
+  background-color: transparent;
   text-transform: uppercase;
 
-  @include text-value(12px, 24px, 400, #cc3366);
+  &::after {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 12px;
+    background-image: url("..//img/icon-heart.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 252px;
+    margin-bottom: 22px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 13px;
+      height: 12px;
+      background-image: url("..//img/icon-heart.svg");
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
+  }
 }

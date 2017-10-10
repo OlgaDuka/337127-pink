@@ -1,44 +1,57 @@
 .upload {
-  min-height: 920px;
-  background-color: #f2f2f2;
+  margin: 0 auto;
+  outline: 1px solid forestgreen;
+  background-color: $gray-color;
 
-  @include wrapper(forestgreen);
+  @media (min-width: $desktop-width) {
+    width: $desktop-width - 20px;
+  }
 }
 
 .upload__offer {
-  padding: 30px 30px 40px;
+  @include text-value(14px, 30px, 400, $text-color);
+  margin: 0;
+  padding: 18px 27px 42px 25px;
   text-align: center;
   background-color: white;
 
-  @include text-value(14px, 30px, 400, $text-color);
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    padding: 46px 28px 68px;
+    flex-grow: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 5px;
+    padding-bottom: 66px;
+  }
 }
 
-.upload__photo {
-  padding: 20px;
+.upload__photo-editor {
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 20px 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 37px 60px 57px 80px;
+  }
 }
 
-.upload__edit {
-  min-height: 140px;
+.upload__img {
+  padding-left: 20px;
 
-  @include wrapper(crimson);
-}
+  @media (min-width: $tablet-width) {
+    width: 300px;
+    height: 398px;
+    padding-top: 20px;
+    padding-left: 0;
 
-.upload__buttons {
-  min-height: 120px;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/*.upload__button {
-
-}*/
-
-.upload__button--execute {
-  @include btn(#cc3366);
-}
-
-.upload__button--cancel {
-  @include btn(#333333);
+    img {
+      width: 100%;
+    }
+  }
 }

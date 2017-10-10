@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <!-- Pixel Glass -->
     <style>
       HTML {
@@ -11,18 +13,18 @@
         /* По умолчанию показывается мобильный макет */
         background-image: url("maket/pink-index-mobile.jpg");
       }
-      /* Планшет
-      @media ( min-width: 760px ) {
+      /* Планшет */
+      @media ( min-width: 660px ) {
         HTML {
 
-          background-image: url( "maket/760.png" );
+          background-image: url( "maket/pink-index-tablet.jpg" );
         }
       }
-       Десктоп
+      /* Десктоп */
       @media ( min-width: 960px ) {
         HTML {
 
-          background-image: url( "maket/960.png" );
+          background-image: url( "maket/pink-index-desktop.jpg" );
         }
       } */
     </style>
@@ -33,173 +35,212 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
-      <div class="page-header__menu-close">
-        <a class="page-header__logo">
-          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK">
-        </a>
-        <button class="page-header__toggle" type="button">Открыть меню</button>
-      </div>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--active">
-            <a>Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="photo.html">Фотографии</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="form.html">Конкурс</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <div class="bg-container bg-container--heder">
+      <header class="page-header set-width">
+        <div class="page-header__nav-wrapper">
+          <div class="page-header__panel">
+            <a class="page-header__logo">
+              <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK">
+            </a>
+            <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          </div>
+          <nav class="main-nav set-width">
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+                <a>Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="photo.html">Фотографии</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html">Конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <section class="downloads set-width">
+          <div class="downloads__content">
+            <h2 class="downloads__title">Взгляните на жизнь иначе!</h2>
+            <div class="downloads__btn"><a class="downloads__link" href="#">Скачать приложение</a></div>
+            <div class="downloads__apps">
+              <a class="downloads__link" href="https://www.apple.com/itunes/">
+                <img  src="img/logo-apple.svg" alt="Apple" width="47" height="56">
+              </a>
+              <a class="downloads__link" href="https://play.google.com/store/">
+                <img src="img/logo-android.svg" alt="Android" width="43" height="47">
+              </a>
+              <a class="downloads__link" href="https://www.microsoft.com/ru-RU/store/apps/">
+                <img src="img/logo-microsoft.svg" alt="Microsoft" width="44" height="41">
+              </a>
+            </div>
+            <p class="downloads__text site-text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </div>
+        </section>
+      </header>
+    </div>
 
     <main class="page-main">
       <h1 class="visually-hidden">Путешествуйте вместе с PINK!</h1>
-
-      <section class="downloads">
-        <h2 class="downloads__title visually-hidden">Взгляните на жизнь иначе!</h2>
-        <div class="downloads__btn"><a class="downloads__link" href="#">Скачать приложение</a></div>
-        <div class="downloads__apps">
-          <a class="downloads__link" href="https://www.apple.com/itunes/">
-            <img  src="img/logo-apple.svg" alt="Apple" width="47" height="56">
-          </a>
-          <a class="downloads__link" href="https://play.google.com/store/">
-            <img src="img/logo-android.svg" alt="Android" width="43" height="47">
-          </a>
-          <a class="downloads__link" href="https://www.microsoft.com/ru-RU/store/apps/">
-            <img src="img/logo-microsoft.svg" alt="Microsoft" width="44" height="41">
-          </a>
-        </div>
-        <p class="downloads__text site-text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-      </section>
-
-      <section class="features">
-        <h2 class="visually-hidden">Достоинства нашего приложения</h2>
-        <div class="features__slogans">
-          <p class="features__slogan site-text">Устали от серости мегаполиса?</p>
-          <p class="features__slogan site-text">Нам есть, что вам предложить!</p>
-        </div>
-        <ul class="features__list">
-          <li class="features__item">
-            <h3 class="features__title">Поднимает настроение</h3>
-            <p class="features__text site-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-          </li>
-          <li class="features__item">
-            <h3 class="features__title">Меняет мир вокруг</h3>
-            <p class="features__text site-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </li>
-          <li class="features__item">
-            <h3 class="features__title">Заводит новых друзей</h3>
-            <p class="features__text site-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-          </li>
-        </ul>
-        <div class="features__screen"><img src="img/iphone-screen-mobile@1x.png" alt="Скриншот айфона" width="157" height="320"></div>
-      </section>
-
-      <section class="reviews">
-        <h2 class="visually-hidden">Отзывы пользователей приложения</h2>
-        <div class="reviews__slider">
-          <div class="controls">
-            <input class="controls__point" type="radio" name="reviews-control" id="reviews-control-1" checked>
-            <input class="controls__point" type="radio" name="reviews-control" id="reviews-control-2">
-            <input class="controls__point" type="radio" name="reviews-control" id="reviews-control-3">
-            <div class="controls__labels">
-              <label for="reviews-control-1" class="controls__label" tabindex="0"><span class="visually-hidden">Первый слайд</span></label>
-              <label for="reviews-control-2" class="controls__label" tabindex="0"><span class="visually-hidden">Второй слайд</span></label>
-              <label for="reviews-control-3" class="controls__label" tabindex="0"><span class="visually-hidden">Третий слайд</span></label>
-            </div>
+      <div class="bg-container bg-container--main-1">
+        <section class="features set-width">
+          <h2 class="visually-hidden">Достоинства нашего приложения</h2>
+          <div class="features__slogans">
+            <p class="features__slogan site-text">Устали от серости мегаполиса?</p>
+            <p class="features__slogan features__slogan--short site-text">Нам есть, что вам предложить!</p>
           </div>
-          <ul class="reviews__list">
-            <li class="reviews__item reviews__item--active">
-              <h3 class="reviews__nikname">Николай Петров</h3>
-              <p class="reviews__text site-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          <ul class="features__list">
+            <li class="features__item">
+              <h3 class="features__title">Поднимает настроение</h3>
+              <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
-            <li class="reviews__item">
-              <h3 class="reviews__nikname">Вася Пупкин</h3>
-              <p class="reviews__text site-text">«Это потрясающе! После того, как я запостил свои фото с плавания по необитаемым островам Филиппинского архипелага, мне пришло столько писем!!! А еще мне досталась победа в ноябрьском конкурсе за снимки тайфуна!»</p>
+            <li class="features__item">
+              <h3 class="features__title">Меняет мир вокруг</h3>
+              <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</p>
             </li>
-            <li class="reviews__item">
-              <h3 class="reviews__nikname">Старушка Шапокляк</h3>
-              <p class="reviews__text site-text">«Мы с Ларисой летели на вертолете. Под нами были горы и хрустальное горное озеро. Я делала снимки все 5 минут, пока мы спускались на парашюте! Ларискин парашют унесло на другую сторону озера. А я предупреждала, что крыски слишком легки для таких полетов...»</p>
+            <li class="features__item">
+              <h3 class="features__title">Заводит новых&nbsp;друзей</h3>
+              <p class="features__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
-        </div>
-      </section>
+        </section>
 
-      <section class="tariffs">
-        <h2 class="visually-hidden">Тарифы</h2>
-        <div class="controls">
-          <input class="controls__point" type="radio" name="tariffs-control" id="tariffs-control-1">
-          <input class="controls__point" type="radio" name="tariffs-control" id="tariffs-control-2" checked>
-          <input class="controls__point" type="radio" name="tariffs-control" id="tariffs-control-3">
-          <div class="controls__labels">
-            <label for="tariffs-control-1" class="controls__label" tabindex="0"><span class="visually-hidden">Первый слайд</span></label>
-            <label for="tariffs-control-2" class="controls__label" tabindex="0"><span class="visually-hidden">Второй слайд</span></label>
-            <label for="tariffs-control-3" class="controls__label" tabindex="0"><span class="visually-hidden">Третий слайд</span></label>
+        <section class="timer set-width">
+          <div class="timer__description">
+            <h3 class="timer__title">Эффект на&nbsp;24 часа!</h3>
+            <p class="timer__text">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
+            <a href="#" class="timer__link">Узнать больше об исследовании</a>
           </div>
-        </div>
-        <table class="tariffs__slider">
-          <tr class="tariffs__str">
-            <td class="tariffs__name">
-              <h3 class="tariffs__title">Мини-тариф</h3>
-              <p class="tariffs__value">1,99 USD</p>
-            </td>
-            <td class="tariffs__name tariffs__name--hit tariffs__name--active">
-              <h3 class="tariffs__title">Стандарт</h3>
-              <p class="tariffs__value">3,99 USD</p>
-            </td>
-            <td class="tariffs__name">
-              <h3 class="tariffs__title">Макси-тариф</h3>
-              <p class="tariffs__value">4,99 USD</p>
-            </td>
-          </tr>
-          <tr class="tariffs__str">
-            <td class="tariffs__option site-text">Розовый фильтр<span>Да</span></td>
-            <td class="tariffs__option site-text">Розовый фильтр<span>Да</span></td>
-            <td class="tariffs__option site-text">Розовый фильтр<span>Да</span></td>
-          </tr>
-          <tr class="tariffs__str">
-            <td class="tariffs__option site-text">Смайлики<span>Нет</span></td>
-            <td class="tariffs__option site-text">Смайлики<span>Да</span></td>
-            <td class="tariffs__option site-text">Смайлики<span>Да</span></td>
-          </tr>
-          <tr class="tariffs__str">
-            <td class="tariffs__option site-text">Комментарии<span>Нет</span></td>
-            <td class="tariffs__option site-text">Комментарии<span>Нет</span></td>
-            <td class="tariffs__option site-text">Комментарии<span>Да</span></td>
-          </tr>
-        </table>
-      </section>
+        </section>
+      </div>
+
+      <div class="bg-container bg-container--main-2">
+        <section class="reviews set-width">
+          <h2 class="visually-hidden">Отзывы пользователей приложения</h2>
+          <div class="reviews__slider">
+            <div class="reviews__control controls">
+              <input class="controls__point" type="radio" name="reviews-control" id="reviews-control-1" checked>
+              <input class="controls__point" type="radio" name="reviews-control" id="reviews-control-2">
+              <input class="controls__point" type="radio" name="reviews-control" id="reviews-control-3">
+              <div class="controls__labels">
+                <label for="reviews-control-1" class="controls__label" tabindex="0"><span class="visually-hidden">Первый слайд</span></label>
+                <label for="reviews-control-2" class="controls__label" tabindex="0"><span class="visually-hidden">Второй слайд</span></label>
+                <label for="reviews-control-3" class="controls__label" tabindex="0"><span class="visually-hidden">Третий слайд</span></label>
+              </div>
+            </div>
+            <ul class="reviews__list">
+              <li class="reviews__item reviews__item--active">
+                <h3 class="reviews__name">Николай Петров</h3>
+                <p class="reviews__about-author">25 лет, водитель трамвая</p>
+                <p class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+              </li>
+              <li class="reviews__item">
+                <h3 class="reviews__name">Вася Пупкин</h3>
+                <p class="reviews__about-author">59 лет, ученый с мировым именем</p>
+                <p class="reviews__text">Это потрясающе! После того, как я запостил свои фото с плавания по необитаемым островам Филиппинского архипелага, мне пришло столько писем!!! А еще мне досталась победа в ноябрьском конкурсе за снимки тайфуна!</p>
+              </li>
+              <li class="reviews__item">
+                <h3 class="reviews__name">Старушка Шапокляк</h3>
+                <p class="reviews__about-author">чуть более 100 лет, героиня известного мульфильма</p>
+                <p class="reviews__text">Мы с Ларисой летели на вертолете. Под нами были горы и хрустальное горное озеро. Я делала снимки все 5 минут, пока мы спускались на парашюте! Ларискин парашют унесло на другую сторону озера. А я предупреждала, что крыски слишком легки для таких полетов...</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="tariffs set-width">
+          <h2 class="visually-hidden">Тарифы</h2>
+          <div class="tariffs__control controls">
+            <input class="controls__point" type="radio" name="tariffs-control" id="tariffs-control-1">
+            <input class="controls__point" type="radio" name="tariffs-control" id="tariffs-control-2" checked>
+            <input class="controls__point" type="radio" name="tariffs-control" id="tariffs-control-3">
+            <div class="controls__labels">
+              <label for="tariffs-control-1" class="controls__label" tabindex="0"><span class="visually-hidden">Первый слайд</span></label>
+              <label for="tariffs-control-2" class="controls__label" tabindex="0"><span class="visually-hidden">Второй слайд</span></label>
+              <label for="tariffs-control-3" class="controls__label" tabindex="0"><span class="visually-hidden">Третий слайд</span></label>
+            </div>
+          </div>
+          <table class="tariffs__slider">
+            <tr class="tariffs__str">
+              <td class="tariffs__empty"></td>
+              <td class="tariffs__name">
+                <h3 class="tariffs__title">База</h3>
+                <p class="tariffs__value">1,99 USD</p>
+              </td>
+              <td class="tariffs__name tariffs__name--hit tariffs__name--active">
+                <h3 class="tariffs__title">Стандарт</h3>
+                <p class="tariffs__value">3,99 USD</p>
+              </td>
+              <td class="tariffs__name">
+                <h3 class="tariffs__title">Анлим</h3>
+                <p class="tariffs__value">9,99 USD</p>
+              </td>
+            </tr>
+            <tr class="tariffs__str">
+              <td class="tariffs__option">Розовый фильтр</td>
+              <td class="tariffs__option"><span>Да</span></td>
+              <td class="tariffs__option"><span>Да</span></td>
+              <td class="tariffs__option"><span>Да</span></td>
+            </tr>
+            <tr class="tariffs__str">
+              <td class="tariffs__option">Смайлики</td>
+              <td class="tariffs__option"><span>Нет</span></td>
+              <td class="tariffs__option"><span>Да</span></td>
+              <td class="tariffs__option"><span>Да</span></td>
+            </tr>
+            <tr class="tariffs__str">
+              <td class="tariffs__option">Комментарии</td>
+              <td class="tariffs__option"><span>Нет</span></td>
+              <td class="tariffs__option"><span>Нет</span></td>
+              <td class="tariffs__option"><span>Да</span></td>
+            </tr>
+          </table>
+        </section>
+      </div>
+
+      <div class="bg-container bg-container--main-2">
+        <section class="contacts set-width">
+          <h2 class="visually-hidden">Контакты</h2>
+          <div class="contacts__relationships">
+            <p class="contacts__relationship">Остались вопросы?</p>
+            <p class="contacts__relationship">Свяжитесь с нами!</p>
+          </div>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <h3 class="contacts__title">Звоните:</h3>
+              <a  class="contacts__text" href="tel:+7(812)555-66-66">+7 (812) 555-66-66</a>
+            </li>
+            <li class="contacts__item">
+              <h3 class="contacts__title">Пишите:</h3>
+              <a  class="contacts__text contacts__text--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+            <li class="contacts__item">
+              <h3 class="contacts__title">Приезжайте в гости</h3>
+              <span class="contacts__text contacts__text--address">ул. Большая Конюшенная, 19/8</span>
+            </li>
+          </ul>
+          <img class="contacts__map" src="img/bg-map-mobile@1x.png" alt="Схема проезда">
+        </section>
+      </div>
     </main>
 
-    <footer class="page-footer">
-      <section class="contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__relationships">
-          <p class="contacts__relationship">Остались вопросы?</p>
-          <p class="contacts__relationship">Свяжитесь с нами!</p>
-        </div>
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <h3 class="contacts__title">Звоните:</h3>
-            <a  class="contacts__telephone" href="tel:+7(812)555-66-66">+7 (812) 555-66-66</a>
-          </li>
-          <li class="contacts__item">
-            <h3 class="contacts__title">Пишите:</h3>
-            <a  class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </li>
-          <li class="contacts__item">
-            <h3 class="contacts__title">Приезжайте в гости</h3>
-            <span class="contacts__address">ул. Большая Конюшенная, 19/8</span>
-          </li>
-        </ul>
-        <img class="contacts__map" src="img/bg-map-mobile@1x.png" alt="Схема проезда">
+    <footer class="page-footer page-footer--mobile set-width">
+      <a class="page-footer__logo" href="index.html">
+        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="PINK">
+      </a>
+      <section class="page-footer__social social">
+        <h2 class="visually-hidden">Ссылки на социальные сети</h2>
+        <a class="social__btn social__btn--tw" href="#"><span class="visually-hidden">Твиттер</span></a>
+        <a class="social__btn social__btn--fb" href="#"><span class="visually-hidden">Фейсбук</span></a>
+        <a class="social__btn social__btn--yt" href="#"><span class="visually-hidden">Ю-туб</span></a>
       </section>
+      <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copyright__text">Разработано</span>
+        <img class="copyright__img" src="img/logo-htmlacademy.svg" alt="HTML Академия" width="27" height="34">
+      </a>
     </footer>
 
   </body>

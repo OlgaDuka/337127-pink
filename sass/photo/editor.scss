@@ -1,23 +1,180 @@
-/*.editor {
-
+.editor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.editor__wrapper {
+.editor__tools {
+  @include list-init;
+  width: 246px;
+  height: 50px;
+  margin: 36px auto 73px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
+  @media (min-width: $tablet-width) {
+    width: 271px;
+    height: auto;
+    padding-left: 27px;
+    padding-right: 2px;
+    margin: 0;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 395px;
+    padding-right: 15px;
+  }
 }
 
-.editor__crop {
+.editor__item {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    height: 72px;
+    align-items: center;
+    border-bottom: 1px solid #dddfe0;
+  }
 }
 
-.editor__contrast {
-
+.editor__btn {
+  width: 48px;
+  height: 44px;
+  border: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.editor__fill {
+.editor__btn--crop {
+  background-image: url("..//img/icon-editor-crop.svg");
+}
 
+.editor__btn--contrast {
+  background-image: url("..//img/icon-editor-contrast.svg");
+}
+
+.editor__btn--fill {
+  background-image: url("..//img/icon-editor-fill.svg");
 }
 
 .editor__scale {
+  width: 240px;
+  height: 1px;
+  margin: auto;
+  border-bottom: 2px solid #000000;
+  position: absolute;
+  left: -15px;
+  top: 82px;
 
-}*/
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 193px;
+    top: -5px;
+    height: 10px;
+    width: 10px;
+    border: 2px solid $violet-color;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+  }
+
+  &--fill,
+  &--contrast {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin: 0;
+    width: 200px;
+    position: relative;
+    top: 0;
+
+    &--crop::before {
+      left: 144px;
+    }
+
+    &--fill::before {
+      left: 24px;
+    }
+
+    &--contrast::before {
+      left: 96px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 285px;
+
+    &--crop::before {
+      left: 70px;
+    }
+
+    &--fill::before {
+      left: 245px;
+    }
+
+    &--contrast::before {
+      left: 160px;
+    }
+  }
+}
+
+.editor__buttons {
+  min-height: 120px;
+  margin: 0 auto;
+  padding: 38px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top: 1px solid #dddfe0;
+
+  @media (min-width: $tablet-width) {
+    border: 0;
+    padding: 0;
+    min-height: 133px;
+    margin: auto auto 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 53px;
+    margin-left: 30px;
+    margin-right: 0;
+    flex-direction: row;
+  }
+}
+
+.editor__button--execute {
+  @include btn($panel-width, $violet-color);
+
+  @media (min-width: $tablet-width) {
+    @include btn(300px, $violet-color);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include btn(215px, $violet-color);
+  }
+}
+
+.editor__button--cancel {
+  @include btn($panel-width, $text-color);
+
+  @media (min-width: $tablet-width) {
+    @include btn(300px, $text-color);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include btn(215px, $text-color);
+  }
+}

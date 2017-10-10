@@ -1,0 +1,31 @@
+/* Миксин для текста */
+@mixin text-value($f-size, $l-height, $f-weight, $t-color) {
+  font-size: $f-size;
+  line-height: $l-height;
+  font-weight: $f-weight;
+  color: $t-color;
+}
+
+/* Миксин для кнопки */
+@mixin btn($btn-width, $btn-color) {
+  width: $btn-width - 36px;
+  padding: 14px;
+  border: 3px solid $btn-color;
+  border-radius: 40px;
+  text-align: center;
+
+  @include text-value(18px, 18px, 700, $btn-color);
+}
+
+/* Миксин для сброса стилей списков */
+@mixin list-init {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Миксин для градиента в фоне */
+
+@mixin bg-gradient($point) {
+  background-image: linear-gradient(175.5deg, #ffffff 0, #ffffff $point, #f2f2f2 $point, #f2f2f2 100%);
+}

@@ -1,26 +1,67 @@
 .page-footer {
-  min-height: 270px;
-  padding: 0;
-  background-color: white;
+  min-height: 235px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  outline: 1px solid olivedrab;
 
-  @include wrapper(olivedrab);
+  @media (min-width: $tablet-width) {
+    min-height: 125px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 198px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.page-footer--mobile {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }
 
 .page-footer__logo {
   margin-top: 40px;
-}
 
-/*.page-footer__logo-image {
+  @media (min-width: $tablet-width) {
+    margin-top: -20px;
+  }
 
+  @media (min-width: $desktop-width) {
+    margin-top: 40px;
+  }
 }
 
 .page-footer__social {
+  margin-top: 35px;
 
+  @media (min-width: $tablet-width) {
+    margin-top: -10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 55px;
+  }
 }
 
 .page-footer__copyright {
+  margin-top: 30px;
 
-}*/
+  @media (min-width: $tablet-width) {
+    margin-top: -17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 45px;
+  }
+}

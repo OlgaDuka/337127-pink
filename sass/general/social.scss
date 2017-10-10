@@ -1,19 +1,27 @@
-/*.social {
-
+.social {
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .social__btn {
-
+  width: 46px;
+  height: 46px;
+  border: 4px solid #f2f2f2;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .social__btn--tw {
-
+  background-image: url("..//img/icon-twitter.svg");
 }
 
 .social__btn--fb {
-
+  background-image: url("..//img/icon-facebook.svg");
 }
 
 .social__btn--yt {
-
-}*/
+  background-image: url("..//img/icon-youtube.svg");
+}

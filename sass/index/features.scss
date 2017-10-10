@@ -1,5 +1,9 @@
 .features {
-  @include wrapper(orange);
+  outline: 1px solid green;
+
+  @media (min-width: $tablet-width) {
+    outline: 1px solid red;
+  }
 }
 
 .features__slogans {
@@ -7,44 +11,116 @@
   padding-top: 42px;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 65px;
+    margin-bottom: 73px;
+    outline: 1px solid magenta;
+  }
 }
 
 .features__slogan {
+  @include text-value(24px, 28px, 300, $text-color);
   margin-bottom: 30px;
   text-align: center;
 
-  @include text-value(24px, 28px, 300, $text-color);
+  @media (min-width: $tablet-width) {
+    @include text-value(40px, 48px, 300, $text-color);
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include text-value(50px, 60px, 300, $text-color);
+  }
+}
+
+.features__slogan--short {
+  @media (min-width: $tablet-width) {
+    padding-left: 135px;
+    padding-right: 135px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
 }
 
 .features__list {
+  @include list-init;
   width: 280px;
-  margin: 0 auto 12px;
-  padding: 0;
+  margin: 0 auto;
+  padding-bottom: 292px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  list-style: none;
+  background-image: url("../img/iphone-screen-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center bottom -42px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width - 40px;
+    padding-top: 73px;
+    padding-left: 310px;
+    padding-bottom: 8px;
+    margin-left: 20px;
+    background-position: left bottom -70px;
+    background-size: 43.5%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    margin: 0;
+    padding-top: 300px;
+    padding-left: 0;
+    padding-right: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    background: transparent;
+    outline: 1px solid green;
+  }
 }
 
 .features__item {
-  margin-bottom: 30px;
+  margin-bottom: 17px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 246px;
+    margin-top: 62px;
+    text-align: center;
+  }
 }
 
 .features__title {
-  margin: 0;
-  margin-bottom: 12px;
-
   @include text-value(18px, 24px, 700, $text-color);
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    @include text-value(30px, 30px, 700, $text-color);
+    margin-bottom: 23px;
+  }
 }
 
 .features__text {
-  @include text-value(14px, 24px, 400, $text-color);
-}
+  margin-bottom: 12px;
+  margin-top: 12px;
 
-.features__screen {
-  height: 277px;
-  width: 157px;
-  margin: 0 auto;
-  overflow: hidden;
+  @include text-value(14px, 24px, 400, $text-color);
+
+  @media (min-width: $desktop-width) {
+    @include text-value(18px, 30px, 400, $text-color);
+  }
 }

@@ -3,28 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Пинк: фотографии</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <!-- Pixel Glass -->
     <style>
       HTML {
         background-repeat: no-repeat;
         background-position:  50% 0;
-        /* По умолчанию показывается мобильный макет */
         background-image: url( "maket/pink-photo-mobile.jpg" );
       }
-      /* Планшет
-      @media ( min-width: 760px ) {
+
+      @media ( min-width: 660px ) {
         HTML {
 
-          background-image: url( "maket/760.png" );
+          background-image: url( "maket/pink-photo-tablet.jpg" );
         }
       }
-       Десктоп
+
       @media ( min-width: 960px ) {
         HTML {
 
-          background-image: url( "maket/960.png" );
+          background-image: url( "maket/pink-photo-desktop.jpg" );
         }
-      } */
+      }
     </style>
     <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
     <script src="../node_modules/pixel-glass/script.js"></script>
@@ -32,39 +33,49 @@
 
     <link rel="stylesheet" href="css/style.css">
   </head>
+
   <body>
-    <header class="page-header">
-      <div class="page-header__menu-close">
-        <a class="page-header__logo">
-          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK">
-        </a>
-        <button class="page-header__toggle" type="button">Открыть меню</button>
-      </div>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item  main-nav__item--active">
-            <a>Фотографии</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="form.html">Конкурс</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <div class="bg-container bg-container--heder">
+      <header class="page-header set-width">
+        <div class="page-header__nav-wrapper">
+          <div class="page-header__panel">
+            <a class="page-header__logo">
+              <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK">
+            </a>
+            <button class="page-header__toggle" type="button">Открыть меню</button>
+          </div>
+          <nav class="main-nav set-width">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="main-nav__item  main-nav__item--active">
+                <a>Фотографии</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html">Конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <h1 class="page-header__title">Фотографии пользователей</h1>
+      </header>
+    </div>
+
     <main class="page-main">
-      <h1 class="page-main__title">Фотографии пользователей</h2>
-      <p class="page-main__text site-text">Взгляните на фотографии, которые выкладывают пользователи! Видите,&nbsp;как&nbsp;не хватает ваших?</p>
-      <section class="gallery">
-        <img class="gallery__panorama" src="img/panorama-mobile@1x.jpg" alt="Панорама дня" width="320" height="137">
+      <p class="page-main__text set-width">Взгляните на фотографии, которые выкладывают пользователи! Видите,&nbsp;как&nbsp;не хватает ваших?</p>
+
+      <section class="gallery set-width">
+        <h2 class="visually-hidden">Фотогалерея</h2>
         <ul class="gallery__list">
-          <li class="gallery__item post">
-            <div class="post__wrap">
+          <li class="gallery__item gallery__item--panorama">
+            <div class="gallery__img-wrapper">
+              <img class="gallery__img gallery__img--panorama" src="img/panorama-mobile@1x.jpg" alt="Панорама дня" width="320" height="137">
+            </div>
+            <div class="gallery__post post post--panorama">
               <div class="post__author">
                 <span class="post__name">Анна</span>
                 <span class="post__time">(5 минут назад)</span>
@@ -73,9 +84,9 @@
               <button class="post__like" type="button">Нравится: 215</button>
             </div>
           </li>
-          <li class="gallery__item post">
-            <img  src="img/photo-car-mobile@1x.jpg" alt="Фото 1" width="280" height="180">
-            <div class="post__wrap">
+          <li class="gallery__item">
+            <img  class="gallery__img" src="img/photo-car-mobile@1x.jpg" alt="Фото 1" width="280" height="180">
+            <div class="gallery__post post">
               <div class="post__author">
                 <span class="post__name">Левон</span>
                 <span class="post__time">(5 часов назад)</span>
@@ -84,9 +95,9 @@
               <button class="post__like" type="button">Нравится: 356</button>
             </div>
           </li>
-          <li class="gallery__item post">
-            <img  src="img/photo-drumset-mobile@1x.jpg" alt="Фото 2" width="280" height="180">
-            <div class="post__wrap">
+          <li class="gallery__item">
+            <img class="gallery__img"  src="img/photo-drumset-mobile@1x.jpg" alt="Фото 2" width="280" height="180">
+            <div class="gallery__post post">
               <div class="post__author">
                 <span class="post__name">Антон</span>
                 <span class="post__time">(12 часов назад)</span>
@@ -95,9 +106,9 @@
               <button class="post__like" type="button">Нравится: 666</button>
             </div>
           </li>
-          <li class="gallery__item post">
-            <img  src="img/photo-window-mobile@1x.jpg" alt="Фото 3" width="280" height="180">
-            <div class="post__wrap">
+          <li class="gallery__item">
+            <img class="gallery__img"  src="img/photo-window-mobile@1x.jpg" alt="Фото 3" width="280" height="180">
+            <div class="gallery__post post">
               <div class="post__author">
                 <span class="post__name">Борис</span>
                 <span class="post__time">(20 часов назад)</span>
@@ -106,9 +117,9 @@
               <button class="post__like" type="button">Нравится: 215</button>
             </div>
           </li>
-          <li class="gallery__item post">
-            <img  src="img/photo-fair-mobile@1x.jpg" alt="Фото 4" width="280" height="180">
-            <div class="post__wrap">
+          <li class="gallery__item">
+            <img class="gallery__img" src="img/photo-fair-mobile@1x.jpg" alt="Фото 4" width="280" height="180">
+            <div class="gallery__post post">
               <div class="post__author">
                 <span class="post__name">Сергей</span>
                 <span class="post__time">(25 часов назад)</span>
@@ -117,9 +128,9 @@
               <button class="post__like" type="button">Нравится: 4</button>
             </div>
           </li>
-          <li class="gallery__item post">
-            <img  src="img/photo-pov-mobile@1x.jpg" alt="Фото 5" width="280" height="180">
-            <div class="post__wrap">
+          <li class="gallery__item">
+            <img class="gallery__img" src="img/photo-pov-mobile@1x.jpg" alt="Фото 5" width="280" height="180">
+              <div class="gallery__post post">
               <div class="post__author">
                 <span class="post__name">Максим</span>
                 <span class="post__time">(40 часов назад)</span>
@@ -128,9 +139,9 @@
               <button class="post__like" type="button">Нравится: 150</button>
             </div>
           </li>
-          <li class="gallery__item post">
-            <img  src="img/photo-wing-mobile@1x.jpg" alt="Фото 6" width="280" height="180">
-            <div class="post__wrap">
+          <li class="gallery__item">
+            <img class="gallery__img" src="img/photo-wing-mobile@1x.jpg" alt="Фото 6" width="280" height="180">
+            <div class="gallery__post post">
               <div class="post__author">
                 <span class="post__name">Надежда</span>
                 <span class="post__time">(45 часов назад)</span>
@@ -141,25 +152,39 @@
           </li>
         </ul>
       </section>
-      <section class="upload">
+
+      <section class="upload set-width">
         <h2 class="visually-hidden">Загрузите свою фотографию!</h2>
-        <p class="upload__offer site-text">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
-        <img class="upload__photo" src="img/photo-road-mobile@1x.jpg" alt="Ваше фото" width="280" height="374">
-        <div class="upload__edit editor">
-          <div class="editor__wrapper">
-            <button class="editor__crop" type="button"><span class="visually-hidden">Кадрировать</span></button>
-            <button class="editor__contrast"  type="button"><span class="visually-hidden">Контрастность</span></button>
-            <button class="editor__fill" type="button"><span class="visually-hidden">Заливка</span></button>
+        <p class="upload__offer">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
+        <div class="upload__photo-editor">
+          <div class="upload__img">
+            <img src="img/photo-road-mobile@1x.jpg" alt="Ваше фото" width="280" height="374">
           </div>
-          <div class="editor__scale"><span class="visually-hidden">Ползунок</span></div>
-        </div>
-        <div class="upload__buttons">
-          <button class="upload__button upload__button--execute" type="submit">Запостить</button>
-          <button class="upload__button upload__button--cancel" type="reset">Отмена</button>
+          <form class="editor" action="https://echo.htmlacademy.ru/" method="post">
+            <ul class="editor__tools">
+              <li class="editor__item editor__item--mobile-active">
+                <button class="editor__btn editor__btn--crop" type="button"><span class="visually-hidden">Кадрировать</span></button>
+                <div class="editor__scale editor__scale--crop"><span class="visually-hidden">Ползунок</span></div>
+              </li>
+              <li class="editor__item">
+                <button class="editor__btn editor__btn--fill"  type="button"><span class="visually-hidden">Заливка</span></button>
+                <div class="editor__scale editor__scale--fill"><span class="visually-hidden">Ползунок</span></div>
+              </li>
+              <li class="editor__item">
+                <button class="editor__btn editor__btn--contrast" type="button"><span class="visually-hidden">Контрастность</span></button>
+                <div class="editor__scale editor__scale--contrast"><span class="visually-hidden">Ползунок</span></div>
+              </li>
+            </ul>
+            <div class="editor__buttons">
+              <button class="editor__button editor__button--execute" type="submit">Запостить</button>
+              <button class="editor__button editor__button--cancel" type="reset">Отмена</button>
+            </div>
+          </form>
         </div>
       </section>
     </main>
-    <footer class="page-footer">
+
+    <footer class="page-footer set-width">
       <a class="page-footer__logo" href="index.html">
         <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="PINK">
       </a>

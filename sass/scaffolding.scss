@@ -1,0 +1,91 @@
+body {
+  min-width: $panel-width;
+  margin: 0;
+  padding: 0;
+  font-family: $default-font;
+  font-weight: $text-weight;
+  color: $text-color;
+  background-color: $body-color;
+}
+
+.set-width {
+  width: $panel-width;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}
+
+.bg-container--heder {
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.bg-container--main-1 {
+  @include bg-gradient(25%);
+
+  @media (min-width: $tablet-width) {
+    @include bg-gradient(25%);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include bg-gradient(28.5%);
+  }
+}
+
+.bg-container--main-2 {
+  @include bg-gradient(44.5%);
+
+  @media (min-width: $tablet-width) {
+    @include bg-gradient(40%);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include bg-gradient(50%);
+  }
+}
+
+.bg-container--main-3 {
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.site-text {
+  margin: 0;
+
+  @include text-value(14px, 30px, 400, $text-color);
+}
