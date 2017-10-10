@@ -97,7 +97,7 @@
 }
 
 .contacts__text {
-  @include text-value(24px, 28px, 300, #cc3366);
+  @include text-value(24px, 28px, 300, $violet-color);
 }
 
 .contacts__text--email {
