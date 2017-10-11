@@ -105,9 +105,31 @@
 }
 
 .tariffs__name--hit {
-  @media (min-width: $tablet-width) {
-    position: relative;
+  position: relative;
 
+  &::before {
+    content: "";
+    width: 61px;
+    height: 61px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    background-image: url("..//img/bg-hit-tablet.svg");
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "ХИТ";
+    color: white;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 16px;
+    left: 14px;
+    transform: rotate(-45deg);
+  }
+
+  @media (min-width: $tablet-width) {
     &::before {
       content: "";
       width: 61px;
@@ -158,25 +180,12 @@
   position: relative;
 
   @media (max-width: $mobile-width-only) {
-    &--filter::after,
-    &--smile::after,
-    &--comment::after {
-      content: "Розовый фильтр";
+    &::after {
+      content: attr(data-property);
 
       @include text-value(14px, 30px, 400, $text-color);
+      padding-left: 22px;
       text-transform: uppercase;
-      position: absolute;
-      top: 13px;
-      left: 23px;
-    }
-
-    &--smile::after {
-      content: "Смайлики";
-    }
-
-    &--comment::after {
-      content: "Комментарии";
-      top: 14px;
     }
   }
 
