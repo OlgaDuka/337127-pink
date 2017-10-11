@@ -9,7 +9,7 @@
   outline: 1px solid green;
 
   @media (min-width: $tablet-width) {
-    min-height: 617px;
+    min-height: 620px;
     padding-top: 0;
     background-position: right bottom, center -70px;
     background-size: 70%, cover;
@@ -36,7 +36,7 @@
 
   @media (min-width: $desktop-width) {
     @include text-value(50px, 60px, 300, white);
-    margin: 110px 40px 50px;
+    margin: 110px 40px 53px;
   }
 }
 
@@ -53,7 +53,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 70px;
+    letter-spacing: 1.8px;
+    margin-bottom: 65px;
   }
 }
 
@@ -63,6 +64,12 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+
+  @media (min-width: $desktop-width) {
+    width: 205px;
+    padding-right: 5px;
+    margin-bottom: 4px;
+  }
 }
 
 .downloads__link {
@@ -84,7 +91,7 @@
   @media (min-width: $desktop-width) {
     padding-top: 50px;
     padding-left: 0;
-    margin-left: 10px;
+    margin-left: 18px;
   }
 }
 
