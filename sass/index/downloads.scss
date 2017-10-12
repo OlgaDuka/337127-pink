@@ -1,7 +1,7 @@
 .downloads {
   margin: 0 auto;
   min-height: 240px;
-  padding-top: 426px;
+  padding-top: 425px;
   background-color: $main-color;
   background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
@@ -41,19 +41,17 @@
 }
 
 .downloads__btn {
-  $btn-width: $panel-width - 40px;
-
-  @include btn($btn-width, white);
+  @include btn(280px, white, normal);
   margin: 0 auto;
   margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
-    @include btn(300px, white);
+    @include btn(300px, white, normal);
     margin-bottom: 45px;
   }
 
   @media (min-width: $desktop-width) {
-    letter-spacing: 1.8px;
+    @include btn(300px, white, 1.8px);
     margin-bottom: 65px;
   }
 }

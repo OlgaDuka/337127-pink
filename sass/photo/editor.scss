@@ -142,7 +142,7 @@
 
   @media (min-width: $tablet-width) {
     border: 0;
-    padding: 0;
+    padding: 0 0 0 13px;
     min-height: 133px;
     margin: auto auto 0;
   }
@@ -151,30 +151,37 @@
     min-height: 53px;
     margin-left: 30px;
     margin-right: 0;
+    padding: 0;
     flex-direction: row;
   }
 }
 
-.editor__button--execute {
-  @include btn($panel-width, $violet-color);
+.editor__button {
+  &--execute {
+    @include btn(280px, $violet-color, 0.7px);
+  }
+
+  &--cancel {
+    @include btn(280px, $text-color, 0.7px);
+  }
 
   @media (min-width: $tablet-width) {
-    @include btn(300px, $violet-color);
+    &--execute {
+      @include btn(260px, $violet-color, 0.1px);
+    }
+
+    &--cancel {
+      @include btn(260px, $text-color, 0.1px);
+    }
   }
 
   @media (min-width: $desktop-width) {
-    @include btn(215px, $violet-color);
-  }
-}
+    &--execute {
+      @include btn(180px, $violet-color, 0.1px);
+    }
 
-.editor__button--cancel {
-  @include btn($panel-width, $text-color);
-
-  @media (min-width: $tablet-width) {
-    @include btn(300px, $text-color);
-  }
-
-  @media (min-width: $desktop-width) {
-    @include btn(215px, $text-color);
+    &--cancel {
+      @include btn(180px, $text-color, 0.1px);
+    }
   }
 }
