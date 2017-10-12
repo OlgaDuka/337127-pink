@@ -19,7 +19,6 @@
 }
 
 .page-header__panel {
-  position: relative;
   height: 70px;
   display: flex;
   justify-content: space-between;
@@ -46,23 +45,30 @@
 }
 
 .page-header__toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-
-  display: block;
-  width: 70px;
-  height: 50px;
-
-  background-color: #ff00ae;
-
+  height: 24px;
+  background-color: transparent;
   cursor: pointer;
   border: none;
+  background-repeat: no-repeat;
+  background-position: center;
 
-  &:hover,
+  /*  &:hover,
   &:active {
     background-color: #e7009e;
+  }*/
+
+  &--btn-gum {
+    width: 50px;
+    margin-right: 19px;
+    background-image: url("..//img/icon-menu-burger.svg");
+    z-index: 10;
+  }
+
+  &--btn-cross {
+    width: 24px;
+    margin-right: 19px;
+    background-image: url("..//img/icon-menu-cross.svg");
+    z-index: 100;
   }
 
   @media (min-width: $desktop-width) {
