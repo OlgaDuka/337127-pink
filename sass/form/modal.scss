@@ -1,4 +1,5 @@
 .modal {
+  display: block;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -6,16 +7,12 @@
 }
 
 .modal__message {
+  display: block;
   width: 320px;
-  display: none;
   background-color: white;
   border: none;
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
   padding-top: 40px;
-
-  &--open {
-    display: block;
-  }
 
   @media (min-width: $tablet-width) {
     width: 460px;
