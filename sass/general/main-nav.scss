@@ -12,10 +12,6 @@
   display: none;
 }
 
-.main-nav--opened .main-nav__list {
-  display: flex;
-}
-
 .main-nav__list {
   @include list-init;
   display: flex;

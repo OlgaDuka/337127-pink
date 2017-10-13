@@ -24,6 +24,13 @@
   justify-content: space-between;
   align-items: center;
 
+  &--menu-closed {
+    .page-header__toggle {
+      width: 50px;
+      background-image: url("..//img/icon-menu-burger.svg");
+    }
+  }
+
   @media (min-width: $tablet-width) {
     height: 108px;
     outline: 1px solid white;
@@ -46,30 +53,19 @@
 
 .page-header__toggle {
   height: 24px;
+  width: 24px;
+  margin-right: 19px;
+  background-image: url("..//img/icon-menu-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: transparent;
   cursor: pointer;
   border: none;
-  background-repeat: no-repeat;
-  background-position: center;
 
   /*  &:hover,
   &:active {
     background-color: #e7009e;
   }*/
-
-  &--btn-gum {
-    width: 50px;
-    margin-right: 19px;
-    background-image: url("..//img/icon-menu-burger.svg");
-    z-index: 10;
-  }
-
-  &--btn-cross {
-    width: 24px;
-    margin-right: 19px;
-    background-image: url("..//img/icon-menu-cross.svg");
-    z-index: 100;
-  }
 
   @media (min-width: $desktop-width) {
     display: none;
