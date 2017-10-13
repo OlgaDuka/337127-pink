@@ -19,11 +19,17 @@
 }
 
 .page-header__panel {
-  position: relative;
   height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &--menu-closed {
+    .page-header__toggle {
+      width: 50px;
+      background-image: url("..//img/icon-menu-burger.svg");
+    }
+  }
 
   @media (min-width: $tablet-width) {
     height: 108px;
@@ -46,24 +52,20 @@
 }
 
 .page-header__toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-
-  display: block;
-  width: 70px;
-  height: 50px;
-
-  background-color: #ff00ae;
-
+  height: 24px;
+  width: 24px;
+  margin-right: 19px;
+  background-image: url("..//img/icon-menu-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
   cursor: pointer;
   border: none;
 
-  &:hover,
+  /*  &:hover,
   &:active {
     background-color: #e7009e;
-  }
+  }*/
 
   @media (min-width: $desktop-width) {
     display: none;

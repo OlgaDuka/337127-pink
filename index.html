@@ -35,29 +35,21 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="bg-container bg-container--heder">
+    <div class="bg-container bg-container--header">
       <header class="page-header set-width">
         <div class="page-header__nav-wrapper">
           <div class="page-header__panel">
             <a class="page-header__logo">
               <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK">
             </a>
-            <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+            <button class="page-header__toggle"><span class="visually-hidden">Открыть меню</span></button>
           </div>
-          <nav class="main-nav set-width">
+          <nav class="main-nav main-nav--nojs set-width">
             <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--active">
-                <a>Главная</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="photo.html">Фотографии</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="form.html">Конкурс</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-              </li>
+              <li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
+              <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+              <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+              <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
             </ul>
           </nav>
         </div>
@@ -179,23 +171,23 @@
                 <p class="tariffs__value">9,99 USD</p>
               </td>
             </tr>
-            <tr class="tariffs__str">
+            <tr class="tariffs__str tariffs__str--filter">
               <td class="tariffs__option">Розовый фильтр</td>
-              <td class="tariffs__option"><span>Да</span></td>
-              <td class="tariffs__option"><span>Да</span></td>
-              <td class="tariffs__option"><span>Да</span></td>
+              <td class="tariffs__option tariffs__option--yes"><span class="visually-hidden">Да</span></td>
+              <td class="tariffs__option tariffs__option--yes" data-property="Розовый фильтр"><span class="visually-hidden">Да</span></td>
+              <td class="tariffs__option tariffs__option--yes"><span class="visually-hidden">Да</span></td>
             </tr>
-            <tr class="tariffs__str">
+            <tr class="tariffs__str tariffs__str--smile">
               <td class="tariffs__option">Смайлики</td>
-              <td class="tariffs__option"><span>Нет</span></td>
-              <td class="tariffs__option"><span>Да</span></td>
-              <td class="tariffs__option"><span>Да</span></td>
+              <td class="tariffs__option tariffs__option--no"><span class="visually-hidden">Нет</span></td>
+              <td class="tariffs__option tariffs__option--yes" data-property="Смайлики"><span class="visually-hidden">Да</span></td>
+              <td class="tariffs__option tariffs__option--yes"><span class="visually-hidden">Да</span></td>
             </tr>
-            <tr class="tariffs__str">
+            <tr class="tariffs__str tariffs__str--comment">
               <td class="tariffs__option">Комментарии</td>
-              <td class="tariffs__option"><span>Нет</span></td>
-              <td class="tariffs__option"><span>Нет</span></td>
-              <td class="tariffs__option"><span>Да</span></td>
+              <td class="tariffs__option tariffs__option--no"><span class="visually-hidden">Нет</span></td>
+              <td class="tariffs__option tariffs__option--no" data-property="Комментарии"><span class="visually-hidden">Нет</span></td>
+              <td class="tariffs__option tariffs__option--yes"><span class="visually-hidden">Да</span></td>
             </tr>
           </table>
         </section>
@@ -214,7 +206,7 @@
               <a  class="contacts__text" href="tel:+7(812)555-66-66">+7 (812) 555-66-66</a>
             </li>
             <li class="contacts__item">
-              <h3 class="contacts__title">Пишите:</h3>
+              <h3 class="contacts__title">&nbsp;Пишите:</h3>
               <a  class="contacts__text contacts__text--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
             <li class="contacts__item">
@@ -242,6 +234,8 @@
         <img class="copyright__img" src="img/logo-htmlacademy.svg" alt="HTML Академия" width="27" height="34">
       </a>
     </footer>
+
+    <script src="js/popup.js"></script>
 
   </body>
 </html>

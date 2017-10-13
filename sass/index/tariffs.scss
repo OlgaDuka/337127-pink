@@ -1,6 +1,6 @@
 .tariffs {
   outline: 1px solid lime;
-  padding-bottom: 105px;
+  padding-bottom: 102px;
   position: relative;
   overflow: hidden;
 
@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 100px;
+    padding-bottom: 96px;
   }
 }
 
@@ -19,7 +19,7 @@
   border-collapse: collapse;
 
   @media (min-width: $tablet-width) {
-    width: 620px;
+    width: 618px;
     margin: 0 auto;
   }
 
@@ -41,18 +41,19 @@
 
 .tariffs__str {
   height: 60px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
-    height: 48px;
+    height: 47px;
   }
 
   @media (min-width: $desktop-width) {
-    height: 60px;
+    height: 61px;
   }
 }
 
 .tariffs__str:first-child {
-  height: 96px;
+  height: 100px;
   background-color: $main-color;
 
   @media (min-width: $tablet-width) {
@@ -65,8 +66,8 @@
 }
 
 .tariffs__empty {
-  border: 0;
-  background-color: #f2f2f2;
+  border-color: transparent;
+  background-color: $gray-color;
 }
 
 .tariffs__name {
@@ -103,11 +104,72 @@
   }
 }
 
-/*.tariffs__name--hit {
+.tariffs__name--hit {
+  position: relative;
 
+  &::before {
+    content: "";
+    width: 61px;
+    height: 61px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    background-image: url("..//img/bg-hit-tablet.svg");
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "ХИТ";
+    color: white;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 16px;
+    left: 14px;
+    transform: rotate(-45deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      content: "";
+      width: 61px;
+      height: 61px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("..//img/bg-hit-tablet.svg");
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      content: "ХИТ";
+      color: white;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 8px;
+      left: 11px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      width: 74px;
+      height: 73px;
+      background-image: url("..//img/bg-hit.svg");
+    }
+
+    &::after {
+      width: 37px;
+      height: 37px;
+      top: 15px;
+      left: 13px;
+    }
+  }
 }
 
-.tariffs__name--active {
+/*.tariffs__name--active {
 
 }*/
 
@@ -116,21 +178,63 @@
   border: 2px solid #e5e5e5;
   background-color: #ffffff;
 
+  @media (max-width: $mobile-width-only) {
+    &::after {
+      content: attr(data-property);
+
+      @include text-value(14px, 30px, 400, $text-color);
+      padding-left: 22px;
+      text-transform: uppercase;
+    }
+  }
+
+  &--yes::before,
+  &--no::before {
+    content: "";
+    display: block;
+    float: right;
+    margin-right: 18px;
+    width: 27px;
+    height: 27px;
+    background-image: url("..//img/icon-no.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 27px auto;
+  }
+
+  &--yes::before {
+    width: 32px;
+    height: 32px;
+    background-image: url("..//img/icon-yes.svg");
+    background-size: 32px auto;
+  }
+
   @media (min-width: $tablet-width) {
     @include text-value(14px, 30px, 400, $text-color);
-    width: 155px;
-    padding-left: 20px;
+    width: 142px;
+    padding-left: 15px;
+
+    &--yes,
+    &--no {
+      width: 157px;
+      padding-left: 0;
+    }
+
+    &--yes::before,
+    &--no::before {
+      float: none;
+      margin: auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
     font-size: 18px;
-    width: 235px;
+    padding-left: 20px;
+
+    &--yes,
+    &--no {
+      width: 162px;
+      padding-left: 0;
+    }
   }
 }
-
-/*.tariffs__name:first-child,
-.tariffs__option:first-child,
-.tariffs__name:last-child,
-.tariffs__option:last-child {
-  display: none;
-}*/

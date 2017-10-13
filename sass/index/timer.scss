@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 25px 0 60px;
+    padding: 25px 0 64px;
   }
 }
 
@@ -43,6 +43,7 @@
     line-height: 30px;
     width: 100%;
     margin-top: 95px;
+    margin-bottom: -2px;
   }
 }
 
