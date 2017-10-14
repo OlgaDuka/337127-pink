@@ -10,6 +10,16 @@
   }
 }
 
+.page-header__bg-nav-wrapper {
+  width: 100%;
+  min-height: 67px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  @media (min-width: $tablet-width) {
+    min-height: 109px;
+  }
+}
+
 .page-header__nav-wrapper {
   @media (min-width: $desktop-width) {
     display: flex;
@@ -20,12 +30,14 @@
 
 .page-header__panel {
   height: 70px;
+  background-color: $main-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 20;
 
   &--menu-closed {
+    background-color: transparent;
+
     .page-header__toggle {
       width: 50px;
       background-image: url("..//img/icon-menu-burger.svg");
@@ -39,6 +51,10 @@
 
   @media (min-width: $desktop-width) {
     width: 160px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: transparent;
   }
 }
 
@@ -73,31 +89,40 @@
 }
 
 .page-header__title {
-  margin: 0;
-  padding: 30px 20px 84px;
+  margin: 0 auto;
+  width: 180px;
+  padding-top: 30px;
+  padding-bottom: 84px;
 
   @include text-value(24px, 28px, 300, white);
   text-align: center;
 
   &--form {
+    width: 240px;
     padding-bottom: 56px;
   }
 
   @media (min-width: $tablet-width) {
+    width: 370px;
     font-size: 50px;
     line-height: 60px;
-    padding: 70px 20px 140px;
+    padding-top: 70px;
+    padding-bottom: 140px;
 
     &--form {
+      width: 490px;
       padding-bottom: 80px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 65px 170px 100px;
+    padding-top: 65px;
+    padding-bottom: 100px;
 
     &--form {
-      padding: 65px 100px 100px;
+      width: 750px;
+      padding-top: 65px;
+      padding-bottom: 100px;
     }
   }
 }

@@ -26,19 +26,6 @@ body {
   background-repeat: repeat;
   background-position: top;
   background-size: cover;
-  position: relative;
-  z-index: 1;
-
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    height: 67px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-  }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
@@ -46,10 +33,6 @@ body {
 
   @media (min-width: $tablet-width) {
     background-image: url("../img/bg-back-tablet@1x.jpg");
-
-    &::before {
-      height: 109px;
-    }
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
