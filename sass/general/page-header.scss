@@ -23,6 +23,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 20;
 
   &--menu-closed {
     .page-header__toggle {
@@ -38,7 +39,6 @@
 
   @media (min-width: $desktop-width) {
     width: 160px;
-    background-color: rgba(16, 21, 27, 0.3);
   }
 }
 
