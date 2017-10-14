@@ -18,7 +18,7 @@
     background-position: center  bottom;
     background-size: 106%;
 
-    @media (min-width: $tablet-width) {
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/iphone-hand-tablet@2x.png");
     }
   }

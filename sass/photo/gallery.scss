@@ -74,8 +74,24 @@
     position: relative;
     height: 137px;
 
+    &::before {
+      content: "Панорама дня";
+      position: absolute;
+      top: 0;
+      right: 20px;
+      background-color: $violet-color;
+      text-transform: uppercase;
+
+      @include text-value(12px, 24px, 700, white);
+      padding: 4px 20px;
+      height: 35px;
+      width: 141px;
+      box-sizing: border-box;
+    }
+
     @media (min-width: $tablet-width) {
       height: 509px;
+      width: auto;
     }
 
     @media (min-width: $desktop-width) {
