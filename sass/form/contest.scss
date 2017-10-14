@@ -422,6 +422,7 @@
 
 .contest__submit {
   @include text-value(18px, 30px, 700, white);
+  font-family: inherit;
   padding: 17px 20px;
   margin-bottom: 20px;
   text-transform: uppercase;
