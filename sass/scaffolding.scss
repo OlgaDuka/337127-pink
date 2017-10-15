@@ -22,6 +22,7 @@ body {
 }
 
 .bg-container--header {
+  background-color: $main-color;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: repeat;
   background-position: top;
@@ -110,10 +111,4 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.site-text {
-  margin: 0;
-
-  @include text-value(14px, 30px, 400, $text-color);
 }

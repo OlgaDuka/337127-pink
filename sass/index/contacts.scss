@@ -142,21 +142,32 @@
 
 .contacts__text {
   @include text-value(24px, 28px, 300, $violet-color);
-}
 
-.contacts__text--email {
-  padding-top: 5px;
+  &--email,
+  &--telephon {
+    &:hover {
+      color: rgba(51, 51, 51, 1);
+    }
 
-  @media (min-width: $desktop-width) {
-    padding-top: 2px;
+    &:active {
+      color: rgba(51, 51, 51, 0.3);
+    }
   }
-}
 
-.contacts__text--address {
-  padding: 5px;
+  &--email {
+    padding-top: 5px;
 
-  @media (min-width: $desktop-width) {
-    padding-top: 0;
+    @media (min-width: $desktop-width) {
+      padding-top: 2px;
+    }
+  }
+
+  &--address {
+    padding: 5px;
+
+    @media (min-width: $desktop-width) {
+      padding-top: 0;
+    }
   }
 }
 

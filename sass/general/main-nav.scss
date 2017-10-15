@@ -38,6 +38,14 @@
   a {
     @include text-value(18px, 32px, 700, white);
     text-transform: uppercase;
+
+    &:hover {
+      color: $violet-color;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   @media (min-width: $desktop-width) {

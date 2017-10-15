@@ -193,6 +193,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     &::before {
       content: "";
@@ -202,6 +203,14 @@
       border: 2px solid #e5e5e5;
       border-radius: 2px;
       background-color: #ffffff;
+    }
+
+    &:hover::before {
+      border-color: #333333;
+    }
+
+    &:active::before {
+      border-color: $violet-color;
     }
   }
 
@@ -316,6 +325,15 @@
   border: 2px solid #cccccc;
   box-sizing: border-box;
 
+  &:hover {
+    border-color: #333333;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $violet-color;
+  }
+
   @media (min-width: $tablet-width) {
     width: 100%;
     margin-bottom: 0;
@@ -429,6 +447,16 @@
   border: none;
   border-radius: 3px;
   background-color: #2aab6d;
+  cursor: pointer;
+
+  &:active {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  &:disabled {
+    background-color: $gray-color;
+    cursor: not-allowed;
+  }
 
   @media (min-width: $tablet-width) {
     width: 300px;

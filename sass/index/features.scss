@@ -26,28 +26,29 @@
 
 .features__slogan {
   @include text-value(24px, 28px, 300, $text-color);
+  margin-top: 0;
   margin-bottom: 30px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    @include text-value(40px, 48px, 300, $text-color);
+    font-size: 40px;
+    line-height: 48px;
     margin-bottom: 0;
+
+    &--short {
+      padding-left: 135px;
+      padding-right: 135px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    @include text-value(50px, 60px, 300, $text-color);
-  }
-}
+    font-size: 50px;
+    line-height: 60px;
 
-.features__slogan--short {
-  @media (min-width: $tablet-width) {
-    padding-left: 135px;
-    padding-right: 135px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-left: 200px;
-    padding-right: 200px;
+    &--short {
+      padding-left: 200px;
+      padding-right: 200px;
+    }
   }
 }
 

@@ -48,7 +48,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    @include text-value(50px, 60px, 300, white);
+    font-size: 50px;
+    line-height: 60px;
     margin: 110px 40px 53px;
   }
 }
@@ -57,6 +58,16 @@
   @include btn(280px, white, normal);
   margin: 0 auto;
   margin-bottom: 30px;
+
+  &:hover {
+    background-color: white;
+    color: $violet-color;
+  }
+
+  &:active {
+    background-color: white;
+    color: rgba(210, 40, 86, 0.5);
+  }
 
   @media (min-width: $tablet-width) {
     @include btn(300px, white, normal);
@@ -90,11 +101,12 @@
 .downloads__text {
   @include text-value(14px, 24px, 300, white);
   width: 280px;
+  margin: 0;
   padding: 20px 20px 30px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    @include text-value(18px, 24px, 300, white);
+    font-size: 18px;
     width: 300px;
     padding-top: 35px;
     padding-bottom: 110px;

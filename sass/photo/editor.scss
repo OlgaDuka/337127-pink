@@ -56,15 +56,15 @@
 }
 
 .editor__btn--crop {
-  background-image: url("..//img/icon-editor-crop.svg");
+  background-image: url("../img/icon-editor-crop.svg");
 }
 
 .editor__btn--contrast {
-  background-image: url("..//img/icon-editor-contrast.svg");
+  background-image: url("../img/icon-editor-contrast.svg");
 }
 
 .editor__btn--fill {
-  background-image: url("..//img/icon-editor-fill.svg");
+  background-image: url("../img/icon-editor-fill.svg");
 }
 
 .editor__scale {
@@ -87,7 +87,13 @@
     border: 2px solid $violet-color;
     border-radius: 50%;
     background-color: #f1f1f1;
+    cursor: pointer;
   }
+
+  &:active::before {
+    background-color: $violet-color;
+  }
+
 
   &--fill,
   &--contrast {
@@ -157,12 +163,35 @@
 }
 
 .editor__button {
+  cursor: pointer;
+  background-color: $gray-color;
+
   &--execute {
     @include btn(280px, $violet-color, 0.7px);
+
+    &:hover {
+      background-color: $violet-color;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    &:active {
+      background-color: $violet-color;
+      color: rgba(255, 255, 255, 0.4);
+    }
   }
 
   &--cancel {
-    @include btn(280px, $text-color, 0.7px);
+    @include btn(280px, rgba(51, 51, 51, 0.1), 0.7px);
+
+    &:hover {
+      color: rgba(51, 51, 51, 0.3);
+      border-color: rgba(51, 51, 51, 0.3);
+    }
+
+    &:active {
+      background-color: rgba(51, 51, 51, 0.3);
+      color: rgba(255, 255, 255, 0.4);
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -171,7 +200,7 @@
     }
 
     &--cancel {
-      @include btn(260px, $text-color, 0.1px);
+      @include btn(260px, rgba(51, 51, 51, 0.1), 0.1px);
     }
   }
 
@@ -181,7 +210,7 @@
     }
 
     &--cancel {
-      @include btn(180px, $text-color, 0.1px);
+      @include btn(180px, rgba(51, 51, 51, 0.1), 0.1px);
     }
   }
 }

@@ -4,6 +4,25 @@
 
 .reviews__slider {
   position: relative;
+
+  &--back {
+    position: absolute;
+    left: 10px;
+    top: 210px;
+  }
+
+  &--forward {
+    position: absolute;
+    right: 10px;
+    top: 210px;
+  }
+}
+
+.reviews__quotes {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .reviews__control {
