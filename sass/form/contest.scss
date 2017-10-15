@@ -324,6 +324,7 @@
   margin-bottom: 15px;
   border: 2px solid #cccccc;
   box-sizing: border-box;
+  outline: none;
 
   &:hover {
     border-color: #333333;
@@ -338,14 +339,24 @@
     width: 100%;
     margin-bottom: 0;
 
-    &--contact {
+    &--telephone,
+    &--email {
       order: -1;
-      padding: 14px 60px 14px 18px;
+      padding: 14px 0 14px 18px;
+    }
+
+    &--telephone {
+      background-image: url("../img/icon-phone.svg");
+      border-right: 60px solid $gray-color;
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      background-position: right;
     }
   }
 
   @media (min-width: $desktop-width) {
-    &--contact {
+    &--telephone,
+    &--email {
       width: 375px;
     }
   }

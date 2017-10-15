@@ -5,6 +5,13 @@
 .reviews__slider {
   position: relative;
 
+  @media (max-width: 959px) {
+    &--back,
+    &--forward {
+      display: none;
+    }
+  }
+
   &--back {
     position: absolute;
     left: 10px;
@@ -23,6 +30,10 @@
   top: 70px;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (max-width: 959px) {
+    display: none;
+  }
 }
 
 .reviews__control {

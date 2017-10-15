@@ -61,12 +61,6 @@
 
   &:hover {
     background-color: white;
-    color: $violet-color;
-  }
-
-  &:active {
-    background-color: white;
-    color: rgba(210, 40, 86, 0.5);
   }
 
   @media (min-width: $tablet-width) {
@@ -96,6 +90,16 @@
 
 .downloads__link {
   color: white;
+
+  &:hover {
+    color: $violet-color;
+    background-color: white;
+  }
+
+  &:active {
+    background-color: white;
+    color: rgba(210, 40, 86, 0.5);
+  }
 }
 
 .downloads__text {

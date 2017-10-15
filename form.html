@@ -41,7 +41,11 @@
           <div class="page-header__nav-wrapper set-width">
             <div class="page-header__panel">
               <a class="page-header__logo">
-                <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="PINK">
+                <picture>
+                  <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+                  <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+                  <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="PINK">
+                </picture>
               </a>
               <button class="page-header__toggle"><span class="visually-hidden">Открыть меню</span></button>
             </div>
@@ -69,11 +73,11 @@
           <ul class="contest__list contest__list--name">
             <li class="contest__item contest__item--name">
               <label for="surname" class="contest__label">Фамилия:</label>
-              <input type="text" class="contest__field contest__surname" name="surname" id="surname" placeholder="Укажите фамилию *" required>
+              <input type="text" class="contest__field" name="surname" id="surname" placeholder="Укажите фамилию *" required>
             </li>
             <li class="contest__item contest__item--name">
               <label for="name" class="contest__label">Имя:</label>
-              <input type="text" class="contest__field contest__username" name="name" id="name" placeholder="Введите ваше имя *" required>
+              <input type="text" class="contest__field" name="name" id="name" placeholder="Введите ваше имя *" required>
             </li>
             <li class="contest__item contest__item--name">
               <label for="patronymic-name" class="contest__label">Отчество:</label>
@@ -121,11 +125,11 @@
           <ul class="contest__list contest__list--contact">
             <li class="contest__item contest__item--contact">
               <label for="telephone" class="contest__label contest__label--contact">Номер телефона</label>
-              <input type="text" class="contest__field contest__field--contact" name="telephone" id="telephone" placeholder="Номер, пожалуйста">
+              <input type="text" class="contest__field contest__field--telephone" name="telephone" id="telephone" placeholder="Номер, пожалуйста">
             </li>
             <li class="contest__item contest__item--contact">
               <label for="email" class="contest__label contest__label--contact">Адрес почты</label>
-              <input type="email" class="contest__field contest__field--contact  contest__email" name="email" id="email" placeholder="Введите почту *" required>
+              <input type="email" class="contest__field contest__field--email" name="email" id="email" placeholder="Введите почту *" required>
             </li>
           </ul>
         </fieldset>
@@ -161,7 +165,10 @@
 
     <footer class="page-footer set-width">
       <a class="page-footer__logo" href="index.html">
-        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="PINK">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="PINK">
+        </picture>
       </a>
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Ссылки на социальные сети</h2>
