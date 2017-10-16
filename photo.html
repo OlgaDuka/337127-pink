@@ -158,7 +158,14 @@
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
                 </svg>
               </a>
-              <button class="page-header__toggle"><span class="visually-hidden">Открыть меню</span></button>
+              <button class="page-header__toggle"><span class="visually-hidden">Открыть меню</span>
+                <svg class="page-header__toggle page-header__toggle--burger" width="50" height="24">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-menu-burger"></use>
+                </svg>
+                <svg class="page-header__toggle page-header__toggle--cross" width="24" height="24">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-menu-cross"></use>
+                </svg>
+              </button>
             </div>
             <nav class="main-nav main-nav--nojs">
               <ul class="main-nav__list">
@@ -318,15 +325,27 @@
           <form class="editor" action="https://echo.htmlacademy.ru/" method="post">
             <ul class="editor__tools">
               <li class="editor__item editor__item--mobile-active">
-                <button class="editor__btn editor__btn--crop" type="button"><span class="visually-hidden">Кадрировать</span></button>
+                <button class="editor__btn editor__btn--crop" type="button"><span class="visually-hidden">Кадрировать</span>
+                  <svg class="editor__btn editor__btn--crop" width="48" height="48">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-editor-crop"></use>
+                  </svg>
+                </button>
                 <div class="editor__scale editor__scale--crop"><span class="visually-hidden">Ползунок</span></div>
               </li>
               <li class="editor__item">
-                <button class="editor__btn editor__btn--fill"  type="button"><span class="visually-hidden">Заливка</span></button>
+                <button class="editor__btn editor__btn--fill"  type="button"><span class="visually-hidden">Заливка</span>
+                  <svg class="editor__btn editor__btn--fill" width="48" height="48">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-editor-fill"></use>
+                  </svg>
+                </button>
                 <div class="editor__scale editor__scale--fill"><span class="visually-hidden">Ползунок</span></div>
               </li>
               <li class="editor__item">
-                <button class="editor__btn editor__btn--contrast" type="button"><span class="visually-hidden">Контрастность</span></button>
+                <button class="editor__btn editor__btn--contrast" type="button"><span class="visually-hidden">Контрастность</span>
+                  <svg class="editor__btn editor__btn--contrast" width="32" height="32">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-editor-contrast"></use>
+                  </svg>
+                </button>
                 <div class="editor__scale editor__scale--contrast"><span class="visually-hidden">Ползунок</span></div>
               </li>
             </ul>
@@ -356,7 +375,9 @@
       </section>
       <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="copyright__text">Разработано</span>
-        <img class="copyright__img" src="img/htmlacademy.svg" alt="HTML Академия" width="27" height="34">
+        <svg class="copyright__img" width="27" height="34">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+        </svg>
       </a>
     </footer>
 
