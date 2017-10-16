@@ -41,11 +41,15 @@
           <div class="page-header__nav-wrapper set-width">
             <div class="page-header__panel">
               <a class="page-header__logo">
-                <picture>
-                  <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
-                  <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-                  <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="PINK">
-                </picture>
+                <svg class="page-header__logo-image  page-header__logo-image--mobile" width="74" height="23">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
+                </svg>
+                <svg class="page-header__logo-image  page-header__logo-image--tablet" width="146.3" height="40.375">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
+                </svg>
+                <svg class="page-header__logo-image  page-header__logo-image--desktop" width="146.3" height="40.375">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
+                </svg>
               </a>
               <button class="page-header__toggle"><span class="visually-hidden">Открыть меню</span></button>
             </div>
