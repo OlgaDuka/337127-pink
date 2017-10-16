@@ -105,36 +105,8 @@ gulp.task("build", function(done) {
     "copy",
     "style",
     "images",
-    "webp",
     "sprite",
     "html",
     done
   );
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var svgmin = require("gulp-svgmin");
-var uglify = require("gulp-uglify");

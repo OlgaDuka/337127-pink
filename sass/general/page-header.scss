@@ -40,7 +40,15 @@
 
     .page-header__toggle {
       width: 50px;
-      background-image: url("../img/icon-menu-burger.svg");
+
+      &--burger {
+        display: block;
+        color: white;
+      }
+
+      &--cross {
+        display: none;
+      }
     }
   }
 
@@ -69,6 +77,16 @@
 }
 
 .page-header__logo-image {
+  color: white;
+
+  &:hover {
+    color: $violet-color;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   @media (max-width: $mobile-width-only) {
     &--mobile {
       padding-top: 20px;
@@ -115,12 +133,19 @@
   width: 24px;
   margin-right: 19px;
   color: white;
-  background-image: url("../img/icon-menu-cross.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: transparent;
   cursor: pointer;
+  outline: none;
   border: none;
+
+  &--burger {
+    display: none;
+  }
+
+  &--cross {
+    display: block;
+  }
+
 
   @media (min-width: $desktop-width) {
     display: none;
@@ -128,6 +153,10 @@
 
   &:hover {
     color: $violet-color;
+  }
+
+  &--active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 

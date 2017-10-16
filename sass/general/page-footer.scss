@@ -36,11 +36,42 @@
   @media (min-width: $tablet-width) {
     margin-top: -20px;
   }
+}
 
-  @media (min-width: $desktop-width) {
-    margin-top: 0;
+.page-footer__logo-image {
+  color: #333333;
+
+  &:hover {
+    color: $violet-color;
+  }
+
+  &:active {
+    color: #333333;
+    opacity: 0.3;
+  }
+
+  &--mobile {
+    width: 147px;
+    height: 41px;
+  }
+
+  &--desktop {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--desktop {
+      display: block;
+      width: 147px;
+      height: 41px;
+    }
+
+    &--mobile {
+      display: none;
+    }
   }
 }
+
 
 .page-footer__social {
   margin-top: 35px;

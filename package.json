@@ -7,11 +7,19 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "7.1.x",
     "browser-sync": "2.18.x",
+    "del": "^3.0.0",
     "gulp": "3.9.x",
+    "gulp-csso": "^3.0.0",
+    "gulp-imagemin": "^3.4.0",
     "gulp-plumber": "1.1.x",
+    "gulp-posthtml": "3.0.0",
     "gulp-postcss": "7.0.x",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "3.1.x",
+    "gulp-sass": "3.1.x",
+    "gulp-svgstore": "^6.1.0",
     "pixel-glass": "^1.0.13",
+    "run-sequence": "^2.2.0",
     "stylelint": "8.1.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },
@@ -19,8 +27,8 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp style",
-    "start": "gulp serve"
+    "build": "gulp bild",
+    "start": "npm run build && gulp serve"
   },
   "browserslist": [
     "last 2 versions",
