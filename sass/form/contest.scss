@@ -342,15 +342,15 @@
     &--telephone,
     &--email {
       order: -1;
-      padding: 14px 0 14px 18px;
+      padding: 14px 20px 14px 18px;
     }
 
     &--telephone {
-      background-image: url("../img/icon-phone.svg");
-      border-right: 60px solid $gray-color;
-      background-repeat: no-repeat;
-      background-size: 20px 20px;
-      background-position: right;
+      background: url("../img/icon-phone.svg") 96% no-repeat, linear-gradient(to right, #ffffff 0, #ffffff 88%, $gray-color 88%, $gray-color 100%);
+    }
+
+    &--email {
+      background: url("../img/icon-mail.svg") 96% no-repeat, linear-gradient(to right, #ffffff 0, #ffffff 88%, $gray-color 88%, $gray-color 100%);
     }
   }
 
@@ -358,6 +358,14 @@
     &--telephone,
     &--email {
       width: 375px;
+    }
+
+    &--telephone {
+      background: url("../img/icon-phone.svg") 94.2% no-repeat, linear-gradient(to right, #ffffff 0, #ffffff 83.5%, $gray-color 83.5%, $gray-color 100%);
+    }
+
+    &--email {
+      background: url("../img/icon-mail.svg") 94.2% no-repeat, linear-gradient(to right, #ffffff 0, #ffffff 83.5%, $gray-color 83.5%, $gray-color 100%);
     }
   }
 }

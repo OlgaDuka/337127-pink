@@ -3,37 +3,9 @@
 }
 
 .reviews__slider {
-  position: relative;
-
-  @media (max-width: 959px) {
-    &--back,
-    &--forward {
-      display: none;
-    }
-  }
-
-  &--back {
-    position: absolute;
-    left: 10px;
-    top: 210px;
-  }
-
-  &--forward {
-    position: absolute;
-    right: 10px;
-    top: 210px;
-  }
-}
-
-.reviews__quotes {
-  position: absolute;
-  top: 70px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  @media (max-width: 959px) {
-    display: none;
-  }
+  background: url("../img/icon-quotes.svg") center 20% no-repeat,
+    url("../img/icon-review-arrow-left.svg") 1% 54% no-repeat,
+    url("../img/icon-review-arrow-right.svg") 99% 54% no-repeat;
 }
 
 .reviews__control {

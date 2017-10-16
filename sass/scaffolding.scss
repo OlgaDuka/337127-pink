@@ -50,26 +50,26 @@ body {
 }
 
 .bg-container--main-1 {
-  @include bg-gradient(25%);
+  @include bg-gradient(24.8%, 174deg);
 
   @media (min-width: $tablet-width) {
-    @include bg-gradient(25%);
+    @include bg-gradient(26%, 175deg);
   }
 
   @media (min-width: $desktop-width) {
-    @include bg-gradient(28.5%);
+    @include bg-gradient(28.5%, 175.5deg);
   }
 }
 
 .bg-container--main-2 {
-  @include bg-gradient(44.5%);
+  @include bg-gradient(44.5%, 175.5deg);
 
   @media (min-width: $tablet-width) {
-    @include bg-gradient(40%);
+    @include bg-gradient(49.8%, 175.7deg);
   }
 
   @media (min-width: $desktop-width) {
-    @include bg-gradient(50%);
+    @include bg-gradient(48.5%, 176deg);
   }
 }
 
