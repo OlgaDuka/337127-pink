@@ -12,6 +12,8 @@ var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
 var uglify = require("gulp-uglify");
+var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include"); 
 var run = require("run-sequence");
 var del = require("del");
 var server = require("browser-sync").create();
@@ -64,6 +66,15 @@ gulp.task("sprite", function() {
     .pipe(gulp.dest("build/img"));
 });
 
+// Постпроцессинг HTML-файлов
+gulp.task("html", function() {
+  return gulp.src("*.html")
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("build"));
+});
+
 // Очистка билда
 gulp.task("clean", function() {
   return del("build");
@@ -96,6 +107,7 @@ gulp.task("build", function(done) {
     "images",
     "webp",
     "sprite",
+    "html",
     done
   );
 });
