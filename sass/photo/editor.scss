@@ -16,7 +16,7 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    width: 271px;
+    width: 275px;
     height: auto;
     padding-left: 10px;
     padding-right: 2px;
@@ -26,7 +26,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 395px;
+    width: 400px;
     padding-right: 15px;
   }
 }
@@ -66,7 +66,7 @@
   }
 }
 
-.editor__btn--crop {
+.editor__btn-icon--crop {
   color: $violet-color;
 
   @media (min-width: $tablet-width) {
@@ -81,7 +81,7 @@
   }
 }
 
-.editor__btn--contrast {
+.editor__btn-icon--contrast {
   width: 32px;
   height: 32px;
   color: rgba(51, 51, 51, 0.3);
@@ -100,10 +100,11 @@
   @media (min-width: $desktop-width) {
     width: 32px;
     height: 32px;
+    padding-top: 5px;
   }
 }
 
-.editor__btn--fill {
+.editor__btn-icon--fill {
   margin-right: 40px;
   color: rgba(51, 51, 51, 0.3);
 
@@ -119,7 +120,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 3px;
     width: 48px;
     height: 48px;
   }
@@ -151,7 +151,6 @@
   &:active::before {
     background-color: $violet-color;
   }
-
 
   &--fill,
   &--contrast {
@@ -185,6 +184,7 @@
 
   @media (min-width: $desktop-width) {
     width: 285px;
+    top: 6px;
 
     &--crop::before {
       left: 70px;
@@ -195,7 +195,7 @@
     }
 
     &--contrast {
-      top: 1px;
+      top: 5px;
 
       &::before {
         left: 160px;

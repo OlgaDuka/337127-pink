@@ -1,9 +1,7 @@
 .page-header {
-  min-height: 325px;
   background-color: transparent;
 
   @media (min-width: $desktop-width) {
-    min-height: 390px;
     display: flex;
     flex-direction: column;
   }
