@@ -3,6 +3,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 11px;
+  }
 }
 
 .social__btn {
@@ -12,16 +16,24 @@
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
+
+  &:hover {
+    border-color: rgba(51, 51, 51, 1);
+  }
+
+  &:active {
+    border-color: rgba(51, 51, 51, 0.3);
+  }
 }
 
 .social__btn--tw {
-  background-image: url("..//img/icon-twitter.svg");
+  background-image: url("../img/icon-twitter.svg");
 }
 
 .social__btn--fb {
-  background-image: url("..//img/icon-facebook.svg");
+  background-image: url("../img/icon-facebook.svg");
 }
 
 .social__btn--yt {
-  background-image: url("..//img/icon-youtube.svg");
+  background-image: url("../img/icon-youtube.svg");
 }

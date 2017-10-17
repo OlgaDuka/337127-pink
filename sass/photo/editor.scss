@@ -2,21 +2,23 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .editor__tools {
   @include list-init;
-  width: 246px;
+  width: 250px;
   height: 50px;
   margin: 36px auto 73px;
+  padding-left: 25px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    width: 271px;
+    width: 275px;
     height: auto;
-    padding-left: 27px;
+    padding-left: 10px;
     padding-right: 2px;
     margin: 0;
     align-items: flex-start;
@@ -24,7 +26,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 395px;
+    width: 400px;
     padding-right: 15px;
   }
 }
@@ -43,28 +45,84 @@
     height: 72px;
     align-items: center;
     border-bottom: 1px solid #dddfe0;
+
+    &:last-child {
+      height: 68px;
+    }
   }
 }
 
 .editor__btn {
   width: 48px;
-  height: 44px;
+  height: 48px;
+  margin-right: 32px;
   border: 0;
   background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+  }
 }
 
-.editor__btn--crop {
-  background-image: url("..//img/icon-editor-crop.svg");
+.editor__btn-icon--crop {
+  color: $violet-color;
+
+  @media (min-width: $tablet-width) {
+    width: 25px;
+    height: 30px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 48px;
+    height: 48px;
+  }
 }
 
-.editor__btn--contrast {
-  background-image: url("..//img/icon-editor-contrast.svg");
+.editor__btn-icon--contrast {
+  width: 32px;
+  height: 32px;
+  color: rgba(51, 51, 51, 0.3);
+
+  &:hover {
+    color: rgba(51, 51, 51, 0.6);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 17px;
+    height: 17px;
+    padding-left: 3px;
+    color: $violet-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 32px;
+    height: 32px;
+    padding-top: 5px;
+  }
 }
 
-.editor__btn--fill {
-  background-image: url("..//img/icon-editor-fill.svg");
+.editor__btn-icon--fill {
+  margin-right: 40px;
+  color: rgba(51, 51, 51, 0.3);
+
+  &:hover {
+    color: rgba(51, 51, 51, 0.6);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    color: $violet-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .editor__scale {
@@ -73,8 +131,8 @@
   margin: auto;
   border-bottom: 2px solid #000000;
   position: absolute;
-  left: -15px;
-  top: 82px;
+  left: -10px;
+  top: 83px;
 
   &::before {
     content: "";
@@ -87,6 +145,11 @@
     border: 2px solid $violet-color;
     border-radius: 50%;
     background-color: #f1f1f1;
+    cursor: pointer;
+  }
+
+  &:active::before {
+    background-color: $violet-color;
   }
 
   &--fill,
@@ -100,6 +163,7 @@
     width: 200px;
     position: relative;
     top: 0;
+    left: -17px;
 
     &--crop::before {
       left: 144px;
@@ -109,13 +173,18 @@
       left: 24px;
     }
 
-    &--contrast::before {
-      left: 96px;
+    &--contrast {
+      top: -3px;
+
+      &::before {
+        left: 96px;
+      }
     }
   }
 
   @media (min-width: $desktop-width) {
     width: 285px;
+    top: 6px;
 
     &--crop::before {
       left: 70px;
@@ -125,8 +194,12 @@
       left: 245px;
     }
 
-    &--contrast::before {
-      left: 160px;
+    &--contrast {
+      top: 5px;
+
+      &::before {
+        left: 160px;
+      }
     }
   }
 }
@@ -142,27 +215,51 @@
 
   @media (min-width: $tablet-width) {
     border: 0;
-    padding: 0 0 0 13px;
+    padding: 0 8px 0 5px;
     min-height: 133px;
     margin: auto auto 0;
   }
 
   @media (min-width: $desktop-width) {
+    width: 410px;
     min-height: 53px;
-    margin-left: 30px;
-    margin-right: 0;
+    margin: 0;
     padding: 0;
+    padding-left: 10px;
     flex-direction: row;
   }
 }
 
 .editor__button {
+  cursor: pointer;
+  background-color: $gray-color;
+
   &--execute {
     @include btn(280px, $violet-color, 0.7px);
+
+    &:hover {
+      background-color: $violet-color;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    &:active {
+      background-color: $violet-color;
+      color: rgba(255, 255, 255, 0.4);
+    }
   }
 
   &--cancel {
-    @include btn(280px, $text-color, 0.7px);
+    @include btn(280px, rgba(51, 51, 51, 0.1), 0.7px);
+
+    &:hover {
+      color: rgba(51, 51, 51, 0.3);
+      border-color: rgba(51, 51, 51, 0.3);
+    }
+
+    &:active {
+      background-color: rgba(51, 51, 51, 0.3);
+      color: rgba(255, 255, 255, 0.4);
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -171,7 +268,7 @@
     }
 
     &--cancel {
-      @include btn(260px, $text-color, 0.1px);
+      @include btn(260px, rgba(51, 51, 51, 0.1), 0.1px);
     }
   }
 
@@ -181,7 +278,7 @@
     }
 
     &--cancel {
-      @include btn(180px, $text-color, 0.1px);
+      @include btn(180px, rgba(51, 51, 51, 0.1), 0.1px);
     }
   }
 }

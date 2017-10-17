@@ -22,7 +22,7 @@
   @media (min-width: $desktop-width) {
     margin-top: 30px;
     margin-left: auto;
-    margin-right: 5px;
+    margin-right: 10px;
     flex-direction: row;
     justify-content: flex-end;
   }
@@ -38,6 +38,14 @@
   a {
     @include text-value(18px, 32px, 700, white);
     text-transform: uppercase;
+
+    &:hover {
+      color: $violet-color;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   @media (min-width: $desktop-width) {

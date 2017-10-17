@@ -1,9 +1,44 @@
-.reviews {
-  outline: 1px solid fuchsia;
-}
-
 .reviews__slider {
   position: relative;
+
+  @media (min-width: $desktop-width) {
+    background: url("../img/icon-quotes.svg") center 20% no-repeat;
+  }
+}
+
+.reviews__btn {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 22px;
+    height: 42px;
+    position: absolute;
+    top: 49%;
+    border: none;
+    background-color: white;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    cursor: pointer;
+
+    &--back {
+      left: 10px;
+      background-image: url("../img/icon-review-arrow-left.svg");
+    }
+
+    &--forward {
+      background-image: url("../img/icon-review-arrow-right.svg");
+      right: 10px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
 }
 
 .reviews__control {

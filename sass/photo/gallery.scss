@@ -1,12 +1,7 @@
-.gallery {
-  outline: 5px solid mediumvioletred;
-}
-
 .gallery__list {
   @include list-init;
   margin: auto;
   padding: 0 20px;
-  outline: 3px solid yellow;
 
   @media (min-width: $tablet-width) {
     max-width: $tablet-width;
@@ -25,7 +20,6 @@
   width: 280px;
   margin-bottom: 20px;
   box-sizing: border-box;
-  outline: 1px solid blue;
 
   @media (min-width: $tablet-width) {
     width: 300px;
@@ -54,7 +48,6 @@
   overflow: hidden;
   left: 50%;
   transform: translate(-50%);
-  outline: 1px solid red;
   display: flex;
   justify-content: center;
 }
@@ -74,8 +67,24 @@
     position: relative;
     height: 137px;
 
+    &::before {
+      content: "Панорама дня";
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: $violet-color;
+      text-transform: uppercase;
+
+      @include text-value(12px, 24px, 700, white);
+      padding: 4px 20px;
+      height: 35px;
+      width: 141px;
+      box-sizing: border-box;
+    }
+
     @media (min-width: $tablet-width) {
       height: 509px;
+      width: auto;
     }
 
     @media (min-width: $desktop-width) {

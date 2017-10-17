@@ -114,7 +114,7 @@
   @media (min-width: $tablet-width) {
     margin: 0 20px 23px;
     padding: 0;
-    border-color: $gray-color;
+    border: 2px solid #e5e5e5;
 
     &--name {
       order: -4;
@@ -193,6 +193,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     &::before {
       content: "";
@@ -202,6 +203,14 @@
       border: 2px solid #e5e5e5;
       border-radius: 2px;
       background-color: #ffffff;
+    }
+
+    &:hover::before {
+      border-color: #333333;
+    }
+
+    &:active::before {
+      border-color: $violet-color;
     }
   }
 
@@ -313,22 +322,50 @@
   width: 280px;
   padding: 14px 20px;
   margin-bottom: 15px;
-  border: 2px solid #cccccc;
+  border: 2px solid #e5e5e5;
   box-sizing: border-box;
+  outline-color: $violet-color;
+
+  &:hover {
+    border-color: #333333;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $violet-color;
+  }
 
   @media (min-width: $tablet-width) {
     width: 100%;
     margin-bottom: 0;
 
-    &--contact {
+    &--telephone,
+    &--email {
       order: -1;
-      padding: 14px 60px 14px 18px;
+      padding: 14px 20px 14px 18px;
+    }
+
+    &--telephone {
+      background: url("../img/icon-phone.svg") 96% no-repeat, linear-gradient(to right, #ffffff 0, #ffffff 88%, $gray-color 88%, $gray-color 100%);
+    }
+
+    &--email {
+      background: url("../img/icon-mail.svg") 96% no-repeat, linear-gradient(to right, #ffffff 0, #ffffff 88%, $gray-color 88%, $gray-color 100%);
     }
   }
 
   @media (min-width: $desktop-width) {
-    &--contact {
+    &--telephone,
+    &--email {
       width: 375px;
+    }
+
+    &--telephone {
+      background: url("../img/icon-phone.svg") 94.2% no-repeat, linear-gradient(to right, #ffffff 0, #ffffff 83.5%, $gray-color 83.5%, $gray-color 100%);
+    }
+
+    &--email {
+      background: url("../img/icon-mail.svg") 94.2% no-repeat, linear-gradient(to right, #ffffff 0, #ffffff 83.5%, $gray-color 83.5%, $gray-color 100%);
     }
   }
 }
@@ -356,33 +393,33 @@
 }
 
 .contest__letter-border {
-  border: 2px solid $gray-color;
+  border: 1px solid transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
 
   @media (max-width: $mobile-width-only) {
-    border-color: transparent;
     margin: 0;
     padding: 10px 20px;
   }
 
   @media (min-width: $tablet-width) {
-    margin: 45px 20px;
+    border: 2px solid #e5e5e5;
+    margin: 45px 20px 43px;
     padding: 0 60px 50px;
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
-    margin: 43px 10px;
+    margin: 43px 10px 41px;
     padding-bottom: 44px;
   }
 }
 
 .contest__letter {
   @include text-value(18px, 30px, 400, $text-color);
-  min-height: 200px;
+  min-height: 202px;
   width: 100%;
   margin: 0 auto;
   padding: 13px 18px;
@@ -391,13 +428,14 @@
   font-family: inherit;
 
   @media (min-width: $tablet-width) {
-    min-height: 193px;
-    padding: 17px 18px 0;
+    min-height: 195px;
+    padding: 15px 17px 0;
+    border: 2px solid #e5e5e5;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 127px;
-    padding-top: 15px;
+    padding-top: 13px;
   }
 }
 
@@ -422,12 +460,23 @@
 
 .contest__submit {
   @include text-value(18px, 30px, 700, white);
+  font-family: inherit;
   padding: 17px 20px;
   margin-bottom: 20px;
   text-transform: uppercase;
   border: none;
   border-radius: 3px;
   background-color: #2aab6d;
+  cursor: pointer;
+
+  &:active {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  &:disabled {
+    background-color: $gray-color;
+    cursor: not-allowed;
+  }
 
   @media (min-width: $tablet-width) {
     width: 300px;
@@ -450,6 +499,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 2px;
+
     &--desktop-only {
       display: inline-block;
     }

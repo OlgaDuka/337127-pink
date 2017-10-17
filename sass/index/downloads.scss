@@ -1,27 +1,39 @@
 .downloads {
   margin: 0 auto;
-  min-height: 240px;
-  padding-top: 425px;
-  background-color: $main-color;
-  background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: left 110px, center -70px;
-  outline: 1px solid green;
+  padding-top: 395px;
+  background-color: transparent;
+  background-image: url("../img/iphone-hand-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: left 110px;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/iphone-hand-mobile@2x.png");
+    background-size: 80%;
+  }
 
   @media (min-width: $tablet-width) {
-    min-height: 620px;
     padding-top: 0;
-    background-position: right bottom, center -70px;
-    background-size: 70%, cover;
+    background-image: url("../img/iphone-hand-tablet@1x.png");
+    background-position: center  bottom;
+    background-size: 106%;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/iphone-hand-tablet@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {
     min-height: 745px;
     background: transparent;
-    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-image: url("../img/iphone-hand-desktop@1x.png");
     background-repeat: no-repeat;
-    background-position: right 110px bottom;
-    background-size: 50%;
+    background-position: left 26px bottom;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/iphone-hand-desktop@2x.png");
+      background-size: 109%;
+      background-position: left 27px bottom;
+    }
   }
 }
 
@@ -35,7 +47,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    @include text-value(50px, 60px, 300, white);
+    font-size: 50px;
+    line-height: 60px;
     margin: 110px 40px 53px;
   }
 }
@@ -43,47 +56,56 @@
 .downloads__btn {
   @include btn(280px, white, normal);
   margin: 0 auto;
-  margin-bottom: 30px;
+
+  &:hover {
+    background-color: white;
+    color: $violet-color;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.5);
+  }
 
   @media (min-width: $tablet-width) {
     @include btn(300px, white, normal);
-    margin-bottom: 45px;
   }
 
   @media (min-width: $desktop-width) {
     @include btn(300px, white, 1.8px);
-    margin-bottom: 65px;
   }
 }
 
 .downloads__apps {
   width: 200px;
-  margin: 0 auto;
+  margin: 30px auto 0;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 
+  @media (min-width: $tablet-width) {
+    margin-top: 45px;
+  }
+
   @media (min-width: $desktop-width) {
     width: 205px;
     padding-right: 5px;
+    margin-top: 64px;
     margin-bottom: 4px;
   }
-}
-
-.downloads__link {
-  color: white;
 }
 
 .downloads__text {
   @include text-value(14px, 24px, 300, white);
   width: 280px;
-  padding: 20px;
+  margin: 0;
+  padding: 20px 20px 30px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    @include text-value(18px, 24px, 300, white);
+    font-size: 18px;
     width: 300px;
     padding-top: 35px;
+    padding-bottom: 110px;
   }
 
   @media (min-width: $desktop-width) {
@@ -94,13 +116,18 @@
 }
 
 .downloads__content {
+  padding-top: 30px;
+  background-color: $main-color;
+
   @media (min-width: $tablet-width) {
     width: 300px;
+    padding-top: 0;
     margin-left: 20px;
     margin-right: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: transparent;
   }
 
   @media (min-width: $desktop-width) {

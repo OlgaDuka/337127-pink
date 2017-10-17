@@ -22,41 +22,55 @@ body {
 }
 
 .bg-container--header {
+  background-color: $main-color;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: repeat;
   background-position: top;
   background-size: cover;
-}
 
-.bg-container--main-1 {
-  @include bg-gradient(25%);
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
 
   @media (min-width: $tablet-width) {
-    @include bg-gradient(25%);
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
-    @include bg-gradient(28.5%);
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+  }
+}
+
+.bg-container--main-1 {
+  @include bg-gradient(24.8%, 174deg);
+
+  @media (min-width: $tablet-width) {
+    @include bg-gradient(26%, 175deg);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include bg-gradient(28.5%, 175.5deg);
   }
 }
 
 .bg-container--main-2 {
-  @include bg-gradient(44.5%);
+  @include bg-gradient(44.5%, 175.5deg);
 
   @media (min-width: $tablet-width) {
-    @include bg-gradient(40%);
+    @include bg-gradient(49.8%, 175.7deg);
   }
 
   @media (min-width: $desktop-width) {
-    @include bg-gradient(50%);
+    @include bg-gradient(48.5%, 176deg);
   }
-}
-
-.bg-container--main-3 {
-  background-image: url("../img/bg-map-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
 }
 
 .fixed-overlay {
@@ -97,10 +111,4 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.site-text {
-  margin: 0;
-
-  @include text-value(14px, 30px, 400, $text-color);
 }

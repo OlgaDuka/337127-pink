@@ -91,6 +91,7 @@
   border-radius: 2px;
 
   @include text-value(18px, 30px, 700, $text-color);
+  font-family: inherit;
   color: white;
   text-transform: uppercase;
   background-color: $green-color;
