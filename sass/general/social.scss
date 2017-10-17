@@ -3,6 +3,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 11px;
+  }
 }
 
 .social__btn {

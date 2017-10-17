@@ -1,7 +1,6 @@
 .page-header {
   min-height: 325px;
   background-color: transparent;
-  outline: 1px solid orange;
 
   @media (min-width: $desktop-width) {
     min-height: 390px;
@@ -24,7 +23,6 @@
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
-    outline: 1px solid white;
   }
 }
 
@@ -54,7 +52,6 @@
 
   @media (min-width: $tablet-width) {
     height: 108px;
-    outline: 1px solid white;
   }
 
   @media (min-width: $desktop-width) {
@@ -131,11 +128,10 @@
 .page-header__toggle {
   height: 24px;
   width: 24px;
-  margin-right: 19px;
+  margin-right: 25px;
   color: white;
   background-color: transparent;
   cursor: pointer;
-  outline: none;
   border: none;
 
   &--burger {

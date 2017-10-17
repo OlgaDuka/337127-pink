@@ -1,6 +1,5 @@
 .upload {
   margin: 0 auto;
-  outline: 1px solid forestgreen;
   background-color: $gray-color;
 
   @media (min-width: $desktop-width) {
@@ -22,7 +21,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 5px;
+    padding-top: 4px;
     padding-bottom: 66px;
   }
 }
@@ -31,13 +30,15 @@
   padding: 20px 0;
 
   @media (min-width: $tablet-width) {
-    padding: 40px 20px 60px;
+    margin-bottom: 5px;
+    padding: 42px 20px 55px;
     display: flex;
     justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 37px 60px 57px 80px;
+    margin-bottom: 28px;
+    padding: 38px 60px 60px 80px;
   }
 }
 
@@ -47,7 +48,7 @@
   @media (min-width: $tablet-width) {
     width: 300px;
     height: 398px;
-    padding-top: 20px;
+    padding-top: 17px;
     padding-left: 0;
 
     img {

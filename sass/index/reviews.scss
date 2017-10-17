@@ -1,8 +1,6 @@
-.reviews {
-  outline: 1px solid fuchsia;
-}
-
 .reviews__slider {
+  position: relative;
+
   @media (min-width: $desktop-width) {
     background: url("../img/icon-quotes.svg") center 20% no-repeat,
       url("../img/icon-review-arrow-left.svg") 1% 54% no-repeat,

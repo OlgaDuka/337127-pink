@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  outline: 1px solid olivedrab;
 
   @media (min-width: $tablet-width) {
     min-height: 125px;
@@ -22,11 +21,11 @@
     padding-left: 10px;
     padding-right: 10px;
   }
-}
 
-.page-footer--mobile {
-  @media (max-width: $mobile-width-only) {
-    display: none;
+  &--mobile {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
   }
 }
 
@@ -34,7 +33,7 @@
   margin-top: 40px;
 
   @media (min-width: $tablet-width) {
-    margin-top: -20px;
+    margin-top: -22px;
   }
 }
 
@@ -95,6 +94,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 0;
+    margin-top: -8px;
   }
 }
