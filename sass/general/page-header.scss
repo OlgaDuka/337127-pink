@@ -38,14 +38,37 @@
 
     .page-header__toggle {
       width: 50px;
+      height: 24px;
 
-      &--burger {
-        display: block;
+      .page-header__toggle-icon--burger {
         color: white;
+        width: 50px;
+        top: 0;
+        left: 0;
       }
 
-      &--cross {
-        display: none;
+      .page-header__toggle-icon--cross {
+        color: transparent;
+      }
+    }
+
+    .page-header__toggle:hover {
+      .page-header__toggle-icon--burger {
+        color: $violet-color;
+      }
+
+      .page-header__toggle-icon--cross {
+        color: transparent;
+      }
+    }
+
+    .page-header__toggle:active {
+      .page-header__toggle-icon--burger {
+        color: rgba(255, 255, 255, 0.3);
+      }
+
+      .page-header__toggle-icon--cross {
+        color: transparent;
       }
     }
   }
@@ -60,6 +83,56 @@
 
   @media (min-width: $desktop-width) {
     background-color: transparent;
+  }
+}
+
+.page-header__toggle {
+  height: 24px;
+  width: 24px;
+  margin-right: 20px;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__toggle-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.page-header__toggle-icon--burger {
+  color: transparent;
+  width: 24px;
+}
+
+.page-header__toggle-icon--cross {
+  color: white;
+}
+
+.page-header__toggle:hover {
+  .page-header__toggle-icon--cross {
+    color: $violet-color;
+  }
+
+  .page-header__toggle-icon--burger {
+    color: transparent;
+  }
+}
+
+.page-header__toggle:active {
+  .page-header__toggle-icon--cross {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .page-header__toggle-icon--burger {
+    color: transparent;
   }
 }
 
@@ -122,37 +195,6 @@
     &--mobile {
       display: none;
     }
-  }
-}
-
-.page-header__toggle {
-  height: 24px;
-  width: 24px;
-  margin-right: 25px;
-  color: white;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-
-  &--burger {
-    display: none;
-  }
-
-  &--cross {
-    display: block;
-  }
-
-
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
-
-  &:hover {
-    color: $violet-color;
-  }
-
-  &--active {
-    color: rgba(255, 255, 255, 0.3);
   }
 }
 
