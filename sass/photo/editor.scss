@@ -196,6 +196,7 @@
 
     &--contrast {
       top: 1px;
+
       &::before {
         left: 160px;
       }
@@ -214,7 +215,7 @@
 
   @media (min-width: $tablet-width) {
     border: 0;
-    padding: 0 8px 0 5px;;
+    padding: 0 8px 0 5px;
     min-height: 133px;
     margin: auto auto 0;
   }
