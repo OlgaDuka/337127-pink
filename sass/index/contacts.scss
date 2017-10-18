@@ -166,12 +166,11 @@
 }
 
 .contacts__map-wrap {
+  position: relative;
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center bottom;
   height: 200px;
-  position: relative;
-  z-index: 1;
 
   &::before {
     content: "";
@@ -184,7 +183,7 @@
     border: 10px solid white;
     border-radius: 50%;
     background-color: $violet-color;
-    z-index: 2;
+    z-index: 1;
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -214,5 +213,20 @@
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/bg-map-desktop@2x.jpg");
     }
+  }
+}
+
+.contacts__map {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    height: 374px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 517px;
   }
 }

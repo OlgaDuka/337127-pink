@@ -90,8 +90,10 @@
 }
 
 .features__item {
+  width: inherit;
   margin-bottom: 18px;
   text-align: center;
+  outline: 1px solid red;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 21px;

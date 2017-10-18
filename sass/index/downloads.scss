@@ -43,6 +43,7 @@
   @media (min-width: $tablet-width) {
     @include text-value(40px, 48px, 300, white);
     text-align: center;
+    max-width: 220px;
     margin: 95px 40px 30px;
   }
 
@@ -54,6 +55,8 @@
 }
 
 .downloads__btn {
+  display: block;
+
   @include btn(280px, white, normal);
   margin: 0 auto;
 

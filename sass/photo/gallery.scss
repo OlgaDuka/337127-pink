@@ -66,6 +66,7 @@
     display: block;
     position: relative;
     height: 137px;
+    max-width: none;
 
     &::before {
       content: "Панорама дня";
