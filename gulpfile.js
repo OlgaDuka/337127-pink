@@ -13,7 +13,7 @@ var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
 var uglify = require("gulp-uglify");
 var posthtml = require("gulp-posthtml");
-var include = require("posthtml-include"); 
+var include = require("posthtml-include");
 var run = require("run-sequence");
 var del = require("del");
 var server = require("browser-sync").create();
@@ -66,13 +66,31 @@ gulp.task("sprite", function() {
     .pipe(gulp.dest("build/img"));
 });
 
+// Минификация SVG вне спрайта
+gulp.task("svgmin", function() {
+  return gulp.src("build/img/*.svg")
+    .pipe(svgmin())
+    .pipe(gulp.dest("build/img"));
+});
+
+// Минификация скриптов
+gulp.task("jsmin", function() {
+  return gulp.src("build/js/*.js")
+    .pipe(uglify())
+    .pipe(rename({
+      suffix: ".min"
+    }))
+    .pipe(gulp.dest("build/js"));
+});
+
 // Постпроцессинг HTML-файлов
 gulp.task("html", function() {
   return gulp.src("*.html")
     .pipe(posthtml([
       include()
     ]))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build"))
+    .pipe(server.stream());
 });
 
 // Очистка билда
@@ -104,8 +122,10 @@ gulp.task("build", function(done) {
     "clean",
     "copy",
     "style",
+    "jsmin",
     "images",
     "webp",
+    "svgmin",
     "sprite",
     "html",
     done

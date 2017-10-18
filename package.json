@@ -35,8 +35,6 @@
     "webp": "gulp webp",
     "build": "gulp build",
     "start": "gulp serve",
-    "clean": "gulp clean",
-    "copy": "gulp copy",
     "html": "gulp html"
   },
   "browserslist": [
