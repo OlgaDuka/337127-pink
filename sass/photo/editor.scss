@@ -3,6 +3,10 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+  }
 }
 
 .editor__tools {
@@ -178,7 +182,7 @@
 
   @media (min-width: $desktop-width) {
     width: 285px;
-    top: 6px;
+    top: 8px;
 
     &--crop::before {
       left: 70px;
@@ -188,12 +192,8 @@
       left: 245px;
     }
 
-    &--contrast {
-      top: 5px;
-
-      &::before {
-        left: 160px;
-      }
+    &--contrast::before {
+      left: 160px;
     }
   }
 }
@@ -210,14 +210,14 @@
   @media (min-width: $tablet-width) {
     border: 0;
     padding: 0 8px 0 5px;
-    min-height: 133px;
+    height: 133px;
     margin: auto auto 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 410px;
-    min-height: 53px;
-    margin: 0;
+    height: 55px;
+    margin-top: auto;
     padding: 0;
     padding-left: 10px;
     flex-direction: row;
@@ -268,7 +268,7 @@
 
   @media (min-width: $desktop-width) {
     &--execute {
-      @include btn(180px, $violet-color, 0.1px);
+      @include btn(185px, $violet-color, 0.3px);
     }
 
     &--cancel {

@@ -48,6 +48,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 250px;
     font-size: 50px;
     line-height: 60px;
     margin: 110px 40px 53px;
@@ -56,6 +57,7 @@
 
 .downloads__btn {
   display: block;
+  padding-top: 13px;
 
   @include btn(280px, white, normal);
   margin: 0 auto;
@@ -80,19 +82,19 @@
 
 .downloads__apps {
   width: 200px;
-  margin: 30px auto 0;
+  margin: 28px auto 0;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 
   @media (min-width: $tablet-width) {
-    margin-top: 45px;
+    margin-top: 43px;
   }
 
   @media (min-width: $desktop-width) {
     width: 205px;
     padding-right: 5px;
-    margin-top: 64px;
+    margin-top: 60px;
     margin-bottom: 4px;
   }
 }
