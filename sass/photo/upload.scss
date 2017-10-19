@@ -1,5 +1,7 @@
 .upload {
+  outline: 1px solid blue;
   margin: 0 auto;
+  padding: 0;
   background-color: $gray-color;
 
   @media (min-width: $desktop-width) {
