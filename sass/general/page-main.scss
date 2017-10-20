@@ -1,6 +1,9 @@
 .page-main {
   margin: auto;
-  overflow: hidden;
+
+  &--photo {
+    overflow: hidden;
+  }
 }
 
 .page-main__text {
