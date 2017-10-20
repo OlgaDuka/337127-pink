@@ -47,13 +47,13 @@
   background-color: $gray-color;
   background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
-  background-size: 100vw auto;
-  background-position: 50% 0;
+  background-size: 100%  94.074px;
+  background-position: top left;
 }
 
 .features__list {
   @include list-init;
-  width: 280px;
+  max-width: 280px;
   margin: 0 auto;
   padding-top: 75px;
   padding-bottom: 286px;
@@ -70,7 +70,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 309px;
+    max-width: 309px;
     padding-top: 71px;
     padding-left: 311px;
     padding-bottom: 6px;
@@ -85,7 +85,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width;
+    max-width: $desktop-width;
     padding: 0;
     padding-top: 2px;
     flex-direction: row;

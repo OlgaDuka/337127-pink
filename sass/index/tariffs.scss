@@ -1,16 +1,19 @@
 .tariffs {
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 }
 
 .tariffs__bg {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: $gray-color;
   background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: 50% 0;
+  background-size: 100% 94.074px;
+  background-position: top left;
 
   @media (min-width: $tablet-width) {
     padding-top: 90px;
@@ -24,13 +27,16 @@
 }
 
 .tariffs__slider {
-  width: 1120px;
-  margin-left: -540px;
+  display: block;
+  min-width: 1120px;
+  height: 280px;
+  transform: translateX(-148px);
   border-collapse: collapse;
   border: 2px solid $gray-color;
 
   @media (min-width: $tablet-width) {
     width: 618px;
+    min-width: none;
     margin: 0 auto;
   }
 

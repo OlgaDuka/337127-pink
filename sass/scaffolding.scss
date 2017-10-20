@@ -1,5 +1,5 @@
 body {
-  min-width: $panel-width;
+  min-width: 300px;
   margin: 0;
   padding: 0;
   font-family: $default-font;
@@ -9,19 +9,20 @@ body {
 }
 
 .set-width {
-  width: $panel-width;
+  max-width: $panel-width;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    width: $tablet-width;
+    max-width: $tablet-width;
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width;
+    max-width: $desktop-width;
   }
 }
 
 .bg-container--header {
+  outline: 2px solid red;
   background-color: $main-color;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: repeat;

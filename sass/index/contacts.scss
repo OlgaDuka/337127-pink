@@ -38,19 +38,6 @@
   text-align: center;
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 290px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 160px solid transparent;
-    border-right: 160px solid transparent;
-    border-top: 35px solid white;
-    z-index: 100;
-  }
-
   @media (min-width: $tablet-width) {
     margin-top: 27px;
     margin-bottom: 22px;
@@ -60,13 +47,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: baseline;
-
-    &::before {
-      top: 234px;
-      border-left: 330px solid transparent;
-      border-right: 330px solid transparent;
-      border-top: 68px solid white;
-    }
   }
 
   @media (min-width: $desktop-width) {
@@ -75,14 +55,6 @@
     margin-bottom: 0;
     padding-left: 15px;
     padding-right: 15px;
-
-    &::before {
-      top: 120px;
-      left: -270px;
-      border-left: 750px solid transparent;
-      border-right: 750px solid transparent;
-      border-top: 126px solid white;
-    }
   }
 }
 
@@ -173,6 +145,19 @@
   height: 200px;
 
   &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 61.905px;
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    z-index: 3;
+  }
+
+  &::after {
     content: "";
     position: absolute;
     top: 57%;
