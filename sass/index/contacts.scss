@@ -5,11 +5,11 @@
   flex-direction: column;
 
   @media (min-width: $tablet-width) {
-    padding-top: 47px;
+    padding-top: 45px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 64px;
+    padding-top: 65px;
   }
 }
 
@@ -20,7 +20,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 40px;
-    line-height: 50px;
+    line-height: 48px;
   }
 
   @media (min-width: $desktop-width) {

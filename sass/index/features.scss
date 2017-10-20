@@ -1,5 +1,5 @@
 .features__slogans {
-  margin-bottom: 85px;
+  margin-bottom: 10px;
   padding-top: 42px;
   display: flex;
   flex-direction: column;
@@ -43,10 +43,19 @@
   }
 }
 
+.features__bg {
+  background-color: $gray-color;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+  background-position: 50% 0;
+}
+
 .features__list {
   @include list-init;
   width: 280px;
   margin: 0 auto;
+  padding-top: 75px;
   padding-bottom: 286px;
   display: flex;
   flex-direction: column;
@@ -65,7 +74,6 @@
     padding-top: 71px;
     padding-left: 311px;
     padding-bottom: 6px;
-    margin-left: 20px;
     background-image: url("../img/iphone-screen-3-tablet@1x.png");
     background-position: left;
     background-size: auto;
@@ -78,10 +86,8 @@
 
   @media (min-width: $desktop-width) {
     width: $desktop-width;
-    margin: 0;
+    padding: 0;
     padding-top: 2px;
-    padding-left: 0;
-    padding-right: 0;
     flex-direction: row;
     justify-content: space-around;
     align-items: baseline;
@@ -93,7 +99,6 @@
   width: inherit;
   margin-bottom: 18px;
   text-align: center;
-  outline: 1px solid red;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 21px;

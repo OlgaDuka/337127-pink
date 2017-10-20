@@ -1,14 +1,25 @@
 .tariffs {
-  padding-bottom: 100px;
-  position: relative;
   overflow: hidden;
+  position: relative;
+}
+
+.tariffs__bg {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: $gray-color;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 50% 0;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 64px;
+    padding-top: 90px;
+    padding-bottom: 68px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 96px;
+    padding-top: 130px;
+    padding-bottom: 95px;
   }
 }
 
