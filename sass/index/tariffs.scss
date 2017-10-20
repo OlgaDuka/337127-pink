@@ -1,10 +1,10 @@
 .tariffs {
   position: relative;
-  overflow: hidden;
 }
 
 .tariffs__bg {
-  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   padding-top: 100px;
@@ -12,36 +12,35 @@
   background-color: $gray-color;
   background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
-  background-size: 100% 94.074px;
+  background-size: 100% 30px;
   background-position: top left;
 
   @media (min-width: $tablet-width) {
     padding-top: 90px;
     padding-bottom: 68px;
+    background-size: 100% 60px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 130px;
     padding-bottom: 95px;
+    background-size: 100% 90px;
   }
 }
 
 .tariffs__slider {
   display: block;
-  min-width: 1120px;
-  height: 280px;
-  transform: translateX(-148px);
+  min-width: 820px;
   border-collapse: collapse;
   border: 2px solid $gray-color;
 
   @media (min-width: $tablet-width) {
     width: 618px;
-    min-width: none;
     margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
-    width: 940px;
+    width: 938px;
   }
 }
 
@@ -84,6 +83,10 @@
 .tariffs__empty {
   border-color: transparent;
   background-color: $gray-color;
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }
 
 .tariffs__name {
@@ -197,6 +200,10 @@
       @include text-value(14px, 30px, 400, $text-color);
       padding-left: 22px;
       text-transform: uppercase;
+    }
+
+    &:first-child {
+      display: none;
     }
   }
 
