@@ -29,13 +29,13 @@
 }
 
 .tariffs__slider {
-  display: block;
   min-width: 820px;
   border-collapse: collapse;
   border: 2px solid $gray-color;
 
   @media (min-width: $tablet-width) {
     width: 618px;
+    min-width: auto;
     margin: 0 auto;
   }
 

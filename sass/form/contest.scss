@@ -18,6 +18,11 @@
   display: flex;
   flex-direction: column;
 
+  @media (max-width: $mobile-width-only) {
+    width: 280px;
+    margin: auto;
+  }
+
   @media (min-width: $tablet-width) {
     justify-content: space-around;
   }
@@ -98,17 +103,8 @@
   }
 }
 
-.contest__bg {
-  background-color: $gray-color;
-
-  @media (min-width: $tablet-width) {
-    background-color: white;
-  }
-}
-
 .contest__group {
-  width: 280px;
-  margin: 0 auto 25px;
+  margin: 0 0 25px;
   padding: 0;
   border-color: transparent;
 
@@ -125,8 +121,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 620px;
-    margin: 0 auto 23px;
+    margin: 0 20px 23px;
     padding: 0;
     border: 2px solid #e5e5e5;
 
@@ -147,7 +142,6 @@
       order: -2;
       padding: 12px 58px 22px;
       margin-bottom: 57px;
-      box-sizing: border-box;
     }
 
     &--apps {
@@ -182,6 +176,12 @@
     &--name {
       margin-top: 8px;
     }
+  }
+}
+
+.contest__group--bg {
+  @media (max-width: $mobile-width-only) {
+    background-color: $gray-color;
   }
 }
 
