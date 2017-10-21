@@ -445,6 +445,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 13px 18px;
+  border: 2px solid #e5e5e5;
   resize: none;
   box-sizing: border-box;
   font-family: inherit;
@@ -452,7 +453,6 @@
   @media (min-width: $tablet-width) {
     min-height: 195px;
     padding: 15px 17px 0;
-    border: 2px solid #e5e5e5;
   }
 
   @media (min-width: $desktop-width) {
