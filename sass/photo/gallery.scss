@@ -21,10 +21,11 @@
 
 .gallery__item {
   width: 280px;
-  padding-bottom: 20px;
+  padding-bottom: 21px;
 
   @media (min-width: $tablet-width) {
     width: 300px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
 
@@ -36,13 +37,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 55px;
+    margin-bottom: 52px;
     padding: 0 10px;
 
     &--panorama {
       width: 100%;
       margin: 0 auto;
-      margin-bottom: 48px;
+      margin-bottom: 50px;
       padding: 0;
     }
   }
