@@ -22,7 +22,6 @@ body {
 }
 
 .bg-container--header {
-  outline: 2px solid red;
   background-color: $main-color;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: repeat;
@@ -47,30 +46,6 @@ body {
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
     }
-  }
-}
-
-.bg-container--main-1 {
-  @include bg-gradient(24.8%, 174deg);
-
-  @media (min-width: $tablet-width) {
-    @include bg-gradient(26%, 175deg);
-  }
-
-  @media (min-width: $desktop-width) {
-    @include bg-gradient(28.5%, 175.5deg);
-  }
-}
-
-.bg-container--main-2 {
-  @include bg-gradient(44.5%, 175.5deg);
-
-  @media (min-width: $tablet-width) {
-    @include bg-gradient(49.8%, 175.7deg);
-  }
-
-  @media (min-width: $desktop-width) {
-    @include bg-gradient(48.5%, 176deg);
   }
 }
 

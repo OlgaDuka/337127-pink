@@ -8,7 +8,6 @@ var autoprefixer = require("autoprefixer");
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
-var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
 var uglify = require("gulp-uglify");
@@ -46,13 +45,6 @@ gulp.task("images", function() {
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"));
-});
-
-// Перевод JPEG и PNG в формат WEBP (качество — 90%)
-gulp.task("webp", function() {
-  return gulp.src("img/webp-src/*.{png,jpg}")
-  .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("build/img"));
 });
 
 // Создание SVG-спрайта
@@ -104,7 +96,6 @@ gulp.task("copy", function() {
     "fonts/**/*.{woff,woff2}",
     "img/**",
     "!img/sprite-src{,/**}",
-    "!img/webp-src{,/**}",
     "js/**"
   ], {
     base: "."
@@ -124,7 +115,6 @@ gulp.task("build", function(done) {
     "style",
     "jsmin",
     "images",
-    "webp",
     "svgmin",
     "sprite",
     "html",

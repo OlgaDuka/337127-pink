@@ -19,8 +19,6 @@
     "gulp-svgmin": "^1.2.4",
     "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^3.0.0",
-    "gulp-webp": "^2.3.0",
-    "pixel-glass": "^1.0.13",
     "posthtml-include": "^1.1.0",
     "run-sequence": "^1.2.2",
     "stylelint": "8.1.x",
@@ -32,7 +30,6 @@
     "test": "npm run editorconfig && npm run stylelint",
     "sprite": "gulp sprite",
     "images": "gulp images",
-    "webp": "gulp webp",
     "build": "gulp build",
     "start": "gulp serve",
     "html": "gulp html"

@@ -449,6 +449,16 @@
   resize: none;
   box-sizing: border-box;
   font-family: inherit;
+  outline-color: $violet-color;
+
+  &:hover {
+    border-color: #333333;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $violet-color;
+  }
 
   @media (min-width: $tablet-width) {
     min-height: 195px;
