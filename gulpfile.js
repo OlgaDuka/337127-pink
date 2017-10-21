@@ -133,7 +133,7 @@ gulp.task("build", function(done) {
 });
 
 // Живой сервер разработки
-gulp.task("serve", function() {
+gulp.task("serve",function() {
   server.init({
     server: "build/",
     notify: false,

@@ -6,7 +6,6 @@
   align-items: flex-start;
   flex-grow: 1;
   background-color: $gray-color;
-  outline: 1px solid red;
 
   @media (min-width: $tablet-width) {
     min-height: 131px;
@@ -80,7 +79,6 @@
 }
 
 .post__message {
-  outline: 1px solid green;
   max-width: 242px;
 
   @include text-value(14px, 24px, 400, $text-color);
