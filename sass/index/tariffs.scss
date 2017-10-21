@@ -1,26 +1,43 @@
 .tariffs {
-  padding-bottom: 102px;
   position: relative;
+}
+
+.tariffs__bg {
+  max-width: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: $gray-color;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 30px;
+  background-position: top left;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 64px;
+    padding-top: 90px;
+    padding-bottom: 68px;
+    background-size: 100% 60px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 96px;
+    padding-top: 140px;
+    padding-bottom: 95px;
+    background-size: 100% 67px;
   }
 }
 
 .tariffs__slider {
-  width: 1120px;
-  margin-left: -540px;
+  min-width: 835px;
   border-collapse: collapse;
   border: 2px solid $gray-color;
 
   @media (min-width: $tablet-width) {
     width: 618px;
-    margin: 0 auto;
+    min-width: auto;
   }
 
   @media (min-width: $desktop-width) {
@@ -40,33 +57,37 @@
 }
 
 .tariffs__str {
-  height: 60px;
+  min-height: 60px;
 
   @media (min-width: $tablet-width) {
-    height: 47px;
+    min-height: 47px;
   }
 
   @media (min-width: $desktop-width) {
-    height: 61px;
+    min-height: 61px;
   }
 }
 
 .tariffs__str:first-child {
-  height: 100px;
+  min-height: 100px;
   background-color: $main-color;
 
   @media (min-width: $tablet-width) {
-    height: 78px;
+    min-height: 78px;
   }
 
   @media (min-width: $desktop-width) {
-    height: 96px;
+    min-height: 96px;
   }
 }
 
 .tariffs__empty {
   border-color: transparent;
   background-color: $gray-color;
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }
 
 .tariffs__name {
@@ -78,28 +99,34 @@
   @include text-value(18px, 30px, 700, white);
   text-transform: uppercase;
   margin: 0;
-  padding: 0;
+  padding: 13px 15px 0;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
+    padding: 11px 8px 0 12px;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 18px;
+    padding: 14px 8px 0 12px;
   }
 }
 
 .tariffs__value {
   @include text-value(24px, 30px, 300, white);
   margin: 0;
-  padding: 0;
+  padding: 4px 15px 18px;
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
+    line-height: 25px;
+    padding: 0 8px 9px 12px;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 24px;
+    line-height: 30px;
+    padding: 2px 8px 19px 12px;
   }
 }
 
@@ -170,8 +197,10 @@
 
 .tariffs__option {
   width: 280px;
+  padding: 13px 0;
   border: 2px solid #e5e5e5;
   background-color: #ffffff;
+  box-sizing: border-box;
 
   @media (max-width: $mobile-width-only) {
     &::after {
@@ -180,6 +209,10 @@
       @include text-value(14px, 30px, 400, $text-color);
       padding-left: 22px;
       text-transform: uppercase;
+    }
+
+    &:first-child {
+      display: none;
     }
   }
 
@@ -201,19 +234,13 @@
     width: 32px;
     height: 32px;
     background-image: url("..//img/icon-yes.svg");
-    background-size: 32px auto;
+    background-size: 31px auto;
   }
 
   @media (min-width: $tablet-width) {
     @include text-value(14px, 30px, 400, $text-color);
-    width: 142px;
-    padding-left: 15px;
-
-    &--yes,
-    &--no {
-      width: 157px;
-      padding-left: 0;
-    }
+    width: 152px;
+    padding: 6px 8px 7px 16px;
 
     &--yes::before,
     &--no::before {
@@ -224,12 +251,7 @@
 
   @media (min-width: $desktop-width) {
     font-size: 18px;
-    padding-left: 20px;
-
-    &--yes,
-    &--no {
-      width: 162px;
-      padding-left: 0;
-    }
+    width: 232px;
+    padding: 13px 17px 13px 20px;
   }
 }

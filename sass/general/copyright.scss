@@ -5,6 +5,10 @@
   align-items: center;
   justify-content: space-between;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
+
   @media (min-width: $desktop-width) {
     width: 154px;
   }

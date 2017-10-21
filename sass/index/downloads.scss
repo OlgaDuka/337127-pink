@@ -1,4 +1,5 @@
 .downloads {
+  width: 100%;
   margin: 0 auto;
   padding-top: 395px;
   background-color: transparent;
@@ -43,10 +44,12 @@
   @media (min-width: $tablet-width) {
     @include text-value(40px, 48px, 300, white);
     text-align: center;
+    max-width: 220px;
     margin: 95px 40px 30px;
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 250px;
     font-size: 50px;
     line-height: 60px;
     margin: 110px 40px 53px;
@@ -54,6 +57,9 @@
 }
 
 .downloads__btn {
+  display: block;
+  padding-top: 13px;
+
   @include btn(280px, white, normal);
   margin: 0 auto;
 
@@ -77,41 +83,39 @@
 
 .downloads__apps {
   width: 200px;
-  margin: 30px auto 0;
+  margin: 28px auto 0;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 
   @media (min-width: $tablet-width) {
-    margin-top: 45px;
+    margin-top: 43px;
   }
 
   @media (min-width: $desktop-width) {
     width: 205px;
     padding-right: 5px;
-    margin-top: 64px;
+    margin-top: 60px;
     margin-bottom: 4px;
   }
 }
 
 .downloads__text {
   @include text-value(14px, 24px, 300, white);
-  width: 280px;
-  margin: 0;
+  width: 260px;
+  margin: 0 auto;
   padding: 20px 20px 30px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
     width: 300px;
-    padding-top: 35px;
-    padding-bottom: 110px;
+    padding: 35px 0 110px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 50px;
     padding-left: 0;
-    margin-left: 18px;
   }
 }
 

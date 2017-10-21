@@ -14,7 +14,7 @@
     width: 22px;
     height: 42px;
     position: absolute;
-    top: 49%;
+    top: 50%;
     border: none;
     background-color: white;
     background-repeat: no-repeat;
@@ -50,17 +50,18 @@
 
 .reviews__list {
   @include list-init;
-  margin-bottom: 120px;
+
+  margin-bottom: 20px;
   padding: 42px 20px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 100px;
+    margin-bottom: 8px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 40px;
-    margin-bottom: 130px;
+    padding-top: 129px;
+    margin-bottom: 0;
   }
 }
 
@@ -100,11 +101,13 @@
   @media (min-width: $tablet-width) {
     @include text-value(14px, 30px, 400, $text-color);
     margin-top: 2px;
+    padding: 0 20px;
     order: 3;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 18px;
+    margin-bottom: 5px;
   }
 }
 
@@ -129,7 +132,7 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 20px;
-    padding: 125px 70px 0;
+    padding: 37px 70px 3px;
 
     &::before {
       display: none;

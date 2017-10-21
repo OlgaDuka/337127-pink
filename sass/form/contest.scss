@@ -18,6 +18,11 @@
   display: flex;
   flex-direction: column;
 
+  @media (max-width: $mobile-width-only) {
+    width: 280px;
+    margin: auto;
+  }
+
   @media (min-width: $tablet-width) {
     justify-content: space-around;
   }
@@ -32,8 +37,8 @@
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: nowrap;
-      padding-left: 58px;
-      padding-right: 60px;
+      padding-left: 57px;
+      padding-right: 40px;
     }
 
     &--apps {
@@ -44,7 +49,7 @@
     &--name {
       justify-content: space-between;
       width: 432px;
-      min-height: 295px;
+      height: 293px;
       margin-top: 32px;
     }
   }
@@ -91,12 +96,16 @@
     &--name {
       margin: 0;
     }
+
+    &--travel {
+      margin-bottom: 33px;
+    }
   }
 }
 
 .contest__group {
   margin: 0 0 25px;
-  padding: 0 18px;
+  padding: 0;
   border-color: transparent;
 
   &--apps {
@@ -155,11 +164,12 @@
 
     &--travel {
       width: 100%;
-      padding-bottom: 17px;
+      padding-top: 44px;
+      padding-bottom: 10px;
     }
 
     &--apps {
-      margin-top: 30px;
+      margin-top: 28px;
       padding: 0;
     }
 
@@ -169,7 +179,7 @@
   }
 }
 
-.contest__group--background {
+.contest__group--bg {
   @media (max-width: $mobile-width-only) {
     background-color: $gray-color;
   }
@@ -187,8 +197,9 @@
   &--radio {
     @include text-value(18px, 30px, 400, $text-color);
     margin-top: 0;
-    margin-bottom: 43px;
-    padding-left: 0;
+    margin-bottom: 48px;
+    padding-top: 4px;
+    padding-left: 69px;
     text-transform: none;
     position: relative;
     display: flex;
@@ -197,6 +208,9 @@
 
     &::before {
       content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 35px;
       height: 35px;
       margin-right: 30px;
@@ -215,7 +229,7 @@
   }
 
   &--radio {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 
     &::before {
       border-radius: 50%;
@@ -244,8 +258,9 @@
     }
 
     &--radio {
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       margin-left: 57px;
+      padding-left: 60px;
 
       &::before {
         margin-right: 21px;
@@ -254,6 +269,8 @@
 
     &--checkbox {
       margin-left: 58px;
+      margin-bottom: 8px;
+      padding-left: 60px;
 
       &::before {
         margin-right: 20px;
@@ -281,8 +298,10 @@
     }
 
     &--checkbox {
-      margin-left: 0;
-      padding: 0;
+      margin: 0;
+      margin-bottom: 15px;
+      padding-left: 60px;
+      padding-top: 5px;
     }
   }
 }
@@ -320,7 +339,8 @@
   @include text-value(18px, 30px, 400, $text-color);
   font-family: inherit;
   width: 280px;
-  padding: 14px 20px;
+  height: 62px;
+  padding-left: 20px;
   margin-bottom: 15px;
   border: 2px solid #e5e5e5;
   box-sizing: border-box;
@@ -389,6 +409,7 @@
   @media (min-width: $tablet-width) {
     position: static;
     text-align: center;
+    max-width: 420px;
   }
 }
 
@@ -414,6 +435,7 @@
     width: 100%;
     margin: 43px 10px 41px;
     padding-bottom: 44px;
+    padding-left: 58px;
   }
 }
 
@@ -423,14 +445,24 @@
   width: 100%;
   margin: 0 auto;
   padding: 13px 18px;
+  border: 2px solid #e5e5e5;
   resize: none;
   box-sizing: border-box;
   font-family: inherit;
+  outline-color: $violet-color;
+
+  &:hover {
+    border-color: #333333;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $violet-color;
+  }
 
   @media (min-width: $tablet-width) {
     min-height: 195px;
     padding: 15px 17px 0;
-    border: 2px solid #e5e5e5;
   }
 
   @media (min-width: $desktop-width) {
