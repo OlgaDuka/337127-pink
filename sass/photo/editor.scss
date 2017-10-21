@@ -199,7 +199,7 @@
 }
 
 .editor__buttons {
-  height: 122px;
+  min-height: 122px;
   margin: 0 auto;
   padding: 38px 20px 20px;
   display: flex;
@@ -210,13 +210,13 @@
   @media (min-width: $tablet-width) {
     border: 0;
     padding: 0 8px 0 5px;
-    height: 133px;
+    min-height: 133px;
     margin: auto auto 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 410px;
-    height: 55px;
+    min-height: 55px;
     margin-top: auto;
     padding: 0;
     padding-left: 10px;

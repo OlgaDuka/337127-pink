@@ -37,7 +37,7 @@
 
       .post__like {
         order: 2;
-        width: 120px;
+        min-width: 120px;
         margin-right: 5px;
         margin-bottom: 0;
       }
@@ -66,7 +66,7 @@
 
 .post__author {
   order: 0;
-  height: 25px;
+  min-height: 25px;
 }
 
 .post__name {
@@ -121,7 +121,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 22px;
-    width: 240px;
+    min-width: 240px;
     justify-content: space-between;
 
     &::before {
@@ -133,9 +133,11 @@
       display: inline-block;
       width: 13px;
       height: 13px;
+      padding-left: 18px;
+      align-self: center;
       background-image: url("..//img/icon-heart.svg");
       background-repeat: no-repeat;
-      background-position: left center;
+      background-position: right center;
       background-size: 13px 13px;
     }
   }
