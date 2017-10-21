@@ -4,16 +4,17 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex-grow: 1;
   background-color: $gray-color;
   outline: 1px solid red;
 
   @media (min-width: $tablet-width) {
-    height: 131px;
+    min-height: 131px;
     padding: 20px 27px 0;
   }
 
   @media (min-width: $desktop-width) {
-    height: 132px;
+    min-height: 132px;
   }
 
   &--panorama {
@@ -23,7 +24,9 @@
 
     @media (min-width: $tablet-width) {
       width: $tablet-width - 40px;
+      min-height: 95px;
       padding: 24px 22px 20px 27px;
+      box-sizing: border-box;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -47,6 +50,7 @@
 
     @media (min-width: $desktop-width) {
       width: $desktop-width - 20px;
+      min-height: 95px;
       padding: 22px 22px 18px 27px;
 
       .post__message {
@@ -97,6 +101,7 @@
   border: none;
   background-color: transparent;
   text-transform: uppercase;
+  cursor: pointer;
 
   &::after {
     display: none;

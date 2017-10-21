@@ -9,7 +9,8 @@
 /* Миксин для кнопки */
 @mixin btn($btn-width, $btn-color, $btn-letter-sp) {
   width: $btn-width;
-  height: 55px;
+  padding: 13px 10px;
+  min-height: 55px;
   margin-left: 0;
   border: 3px solid $btn-color;
   border-radius: 36px;

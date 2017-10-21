@@ -25,6 +25,8 @@
 
   @media (min-width: $tablet-width) {
     width: 300px;
+    display: flex;
+    flex-direction: column;
 
     &--panorama {
       width: 100%;
