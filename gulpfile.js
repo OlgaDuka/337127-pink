@@ -55,7 +55,7 @@ gulp.task("sprite", function() {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("img"));
 });
 
 // Минификация SVG вне спрайта
@@ -101,10 +101,6 @@ gulp.task("copy", function() {
     base: "."
   })
   .pipe(gulp.dest("build"));
-});
-
-gulp.task("build", function(done) {
-  run("style", "sprite", "html", done);
 });
 
 // Cборка билда
