@@ -49,5 +49,9 @@
   ],
   "engines": {
     "node": "8.2"
+  },
+  "dependencies": {
+    "ajv-keywords": "^2.1.0",
+    "gulp-webp": "^2.3.0"
   }
 }
