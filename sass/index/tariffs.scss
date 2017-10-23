@@ -197,8 +197,8 @@
 
 .tariffs__option {
   width: 280px;
-  word-break: break-word;
   padding: 13px 0;
+  padding-left: 22px;
   border: 2px solid #e5e5e5;
   background-color: #ffffff;
   box-sizing: border-box;
@@ -208,7 +208,7 @@
       content: attr(data-property);
 
       @include text-value(14px, 30px, 400, $text-color);
-      padding-left: 22px;
+
       text-transform: uppercase;
     }
 

@@ -18,7 +18,6 @@
   font-family: inherit;
   text-align: center;
   letter-spacing: $btn-letter-sp;
-  word-break: break-word;
   box-sizing: border-box;
 
   @include text-value(18px, 18px, 700, $btn-color);

@@ -254,7 +254,6 @@
   padding-bottom: 5px;
   text-align: center;
   text-transform: uppercase;
-  word-break: break-word;
   background-color: white;
 
   @media (min-width: $tablet-width) {
@@ -300,7 +299,6 @@
     padding-bottom: 5px;
     padding-left: 69px;
     text-transform: none;
-    word-break: break-word;
     position: relative;
     display: flex;
     align-items: center;
@@ -341,7 +339,6 @@
     margin: 0 0 10px;
     padding: 0;
     align-self: center;
-    word-break: break-word;
   }
 
   @media (min-width: $tablet-width) {
@@ -574,7 +571,7 @@
   padding: 17px 20px;
   margin-bottom: 20px;
   text-transform: uppercase;
-  word-break: break-word;
+
   border: none;
   border-radius: 3px;
   background-color: #2aab6d;
@@ -601,7 +598,6 @@
   max-width: 270px;
   text-transform: uppercase;
   text-align: center;
-  word-break: break-word;
 
   &--violet {
     color: $violet-color;

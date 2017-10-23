@@ -2,7 +2,7 @@
   position: relative;
 
   @media (min-width: $desktop-width) {
-    background: url("../img/icon-quotes.svg") center 20% no-repeat;
+    background: url("../img/icon-quotes.svg") center 72px no-repeat;
   }
 }
 
@@ -81,7 +81,6 @@
 .reviews__name {
   @include text-value(18px, 30px, 700, $text-color);
   margin: 0 auto 14px;
-  word-break: break-word;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -103,7 +102,6 @@
     @include text-value(14px, 30px, 400, $text-color);
     margin-top: 2px;
     padding: 0 20px;
-    word-break: break-word;
     order: 3;
   }
 
@@ -115,7 +113,6 @@
 
 .reviews__text {
   @include text-value(14px, 30px, 400, $text-color);
-  word-break: break-word;
 
   &::before {
     display: inline-block;
