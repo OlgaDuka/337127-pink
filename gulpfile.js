@@ -8,6 +8,7 @@ var autoprefixer = require("autoprefixer");
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
+var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
 var uglify = require("gulp-uglify");
@@ -47,6 +48,13 @@ gulp.task("images", function() {
     .pipe(gulp.dest("build/img"));
 });
 
+// Конвертация JPEG и PNG в формат WEBP (качество — 90%)
+gulp.task("webp", function() {
+  return gulp.src("img/webp-src/*.{png,jpg}")
+  .pipe(webp({quality: 90}))
+  .pipe(gulp.dest("build/img"));
+});
+
 // Создание SVG-спрайта
 gulp.task("sprite", function() {
   return gulp.src("img/sprite-src/*.svg")
@@ -56,13 +64,6 @@ gulp.task("sprite", function() {
     }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("img"));
-});
-
-// Минификация SVG
-gulp.task("svgmin", function() {
-  return gulp.src("build/img/*.svg")
-    .pipe(svgmin())
-    .pipe(gulp.dest("build/img"));
 });
 
 // Минификация скриптов
@@ -97,6 +98,7 @@ gulp.task("copy", function() {
     "img/**",
     "!img/sprite-src{,/**}",
     "!img/sprite.svg",
+    "!img/webp-src{,/**}",
     "js/**"
   ], {
     base: "."
@@ -112,6 +114,7 @@ gulp.task("build", function(done) {
     "style",
     "jsmin",
     "images",
+    "webp",
     "sprite",
     "html",
     done
