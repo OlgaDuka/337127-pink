@@ -17,7 +17,7 @@
   @include list-init;
   display: flex;
   flex-direction: column;
-  outline: 1px solid magenta;
+  clear: both;
 
   @media (max-width: $mobile-width-only) {
     width: 280px;
@@ -44,7 +44,7 @@
 
     &--apps {
       width: 432px;
-      margin-top: 33px;
+      margin-top: 52px;
     }
 
     &--name {
@@ -59,7 +59,6 @@
 .contest__item {
   display: flex;
   flex-direction: column;
-  outline: 1px solid yellow;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -77,20 +76,15 @@
 
     &--apps {
       margin-top: 0;
-      margin-bottom: 6px;
+      margin-bottom: 0;
     }
 
     &--travel {
-      margin-bottom: 35px;
+      margin-bottom: 30px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    &--apps {
-      margin-top: 6px;
-      margin-bottom: 0;
-    }
-
     &--contact {
       margin-top: 24px;
     }
@@ -100,7 +94,7 @@
     }
 
     &--travel {
-      margin-bottom: 33px;
+      margin-bottom: 28px;
     }
   }
 }
@@ -109,7 +103,6 @@
   margin: 0 0 25px;
   padding: 0;
   border-color: transparent;
-  outline: 1px solid red;
 
   &--apps {
     padding-top: 107px;
@@ -128,27 +121,27 @@
 
     &--name {
       order: -4;
-      margin-bottom: 45px;
+      margin-bottom: 54px;
       border-color: transparent;
     }
 
     &--travel {
       order: -1;
       margin-bottom: 20px;
-      padding-top: 38px;
-      padding-bottom: 11px;
+      padding-top: 48px;
+      padding-bottom: 10px;
     }
 
     &--contact {
       order: -2;
-      padding: 12px 58px 22px;
-      margin-bottom: 57px;
+      padding: 18px 58px 23px;
+      margin-bottom: 66px;
     }
 
     &--apps {
       order: -3;
-      margin-bottom: 57px;
-      padding-top: 40px;
+      margin-bottom: 66px;
+      padding-top: 49px;
       padding-bottom: 23px;
     }
   }
@@ -158,19 +151,19 @@
 
     &--contact {
       width: 100%;
-      margin-top: 32px;
-      margin-bottom: 57px;
-      padding: 10px 58px;
+      margin-top: 40px;
+      margin-bottom: 64px;
+      padding: 20px 58px 10px;
     }
 
     &--travel {
       width: 100%;
-      padding-top: 44px;
+      padding-top: 51px;
       padding-bottom: 10px;
     }
 
     &--apps {
-      margin-top: 28px;
+      margin-top: 34px;
       padding: 0;
     }
 
@@ -184,35 +177,69 @@
   display: block;
   float: left;
   width: 100%;
-  outline: 1px solid green;
+
+  &--travel,
+  &--apps {
+    .contest__description-text {
+      background-color: $gray-color;
+    }
+  }
 
   &--travel {
-    margin-top: -53px;
-
-    .contest__description-text {
-      width: 400px;
-    }
+    margin-top: -75px;
   }
 
   &--contact {
     margin-top: -23px;
-
-    .contest__description-text {
-      width: 250px;
-    }
   }
 
   &--apps {
-    margin-top: -12px;
-
-    .contest__description-text {
-      width: 330px;
-    }
+    margin-top: -71px;
   }
 
   @media (max-width: $mobile-width-only) {
     &--contact {
       display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    .contest__description-text {
+      background-color: white;
+    }
+
+    &--apps {
+      margin-top: -58px;
+
+      .contest__description-text {
+        width: 330px;
+      }
+    }
+
+    &--contact {
+      margin-top: -29px;
+
+      .contest__description-text {
+        width: 222px;
+      }
+    }
+
+    &--travel {
+      margin-top: -58px;
+
+      .contest__description-text {
+        width: 400px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--apps {
+      margin-top: -9px;
+    }
+
+    &--travel {
+      margin-top: -60px;
     }
   }
 }
@@ -229,10 +256,14 @@
   text-transform: uppercase;
   word-break: break-word;
   background-color: white;
-  outline: 1px solid blue;
 
   @media (min-width: $tablet-width) {
     max-width: 420px;
+
+    &--travel,
+    &--apps {
+      background-color: white;
+    }
   }
 }
 
@@ -288,7 +319,7 @@
   }
 
   &--radio {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 
     &::before {
       border-radius: 50%;
@@ -464,7 +495,7 @@
   @media (min-width: $tablet-width) {
     border: 2px solid #e5e5e5;
     margin: 45px 20px 43px;
-    padding: 0 60px 50px;
+    padding: 0 60px 48px;
   }
 
   @media (min-width: $desktop-width) {
@@ -498,7 +529,7 @@
 
   @media (min-width: $tablet-width) {
     min-height: 195px;
-    padding: 15px 17px 0;
+    padding: 14px 17px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -522,7 +553,7 @@
 
   @media (min-width: $desktop-width) {
     width: 100%;
-    margin: 21px 10px 0 9px;
+    margin: 23px 10px -4px 9px;
   }
 }
 
