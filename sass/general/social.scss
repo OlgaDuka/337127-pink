@@ -25,16 +25,16 @@
 }
 
 .social__img {
-  width: 18px;
-  height: 15px;
+  &--tw {
+    padding-left: 14px;
+    padding-top: 14px;
+  }
 
   &--fb {
-    width: 9px;
-    height: 19px;
-  }
+    padding-left: 18px;
+    padding-top: 12px;  }
 
   &--yt {
-    width: 15px;
-    height: 14px;
-  }
+    padding-left: 17px;
+    padding-top: 14px;  }
 }

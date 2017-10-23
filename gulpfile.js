@@ -50,7 +50,6 @@ gulp.task("images", function() {
 // Создание SVG-спрайта
 gulp.task("sprite", function() {
   return gulp.src("img/sprite-src/*.svg")
-    .pipe(svgmin())
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -58,7 +57,7 @@ gulp.task("sprite", function() {
     .pipe(gulp.dest("img"));
 });
 
-// Минификация SVG вне спрайта
+// Минификация SVG
 gulp.task("svgmin", function() {
   return gulp.src("build/img/*.svg")
     .pipe(svgmin())
@@ -97,7 +96,7 @@ gulp.task("copy", function() {
     "img/**",
     "!img/sprite-src{,/**}",
     "js/**"
-  ], {
+    ], {
     base: "."
   })
   .pipe(gulp.dest("build"));
@@ -111,7 +110,6 @@ gulp.task("build", function(done) {
     "style",
     "jsmin",
     "images",
-    "svgmin",
     "sprite",
     "html",
     done

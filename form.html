@@ -13,7 +13,7 @@
   </head>
   <body>
     <div style="display: none">
-      <include src="../img/sprite.svg"></include>
+      <include src="img/sprite.svg"></include>
     </div>
     <div class="bg-container bg-container--header">
       <header class="page-header">
@@ -77,7 +77,7 @@
           </ul>
         </fieldset>
         <fieldset class="contest__group contest__group--travel contest__group--bg">
-          <legend class="contest__description"><span>Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</span></legend>
+          <legend class="contest__description contest__description--travel"><span class="contest__description-text">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</span></legend>
           <div class="contest__list contest__list--travel">
             <div class="contest__column-wrap">
               <div class="contest__item contest__item--travel">
@@ -113,7 +113,7 @@
         </fieldset>
 
         <fieldset class="contest__group contest__group--contact">
-          <legend class="contest__description contest__description--contact">Контактная информация</legend>
+          <legend class="contest__description contest__description--contact"><span class="contest__description-text">Контактная информация</span></legend>
           <ul class="contest__list contest__list--contact">
             <li class="contest__item contest__item--contact">
               <label for="telephone" class="contest__label contest__label--contact">Номер телефона</label>
@@ -127,7 +127,7 @@
         </fieldset>
 
         <fieldset class="contest__group contest__group--apps contest__group--bg">
-          <legend class="contest__description">С каким приложением путешествовали?</legend>
+          <legend class="contest__description contest__description--apps"><span class="contest__description-text">С каким приложением путешествовали?</span></legend>
           <ul class="contest__list contest__list--apps">
             <li class="contest__item contest__item--apps">
               <input class="contest__radio" type="radio" class="visually-hidden" name="app" id="for_iOS" value="for_iOS" checked>
@@ -167,21 +167,21 @@
       </a>
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Ссылки на социальные сети</h2>
-        <a class="social__btn social__btn--tw" href="#">
+        <a class="social__btn" href="#">
           <span class="visually-hidden">Твиттер</span>
-          <svg class="social__img" width="17.5px" height="14.663px">
+          <svg class="social__img social__img--tw" width="17.5px" height="14.663">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use>
           </svg>
         </a>
-        <a class="social__btn social__btn--fb" href="#">
+        <a class="social__btn" href="#">
           <span class="visually-hidden">Фейсбук</span>
-          <svg class="social__img" width="8.673px" height="18.944px">
+          <svg class="social__img social__img--fb" width="8.673px" height="18.944">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use>
           </svg>
         </a>
-        <a class="social__btn social__btn--yt" href="#">
+        <a class="social__btn" href="#">
           <span class="visually-hidden">Ю-туб</span>
-          <svg class="social__img" width="14.64px" height="13.96px">
+          <svg class="social__img social__img--yt" width="14.64px" height="13.96">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-youtube"></use>
           </svg>
         </a>

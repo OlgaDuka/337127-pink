@@ -17,6 +17,7 @@
   @include list-init;
   display: flex;
   flex-direction: column;
+  outline: 1px solid magenta;
 
   @media (max-width: $mobile-width-only) {
     width: 280px;
@@ -58,6 +59,7 @@
 .contest__item {
   display: flex;
   flex-direction: column;
+  outline: 1px solid yellow;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -107,16 +109,15 @@
   margin: 0 0 25px;
   padding: 0;
   border-color: transparent;
+  outline: 1px solid red;
 
   &--apps {
-    position: relative;
     padding-top: 107px;
     padding-bottom: 8px;
     margin-bottom: 20px;
   }
 
   &--travel {
-    position: relative;
     padding-top: 111px;
   }
 
@@ -176,6 +177,62 @@
     &--name {
       margin-top: 8px;
     }
+  }
+}
+
+.contest__description {
+  display: block;
+  float: left;
+  width: 100%;
+  outline: 1px solid green;
+
+  &--travel {
+    margin-top: -53px;
+
+    .contest__description-text {
+      width: 400px;
+    }
+  }
+
+  &--contact {
+    margin-top: -23px;
+
+    .contest__description-text {
+      width: 250px;
+    }
+  }
+
+  &--apps {
+    margin-top: -12px;
+
+    .contest__description-text {
+      width: 330px;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    &--contact {
+      display: none;
+    }
+  }
+}
+
+.contest__description-text {
+  @include text-value(14px, 18px, 400, $violet-color);
+  max-width: 280px;
+  display: block;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  word-break: break-word;
+  background-color: white;
+  outline: 1px solid blue;
+
+  @media (min-width: $tablet-width) {
+    max-width: 420px;
   }
 }
 
@@ -389,29 +446,6 @@
     &--email {
       background: url("../img/icon-mail.svg") 94.2% no-repeat, linear-gradient(to right, #ffffff 0, #ffffff 83.5%, $gray-color 83.5%, $gray-color 100%);
     }
-  }
-}
-
-.contest__description {
-  @include text-value(14px, 18px, 400, $violet-color);
-  padding-left: 20px;
-  padding-right: 20px;
-  position: absolute;
-  top: 37px;
-  left: 0;
-  text-align: center;
-  text-transform: uppercase;
-
-  @media (max-width: $mobile-width-only) {
-    &--contact {
-      display: none;
-    }
-  }
-
-  @media (min-width: $tablet-width) {
-    position: static;
-    text-align: center;
-    max-width: 420px;
   }
 }
 
