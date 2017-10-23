@@ -1,6 +1,8 @@
 .contacts__relationships {
   margin-bottom: 20px;
   padding-top: 43px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   flex-direction: column;
 
@@ -17,6 +19,7 @@
   @include text-value(24px, 28px, 300, $text-color);
   margin: 0;
   text-align: center;
+  word-break: break-word;
 
   @media (min-width: $tablet-width) {
     font-size: 40px;
@@ -91,6 +94,7 @@
   @include text-value(18px, 22px, 700, $text-color);
   margin-bottom: 2px;
   margin-top: 15px;
+  word-break: break-word;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 5px;
@@ -108,6 +112,7 @@
 
 .contacts__text {
   @include text-value(24px, 28px, 300, $violet-color);
+  word-break: break-word;
 
   &--email,
   &--telephon {

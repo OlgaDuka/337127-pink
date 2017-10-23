@@ -19,7 +19,10 @@
   @include text-value(24px, 28px, 300, $text-color);
   margin-top: 0;
   margin-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
   text-align: center;
+  word-break: break-word;
 
   @media (min-width: $tablet-width) {
     font-size: 40px;
@@ -153,6 +156,7 @@
 .features__title {
   @include text-value(18px, 24px, 700, $text-color);
   margin: 0;
+  word-break: break-word;
 
   @media (min-width: $desktop-width) {
     @include text-value(30px, 30px, 700, $text-color);
@@ -163,6 +167,7 @@
 .features__text {
   margin-bottom: 13px;
   margin-top: 12px;
+  word-break: break-word;
 
   @include text-value(14px, 24px, 400, $text-color);
 

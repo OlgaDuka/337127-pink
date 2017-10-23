@@ -197,6 +197,7 @@
 
 .tariffs__option {
   width: 280px;
+  word-break: break-word;
   padding: 13px 0;
   border: 2px solid #e5e5e5;
   background-color: #ffffff;
@@ -239,7 +240,7 @@
 
   @media (min-width: $tablet-width) {
     @include text-value(14px, 30px, 400, $text-color);
-    width: 152px;
+    max-width: 152px;
     padding: 6px 8px 7px 16px;
 
     &--yes::before,
@@ -251,7 +252,7 @@
 
   @media (min-width: $desktop-width) {
     font-size: 18px;
-    width: 232px;
+    max-width: 232px;
     padding: 13px 17px 13px 20px;
   }
 }

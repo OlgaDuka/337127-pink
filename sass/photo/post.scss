@@ -1,4 +1,6 @@
 .post {
+  max-width: 280px;
+  word-break: break-word;
   padding: 16px 17px 20px;
   margin: auto;
   display: flex;
@@ -8,6 +10,7 @@
   background-color: $gray-color;
 
   @media (min-width: $tablet-width) {
+    max-width: 300px;
     min-height: 131px;
     padding: 23px 27px 0;
   }
@@ -18,12 +21,12 @@
   }
 
   &--panorama {
-    width: $panel-width - 40px;
+    max-width: $panel-width - 40px;
     height: auto;
     box-sizing: border-box;
 
     @media (min-width: $tablet-width) {
-      width: $tablet-width - 40px;
+      max-width: $tablet-width - 40px;
       min-height: 95px;
       padding: 24px 22px 20px 27px;
       box-sizing: border-box;
@@ -49,7 +52,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      width: $desktop-width - 20px;
+      max-width: $desktop-width - 20px;
       min-height: 95px;
       padding: 22px 22px 18px 27px;
 

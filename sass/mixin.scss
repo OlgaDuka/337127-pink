@@ -8,6 +8,7 @@
 
 /* Миксин для кнопки */
 @mixin btn($btn-width, $btn-color, $btn-letter-sp) {
+  max-width: $btn-width;
   width: $btn-width;
   padding: 13px 10px;
   min-height: 55px;
@@ -17,6 +18,7 @@
   font-family: inherit;
   text-align: center;
   letter-spacing: $btn-letter-sp;
+  word-break: break-word;
   box-sizing: border-box;
 
   @include text-value(18px, 18px, 700, $btn-color);

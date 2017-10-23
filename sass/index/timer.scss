@@ -15,16 +15,17 @@
 
 .timer__description {
   @media (min-width: $tablet-width) {
-    width: 310px;
+    max-width: 310px;
     margin: 0 auto;
     padding-left: 310px;
     padding-bottom: 30px;
+    word-break: break-word;
     background-image: url("../img/24.png");
     background-repeat: no-repeat;
   }
 
   @media (min-width: $desktop-width) {
-    width: 575px;
+    max-width: 575px;
     padding-left: 365px;
     padding-bottom: 50px;
     background-size: 32%;
@@ -34,9 +35,10 @@
 .timer__title {
   @media (min-width: $tablet-width) {
     @include text-value(30px, 36px, 700, $text-color);
-    width: 180px;
+    max-width: 180px;
     margin-top: 38px;
     margin-bottom: 0;
+    word-break: break-word;
   }
 
   @media (min-width: $desktop-width) {
@@ -52,6 +54,7 @@
     @include text-value(14px, 24px, 400, $text-color);
     margin: 10px;
     margin-left: 0;
+    word-break: break-word;
   }
 
   @media (min-width: $desktop-width) {
@@ -66,6 +69,7 @@
   @media (min-width: $tablet-width) {
     @include text-value(14px, 24px, 400, $violet-color);
     text-decoration: underline;
+    word-break: break-word;
   }
 
   @media (min-width: $desktop-width) {
