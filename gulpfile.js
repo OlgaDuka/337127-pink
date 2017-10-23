@@ -50,6 +50,7 @@ gulp.task("images", function() {
 // Создание SVG-спрайта
 gulp.task("sprite", function() {
   return gulp.src("img/sprite-src/*.svg")
+    .pipe(svgmin())
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -95,8 +96,9 @@ gulp.task("copy", function() {
     "fonts/**/*.{woff,woff2}",
     "img/**",
     "!img/sprite-src{,/**}",
+    "!img/sprite.svg",
     "js/**"
-    ], {
+  ], {
     base: "."
   })
   .pipe(gulp.dest("build"));
