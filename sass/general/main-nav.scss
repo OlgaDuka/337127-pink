@@ -2,7 +2,7 @@
   background-color: $main-color;
 
   @media (min-width: $desktop-width) {
-    width: 790px;
+    width: 642px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,10 +23,8 @@
   align-items: stretch;
 
   @media (min-width: $desktop-width) {
-    margin-left: auto;
-    margin-right: 10px;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-content: space-around;
     align-items: center;
@@ -54,18 +52,15 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 80px;
     min-height: 28px;
     padding-bottom: 4px;
-    max-width: 135px;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
     border: 0;
 
-    &:first-child {
-      margin-left: 10px;
-    }
-
-    &--active {
+    &--active a {
+      padding-bottom: 5px;
       border-bottom: 2px solid white;
     }
 
