@@ -15,7 +15,7 @@
 
 .timer__description {
   @media (min-width: $tablet-width) {
-    width: 310px;
+    max-width: 310px;
     margin: 0 auto;
     padding-left: 310px;
     padding-bottom: 30px;
@@ -24,7 +24,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 575px;
+    max-width: 575px;
     padding-left: 365px;
     padding-bottom: 50px;
     background-size: 32%;
@@ -34,7 +34,8 @@
 .timer__title {
   @media (min-width: $tablet-width) {
     @include text-value(30px, 36px, 700, $text-color);
-    width: 180px;
+
+    max-width: 180px;
     margin-top: 38px;
     margin-bottom: 0;
   }
@@ -42,6 +43,7 @@
   @media (min-width: $desktop-width) {
     line-height: 30px;
     width: 100%;
+    max-width: none;
     margin-top: 95px;
     margin-bottom: -2px;
   }

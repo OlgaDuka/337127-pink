@@ -1,5 +1,4 @@
 .copyright {
-  width: 130px;
   padding-top: 7px;
   display: flex;
   align-items: center;
@@ -8,20 +7,13 @@
   @media (min-width: $tablet-width) {
     padding-top: 0;
   }
-
-  @media (min-width: $desktop-width) {
-    width: 154px;
-  }
 }
 
 .copyright__text {
   display: block;
+  padding-right: 15px;
 
   @include text-value(14px, 18px, 400, $text-color);
-
-  @media (min-width: $tablet-width) {
-    padding-right: 10px;
-  }
 
   @media (min-width: $desktop-width) {
     font-size: 18px;
@@ -31,6 +23,7 @@
 .copyright__img {
   width: 27px;
   height: 34px;
+  flex-shrink: 0;
   color: $violet-color;
 
   @media (min-width: $tablet-width) {

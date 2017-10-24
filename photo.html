@@ -22,21 +22,21 @@
           <div class="page-header__nav-wrapper set-width">
             <div class="page-header__panel">
               <a class="page-header__logo" href="index.html">
-                <svg class="page-header__logo-image  page-header__logo-image--mobile" width="74" height="23">
+                <svg class="page-header__logo-image  page-header__logo-image--mobile" width="74" height="23" aria-label="Logo PINK. Main page">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-mobile"></use>
                 </svg>
-                <svg class="page-header__logo-image  page-header__logo-image--tablet" width="146.3" height="40.375">
+                <svg class="page-header__logo-image  page-header__logo-image--tablet" width="146.3" height="40.375" aria-label="Logo PINK. Main page">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-tablet"></use>
                 </svg>
-                <svg class="page-header__logo-image  page-header__logo-image--desktop" width="146.3" height="40.375">
+                <svg class="page-header__logo-image  page-header__logo-image--desktop" width="146.3" height="40.375" aria-label="Logo PINK. Main page">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-desktop"></use>
                 </svg>
               </a>
-              <button class="page-header__toggle"><span class="visually-hidden">Открыть меню</span>
-                <svg class="page-header__toggle-icon page-header__toggle-icon--burger" width="50" height="24">
+              <button class="page-header__toggle">
+                <svg class="page-header__toggle-icon page-header__toggle-icon--burger" width="50" height="24" aria-label="Open menu">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-burger"></use>
                 </svg>
-                <svg class="page-header__toggle-icon page-header__toggle-icon--cross" width="24" height="24">
+                <svg class="page-header__toggle-icon page-header__toggle-icon--cross" width="24" height="24" aria-label="Close menu">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-cross"></use>
                 </svg>
               </button>
@@ -63,9 +63,12 @@
         <ul class="gallery__list">
           <li class="gallery__item gallery__item--panorama">
             <div class="gallery__img-wrapper">
-              <a class="gallery__img-link" href="#">
+              <a class="gallery__img-link" href="img/panorama-desktop@2x.jpg" target="blank" title="Увеличить фото">
                 <span class="gallery__img-label">Панорама дня</span>
                 <picture>
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">
                   <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
                   <img class="gallery__img gallery__img--panorama" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@1x.jpg 1x, img/panorama-mobile@2x.jpg 2x" alt="Panorama">
@@ -82,8 +85,11 @@
             </div>
           </li>
           <li class="gallery__item">
-            <a href="#">
+            <a href="img/photo-car-desktop@2x.jpg" target="blank" title="Увеличить фото">
               <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
                 <img  class="gallery__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@1x.jpg 1x, img/photo-car-mobile@2x.jpg 2x" alt="Car">
@@ -99,8 +105,11 @@
             </div>
           </li>
           <li class="gallery__item">
-            <a href="#">
+            <a href="img/photo-drumset-desktop@2x.jpg" target="blank" title="Увеличить фото">
               <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
                 <img  class="gallery__img" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@1x.jpg 1x, img/photo-drumset-mobile@2x.jpg 2x" alt="Drumset">
@@ -116,8 +125,11 @@
             </div>
           </li>
           <li class="gallery__item">
-            <a href="#">
+            <a href="img/photo-window-desktop@2x.jpg" target="blank" title="Увеличить фото">
               <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
                 <img class="gallery__img" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@1x.jpg 1x, img/photo-window-mobile@2x.jpg 2x" alt="Window">
@@ -133,8 +145,11 @@
             </div>
           </li>
           <li class="gallery__item">
-            <a href="#">
+            <a href="img/photo-fair-desktop@2x.jpg" target="blank" title="Увеличить фото">
               <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
                 <img class="gallery__img" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@1x.jpg 1x, img/photo-fair-mobile@2x.jpg 2x" alt="Fair">
@@ -150,8 +165,11 @@
             </div>
           </li>
           <li class="gallery__item">
-            <a href="#">
+            <a href="img/photo-pov-desktop@2x.jpg" target="blank" title="Увеличить фото">
               <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
                 <img class="gallery__img" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@1x.jpg 1x, img/photo-pov-mobile@2x.jpg 2x" alt="Pov">
@@ -167,8 +185,11 @@
             </div>
           </li>
           <li class="gallery__item">
-            <a href="#">
+            <a href="img/photo-wing-desktop@2x.jpg" target="blank" title="Увеличить фото">
               <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
                 <img class="gallery__img" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@1x.jpg 1x, img/photo-wing-mobile@2x.jpg 2x" alt="Wing">
@@ -200,24 +221,24 @@
           <form class="editor" action="https://echo.htmlacademy.ru/" method="post">
             <ul class="editor__tools">
               <li class="editor__item editor__item--mobile-active">
-                <button class="editor__btn editor__btn--crop" type="button"><span class="visually-hidden">Кадрировать</span>
-                  <svg class="editor__btn-icon editor__btn-icon--crop" width="48" height="48">
+                <button class="editor__btn editor__btn--crop" type="button">
+                  <svg class="editor__btn-icon editor__btn-icon--crop" width="48" height="48" aria-label="Edit photo. Crop">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-editor-crop"></use>
                   </svg>
                 </button>
                 <div class="editor__scale editor__scale--crop"><span class="visually-hidden">Ползунок</span></div>
               </li>
               <li class="editor__item">
-                <button class="editor__btn editor__btn--fill"  type="button"><span class="visually-hidden">Заливка</span>
-                  <svg class="editor__btn-icon editor__btn-icon--fill" width="48" height="48">
+                <button class="editor__btn editor__btn--fill"  type="button">
+                  <svg class="editor__btn-icon editor__btn-icon--fill" width="48" height="48" aria-label="Edit photo. Fill">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-editor-fill"></use>
                   </svg>
                 </button>
                 <div class="editor__scale editor__scale--fill"><span class="visually-hidden">Ползунок</span></div>
               </li>
               <li class="editor__item">
-                <button class="editor__btn editor__btn--contrast" type="button"><span class="visually-hidden">Контрастность</span>
-                  <svg class="editor__btn-icon editor__btn-icon--contrast" width="32" height="32">
+                <button class="editor__btn editor__btn--contrast" type="button">
+                  <svg class="editor__btn-icon editor__btn-icon--contrast" width="32" height="32" aria-label="Edit photo. Contrast">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-editor-contrast"></use>
                   </svg>
                 </button>
@@ -235,22 +256,34 @@
 
     <footer class="page-footer set-width">
       <a class="page-footer__logo" href="index.html">
-        <svg class="page-footer__logo-image  page-footer__logo-image--mobile" width="146.3" height="40.375">
+        <svg class="page-footer__logo-image  page-footer__logo-image--mobile" width="146.3" height="40.375" aria-label="Logo PINK. Main page">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-blue-mobile"></use>
         </svg>
-        <svg class="page-footer__logo-image  page-footer__logo-image--desktop" width="146.3" height="40.375">
+        <svg class="page-footer__logo-image  page-footer__logo-image--desktop" width="146.3" height="40.375" aria-label="Logo PINK. Main page">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-blue-desktop"></use>
         </svg>
       </a>
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Ссылки на социальные сети</h2>
-        <a class="social__btn social__btn--tw" href="#"><span class="visually-hidden">Твиттер</span></a>
-        <a class="social__btn social__btn--fb" href="#"><span class="visually-hidden">Фейсбук</span></a>
-        <a class="social__btn social__btn--yt" href="#"><span class="visually-hidden">Ю-туб</span></a>
+        <a class="social__btn" href="#">
+          <svg class="social__img social__img--tw" width="17.5px" height="14.663" aria-label="Twitter">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use>
+          </svg>
+        </a>
+        <a class="social__btn" href="#">
+          <svg class="social__img social__img--fb" width="8.673px" height="18.944" aria-label="Facebook">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use>
+          </svg>
+        </a>
+        <a class="social__btn" href="#">
+          <svg class="social__img social__img--yt" width="14.64px" height="13.96" aria-label="You-tybe">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-youtube"></use>
+          </svg>
+        </a>
       </section>
       <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="copyright__text">Разработано</span>
-        <svg class="copyright__img" width="27" height="34">
+        <svg class="copyright__img" width="27" height="34" aria-label="HTML Academy">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use>
         </svg>
       </a>

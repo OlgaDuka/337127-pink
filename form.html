@@ -21,21 +21,21 @@
           <div class="page-header__nav-wrapper set-width">
             <div class="page-header__panel">
               <a class="page-header__logo" href="index.html">
-                <svg class="page-header__logo-image  page-header__logo-image--mobile" width="74" height="23">
+                <svg class="page-header__logo-image  page-header__logo-image--mobile" width="74" height="23" aria-label="Logo PINK. Main page">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-mobile"></use>
                 </svg>
-                <svg class="page-header__logo-image  page-header__logo-image--tablet" width="146.3" height="40.375">
+                <svg class="page-header__logo-image  page-header__logo-image--tablet" width="146.3" height="40.375" aria-label="Logo PINK. Main page">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-tablet"></use>
                 </svg>
-                <svg class="page-header__logo-image  page-header__logo-image--desktop" width="146.3" height="40.375">
+                <svg class="page-header__logo-image  page-header__logo-image--desktop" width="146.3" height="40.375" aria-label="Logo PINK. Main page">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-desktop"></use>
                 </svg>
               </a>
-              <button class="page-header__toggle"><span class="visually-hidden">Открыть меню</span>
-                <svg class="page-header__toggle-icon page-header__toggle-icon--burger" width="50" height="24">
+              <button class="page-header__toggle">
+                <svg class="page-header__toggle-icon page-header__toggle-icon--burger" width="50" height="24" aria-label="Open menu">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-burger"></use>
                 </svg>
-                <svg class="page-header__toggle-icon page-header__toggle-icon--cross" width="24" height="24">
+                <svg class="page-header__toggle-icon page-header__toggle-icon--cross" width="24" height="24" aria-label="Close menu">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-cross"></use>
                 </svg>
               </button>
@@ -77,43 +77,43 @@
           </ul>
         </fieldset>
         <fieldset class="contest__group contest__group--travel contest__group--bg">
-          <legend class="contest__description" align="center">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</legend>
+          <legend class="contest__description contest__description--travel"><span class="contest__description-text">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</span></legend>
           <div class="contest__list contest__list--travel">
             <div class="contest__column-wrap">
               <div class="contest__item contest__item--travel">
-                <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" id="shark" value="shark" checked>
-                <label for="shark" class="contest__label contest__label--checkbox">Сделал селфи с акулой</label>
+                <input class="contest__checkbox visually-hidden" type="checkbox" name="event" id="shark" value="shark" checked>
+                <label for="shark" class="contest__label contest__label--checkbox" tabindex="0">Сделал селфи с акулой</label>
               </div>
               <div class="contest__item contest__item--travel">
-                <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" id="beach" value="beach" checked>
-                <label for="beach" class="contest__label contest__label--checkbox">Обгорел на пляже</label>
-              </div>
-            </div>
-            <div class="contest__column-wrap">
-              <div class="contest__item contest__item--travel">
-                <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" id="Norris" value="Norris">
-                <label for="Norris" class="contest__label contest__label--checkbox">Видел Чака Норриса</label>
-              </div>
-              <div class="contest__item contest__item--travel">
-                <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" id="souvenir" value="souvenir">
-                <label for="souvenir" class="contest__label contest__label--checkbox">Накупил сувениров</label>
+                <input class="contest__checkbox visually-hidden" type="checkbox" name="event" id="beach" value="beach" checked>
+                <label for="beach" class="contest__label contest__label--checkbox" tabindex="0">Обгорел на пляже</label>
               </div>
             </div>
             <div class="contest__column-wrap">
               <div class="contest__item contest__item--travel">
-                <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" id="tower" value="tower" checked>
-                <label for="tower" class="contest__label contest__label--checkbox">Удержал башню</label>
+                <input class="contest__checkbox visually-hidden" type="checkbox" name="event" id="Norris" value="Norris">
+                <label for="Norris" class="contest__label contest__label--checkbox" tabindex="0">Видел Чака Норриса</label>
               </div>
               <div class="contest__item contest__item--travel">
-                <input class="contest__checkbox" type="checkbox" class="visually-hidden" name="event" id="hotel" value="hotel" checked>
-                <label for="hotel" class="contest__label contest__label--checkbox">Разгромил отель</label>
+                <input class="contest__checkbox visually-hidden" type="checkbox" name="event" id="souvenir" value="souvenir">
+                <label for="souvenir" class="contest__label contest__label--checkbox" tabindex="0">Накупил сувениров</label>
+              </div>
+            </div>
+            <div class="contest__column-wrap">
+              <div class="contest__item contest__item--travel">
+                <input class="contest__checkbox visually-hidden" type="checkbox" name="event" id="tower" value="tower" checked>
+                <label for="tower" class="contest__label contest__label--checkbox" tabindex="0">Удержал башню</label>
+              </div>
+              <div class="contest__item contest__item--travel">
+                <input class="contest__checkbox visually-hidden" type="checkbox" name="event" id="hotel" value="hotel" checked>
+                <label for="hotel" class="contest__label contest__label--checkbox" tabindex="0">Разгромил отель</label>
               </div>
             </div>
           </div>
         </fieldset>
 
         <fieldset class="contest__group contest__group--contact">
-          <legend class="contest__description contest__description--contact" align="center">Контактная информация</legend>
+          <legend class="contest__description contest__description--contact"><span class="contest__description-text">Контактная информация</span></legend>
           <ul class="contest__list contest__list--contact">
             <li class="contest__item contest__item--contact">
               <label for="telephone" class="contest__label contest__label--contact">Номер телефона</label>
@@ -126,20 +126,20 @@
           </ul>
         </fieldset>
 
-        <fieldset class="contest__group contest__group--apps  contest__group--bg">
-          <legend class="contest__description" align="center">С каким приложением путешествовали?</legend>
+        <fieldset class="contest__group contest__group--apps contest__group--bg">
+          <legend class="contest__description contest__description--apps"><span class="contest__description-text">С каким приложением путешествовали?</span></legend>
           <ul class="contest__list contest__list--apps">
             <li class="contest__item contest__item--apps">
-              <input class="contest__radio" type="radio" class="visually-hidden" name="app" id="for_iOS" value="for_iOS" checked>
-              <label for="for_iOS" class="contest__label contest__label--radio">Pink для iOS</label>
+              <input class="contest__radio visually-hidden" type="radio" name="app" id="for_iOS" value="for_iOS" checked>
+              <label for="for_iOS" class="contest__label contest__label--radio" tabindex="0">Pink для iOS</label>
             </li>
             <li class="contest__item contest__item--apps">
-              <input class="contest__radio" type="radio" class="visually-hidden" name="app" id="for_Android" value="for_Android">
-              <label for="for_Android" class="contest__label contest__label--radio">Pink на Android</label>
+              <input class="contest__radio visually-hidden" type="radio" name="app" id="for_Android" value="for_Android">
+              <label for="for_Android" class="contest__label contest__label--radio" tabindex="0">Pink на Android</label>
             </li>
             <li class="contest__item contest__item--apps">
-              <input class="contest__radio" type="radio" class="visually-hidden" name="app" id="for_Windows" value="for_Windows">
-              <label for="for_Windows" class="contest__label contest__label--radio">Windows Phone</label>
+              <input class="contest__radio visually-hidden" type="radio" name="app" id="for_Windows" value="for_Windows">
+              <label for="for_Windows" class="contest__label contest__label--radio" tabindex="0">Windows Phone</label>
             </li>
           </ul>
         </fieldset>
@@ -158,28 +158,40 @@
 
     <footer class="page-footer set-width">
       <a class="page-footer__logo" href="index.html">
-        <svg class="page-footer__logo-image  page-footer__logo-image--mobile" width="146.3" height="40.375">
+        <svg class="page-footer__logo-image  page-footer__logo-image--mobile" width="146.3" height="40.375" aria-label="Logo PINK. Main page">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-blue-mobile"></use>
         </svg>
-        <svg class="page-footer__logo-image  page-footer__logo-image--desktop" width="146.3" height="40.375">
+        <svg class="page-footer__logo-image  page-footer__logo-image--desktop" width="146.3" height="40.375" aria-label="Logo PINK. Main page">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-blue-desktop"></use>
         </svg>
       </a>
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Ссылки на социальные сети</h2>
-        <a class="social__btn social__btn--tw" href="#"><span class="visually-hidden">Твиттер</span></a>
-        <a class="social__btn social__btn--fb" href="#"><span class="visually-hidden">Фейсбук</span></a>
-        <a class="social__btn social__btn--yt" href="#"><span class="visually-hidden">Ю-туб</span></a>
+        <a class="social__btn" href="#">
+          <svg class="social__img social__img--tw" width="17.5px" height="14.663" aria-label="Twitter">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use>
+          </svg>
+        </a>
+        <a class="social__btn" href="#">
+          <svg class="social__img social__img--fb" width="8.673px" height="18.944" aria-label="Facebook">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use>
+          </svg>
+        </a>
+        <a class="social__btn" href="#">
+          <svg class="social__img social__img--yt" width="14.64px" height="13.96" aria-label="You-tybe">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-youtube"></use>
+          </svg>
+        </a>
       </section>
       <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="copyright__text">Разработано</span>
-        <svg class="copyright__img" width="27" height="34">
+        <svg class="copyright__img" width="27" height="34" aria-label="HTML Academy">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use>
         </svg>
       </a>
     </footer>
 
-<!--  Для отображения окон добавить класс fixed-overlay--open !-->
+<!--  Для отображения окон добавить класс fixed-overlay-open с двумя дефисами во втором случае !-->
     <div class="fixed-overlay">
       <div class="modal">
         <div class="modal__message">

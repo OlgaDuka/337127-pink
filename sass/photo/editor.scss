@@ -199,7 +199,6 @@
 }
 
 .editor__buttons {
-  min-height: 122px;
   margin: 0 auto;
   padding: 38px 20px 20px;
   display: flex;
@@ -231,6 +230,8 @@
   &--execute {
     @include btn(280px, $violet-color, 0.2px);
 
+    margin-bottom: 12px;
+
     &:hover {
       background-color: $violet-color;
       color: rgba(255, 255, 255, 1);
@@ -259,6 +260,8 @@
   @media (min-width: $tablet-width) {
     &--execute {
       @include btn(260px, $violet-color, 0.1px);
+
+      margin-bottom: 23px;
     }
 
     &--cancel {
@@ -269,6 +272,8 @@
   @media (min-width: $desktop-width) {
     &--execute {
       @include btn(185px, $violet-color, 0.3px);
+
+      margin-bottom: 0;
     }
 
     &--cancel {
