@@ -3,6 +3,9 @@
 
   @media (min-width: $desktop-width) {
     width: 790px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: rgba(16, 21, 27, 0.3);
   }
 }
@@ -20,13 +23,13 @@
   align-items: stretch;
 
   @media (min-width: $desktop-width) {
-    margin-top: 30px;
     margin-left: auto;
     margin-right: 10px;
     flex-direction: row;
     justify-content: flex-end;
     flex-wrap: wrap;
     align-content: space-around;
+    align-items: center;
   }
 }
 
@@ -53,7 +56,7 @@
   @media (min-width: $desktop-width) {
     margin-left: 80px;
     min-height: 28px;
-    padding-top: 15px;
+    padding-bottom: 4px;
     max-width: 135px;
     text-align: center;
     border: 0;

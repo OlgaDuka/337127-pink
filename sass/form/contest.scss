@@ -587,7 +587,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    max-width: 300px;
+    width: 300px;
     margin: 0;
     box-sizing: border-box;
   }
@@ -595,7 +595,6 @@
 
 .contest__note {
   @include text-value(14px, 30px, 400, $text-color);
-  max-width: 270px;
   text-transform: uppercase;
   text-align: center;
 
