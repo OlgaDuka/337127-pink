@@ -260,13 +260,13 @@
 
   @media (min-width: $tablet-width) {
     &--execute {
-      @include btn(260px, 260px, $violet-color, 0.1px);
+      @include btn(auto, 260px, $violet-color, 0.1px);
 
       margin-bottom: 23px;
     }
 
     &--cancel {
-      @include btn(260px, 260px, rgba(51, 51, 51, 0.1), 0.1px);
+      @include btn(auto, 260px, rgba(51, 51, 51, 0.1), 0.1px);
     }
   }
 
