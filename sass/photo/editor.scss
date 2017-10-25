@@ -220,6 +220,7 @@
     padding: 0;
     padding-left: 10px;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -271,13 +272,13 @@
 
   @media (min-width: $desktop-width) {
     &--execute {
-      @include btn(185px, $violet-color, 0.3px);
+      @include btn(auto, $violet-color, 0.3px);
 
       margin-bottom: 0;
     }
 
     &--cancel {
-      @include btn(180px, rgba(51, 51, 51, 0.1), 0.1px);
+      @include btn(auto, rgba(51, 51, 51, 0.1), 0.1px);
     }
   }
 }
