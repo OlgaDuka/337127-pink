@@ -77,7 +77,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    @include btn(300px, auto, white, 1.8px);
+    @include btn(auto, 300px, white, 1.8px);
   }
 }
 
