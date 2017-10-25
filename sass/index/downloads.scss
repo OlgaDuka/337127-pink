@@ -60,7 +60,7 @@
   display: block;
   padding-top: 13px;
 
-  @include btn(280px, white, normal);
+  @include btn(280px, 280px, white, normal);
   margin: 0 auto;
 
   &:hover {
@@ -73,11 +73,11 @@
   }
 
   @media (min-width: $tablet-width) {
-    @include btn(300px, white, normal);
+    @include btn(300px, 300px, white, normal);
   }
 
   @media (min-width: $desktop-width) {
-    @include btn(300px, white, 1.8px);
+    @include btn(auto, 300px, white, 1.8px);
   }
 }
 
