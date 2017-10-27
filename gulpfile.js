@@ -17,6 +17,7 @@ var include = require("posthtml-include");
 var run = require("run-sequence");
 var del = require("del");
 var server = require("browser-sync").create();
+var ghPages = require('gulp-gh-pages');
 
 // Препроцессор, префиксы, минификация стилей
 gulp.task("style", function() {
@@ -106,6 +107,12 @@ gulp.task("copy", function() {
   .pipe(gulp.dest("build"));
 });
 
+// Публикация проекта на гитхаб
+gulp.task("deploy", function() {
+  return gulp.src("./build/**/*")
+    .pipe(ghPages());
+});
+
 // Cборка билда
 gulp.task("build", function(done) {
   run(
@@ -117,6 +124,7 @@ gulp.task("build", function(done) {
     "webp",
     "sprite",
     "html",
+    "deploy",
     done
   );
 });
